@@ -1,106 +1,113 @@
-cxengage.github.io
-==================
-# Platform API Documentation
+_Note - this is a draft. This is intended to be customer facing_
 
-## Account
+CxEngage's customer Domain-Specific Language (DSL) offers incredible flexibility, providing the ability to set up almost any type of pattern of events to match. At it's most basic, every pattern is of the form: **when** _"events happen"_ **then** _"notify or do something"_.
 
-Authenticated methods that allow you to manage your account.
+### "Whens"
 
-Resource | Description
---- | ---
-[<code>GET</code> account](account/GET.md) | Returns the authenticated user's account information
-[<code>PUT</code> account](account/PUT.md) | Updates the authenticated user's account information
-[<code>GET</code> account/tenants](account/GET_tenants.md) | Returns the active tenants the authenticated user has permission to access
+The following keywords are available to describe the **"when"** portion of the pattern:
 
-## Tenants
+| When keywords|
+|:-------------:|
+| =             |
+| >             |
+| <             |
+| not           |
+| and           |
+| or            |
+| Within        |
+| inSequence    |
+| allOf         |
+| anyOf         |
+| count         |
+| failWhen      |
+| seconds       |
+| minutes       |
+| hours         |
+| days          |
 
-Authenticated methods that allow you to get more information about a tenant.
+For example, the following is a pattern where if a customer calls into a contact center twice and abandons the call twice within an hour, then we would call the customer back:
 
-Resource | Description
---- | ---
-[<code>GET</code> tenants/:tid](tenants/GET_id.md) | Returns information for tenant `tid`
-[<code>POST</code> tenants/:tid/accounts/:id](tenants/POST_tid_accounts_id.md) | Gives permission to account `id` to access the tenant `tid`
-[<code>DELETE</code> tenants/:tid/accounts/:id](tenants/DELETE_tid_accounts_id.md) | Revokes permission of account `id` to access the tenant `tid`
+```clojure
+;;When
+(within 1 hours
+        (count 2 (event (= CallAction "abandoned")))
+        
+;Then
+(send echo message {:message "Call abandoned twice, call customer back"})
+```
+_(Echo is used for convenience in this case to illustrate the example, but is also useful for testing your patterns.)_
 
-## Event Record
+Now, what if a customer calls a 3rd time and gets an agent before the agent calls back? Since we don't want the agent to call him or her back, we can account for this scenario by using the FailWhen keyword as follows: 
 
-Authenticated methods that allow you to manage the event record of a tenant.
-
-Resource | Description
---- | ---
-[<code>GET</code> tenants/:tid/event_record](event_record/GET.md) | Returns the event record on tenant `tid`
-[<code>POST</code> tenants/:tid/event_record](event_record/POST.md) | Updates the event record for tenant `tid`
-
-## Patterns
-
-Authenticated methods that allow you to manage the patterns of a tenant.
-
-Resource | Description
---- | ---
-[<code>GET</code> tenants/:tid/patterns](patterns/GET.md) | Returns all patterns for tenant `tid`
-[<code>POST</code> tenants/:tid/patterns](patterns/POST.md) | Creates a new pattern for tenant `tid`
-[<code>GET</code> tenants/:tid/patterns/:id](patterns/GET_id.md) | Returns the pattern matching `id` for tenant `tid`
-[<code>POST</code> tenants/:tid/patterns/:id](patterns/POST_id.md) | Updates the pattern matching `id` for tenant `tid`
-[<code>DELETE</code> tenants/:tid/patterns/:id](patterns/DELETE_id.md) | Deletes the pattern matching `id` for tenant `tid`
-
-## Message Templates
-
-Authenticated methods that allow you to manage the message templates of a tenant.
-
-Resource | Description
----| ---
-[<code>GET</code> tenants/:tid/message_templates](message_templates/GET.md) | Returns all message templates for tenant `tid`
-[<code>POST</code> tenants/:tid/message_templates](message_templates/POST.md) | Creates a new message template for tenant `tid`
-[<code>GET</code> tenants/:tid/message_templates/:id](message_templates/GET_id.md) | Returns the message template matching `id` for tenant `tid`
-[<code>POST</code> tenants/:tid/message_templates/:id](message_templates/POST_id.md) | Updates the message template matching `id` for tenant `tid`
-[<code>DELETE</code> tenants/:tid/message_templates/:id](message_templates/DELETE_id.md) | Deletes the message template matching `id` for tenant `tid`
-
-## Listeners
-
-Authenticated methods that allow you to manage the listeners of a tenant.
-
-Resource | Description
----| ---
-[<code>GET</code> tenants/:tid/listeners](listeners/GET.md) | Returns all listeners for tenant `tid`
-[<code>POST</code> tenants/:tid/listeners](listeners/POST.md) | Creates a new listener for tenant `tid`
-[<code>GET</code> tenants/:tid/listeners/:id](listeners/GET_id.md) | Returns the listener matching `id` for tenant `tid`
-[<code>POST</code> tenants/:tid/listeners/:id](listeners/POST_id.md) | Updates the listener matching `id` for tenant `tid`
-[<code>DELETE</code> tenants/:tid/listeners/:id](listeners/DELETE_id.md) | Deletes the listener matching `id` for tenant `tid`
-
-## Integrations
-
-Authenticated methods that allow you to manage the integrations of a tenant.
+```clojure
+;;When
+(allOf (within 1 hours
+                 (count 2 (event (= "CallAction" "abandoned")))))
+       (failWhen (count 1 (event (= "CallAction" "answered"))))
+       
+;;Then
+(send echo message {:message "Call abandoned twice , call customer back"}))
+```
 
 
-Resource | Description
----| ---
-[<code>GET</code> tenants/:tid/integrations](integrations/GET.md) | Returns all integrations for tenant `tid`
-[<code>GET</code> tenants/:tid/integrations/:id](integrations/GET_id.md) | Returns the integration matching `id` for tenant `tid`
-[<code>POST</code> tenants/:tid/integrations/:id](integrations/POST_id.md) | Updates the integration matching `id` for tenant `tid`
 
-## Augments
+As another example, what if when a customer calls in once, talks to an agent, and then calls back within 30 minutes, we want the customer to be routed to a more experienced second-tier agent? That pattern would look like this:
 
-Authenticated methods that allow you to manage the augments of a tenant.
+```clojure
+;;When
+(within 30 minutes
+        (inSequence (event (= "CallAction" "answered")
+                    (event (= "CallAction" "inqueue"))))
+                    
+;Then
+(send echo message {:message "Transfer call to senior agent"})
+```
+More info on [Writing Whens](Writing-Whens.md)
 
-Resource | Description
----| ---
-[<code>GET</code> tenants/:tid/augments](augments/GET.md) | Returns all augments for tenant `tid`
-[<code>POST</code> tenants/:tid/augments](augments/POST.md) | Creates a new augment for tenant `tid`
-[<code>GET</code> tenants/:tid/augments/:id](augments/GET_id.md) | Returns the augment matching `id` for tenant `tid`
-[<code>POST</code> tenants/:tid/augments/:id](augments/POST_id.md) | Updates the augment matching `id` for tenant `tid`
-[<code>DELETE</code> tenants/:tid/augments/:id](augments/DELETE_id.md) | Deletes the augment matching `id` for tenant `tid`
+### "Thens"
 
-## Reaction Search
+The following keywords are available to describe the **"then"** portion of the pattern:
 
-__TBD__
+| Then keywords|
+| :-----------: |
+| par        |
+| seq        |
+| delay      |
+| send       |
+| if         |
+| on-success |
+| on-failure |
+| timeout    |
+| message-template |
+| set |
 
-## Manager 
+Continuing the examples from above, we can replace the _echos_ with the above _"thens"_. Now, when a caller abandons the call twice, we can use our Twilio integration to trigger an outbound call:
 
-Authenticated methods that allow you to view and delete events currently in the system.
+```clojure
+;;When
+(allOf (within 1 hours
+               (count 2 (event (= "CallAction" "abandoned"))))
 
-Resource | Description
----- | ---
-[<code>GET</code> tenants/:tid/manager/events/:evid](manager/GET_tenant_tid_manager_events_id.md) | Returns value of event `evid`
-[<code>GET</code> tenants/:tid/manager/patterns/:ptid](manager/GET_tenant_tid_manager_patterns_id.md) | Returns the events that currently contribute to pattern `ptid` for tenant `tid`
-[<code>GET</code> tenants/:tid/manager/events/key/:keyid](manager/GET_tenant_tid_manager_key_id.md) | Returns the events that match key attribute `keyid` for tenant `tid`
-[<code>DELETE</code> tenants/:tid/manager/events/:evid](manager/DELETE_tenant_tid_manager_events_key_id.md) | Deletes the event matching `evid` for tenant `tid`
+;;Then
+(send twilio call {:to-phone-number *phone-number*}))
+```
+
+If we would like to send an SMS to a customer after the two abandons to let them know they will receive a call shortly, we can write the pattern using _seq_ (short for _sequence_) as: 
+
+```clojure
+;;When
+(allOf (within 1 hours
+               (count 2 (event (= "CallAction" "abandoned"))))
+                
+;;Then
+(seq
+  (send twilio sms {:to-phone-number *phone-number*
+                    :message "We apologize for the long waits, an agent
+                              will call you back shortly"})
+  (send twilio call {:to-phone-number *phone-number*}))
+```
+
+In this example, we use the _seq_ keyword because we want the SMS to go out before the agent calls
+back. One thing to note here is that if the SMS fails, the next send does not execute.
+
+More info on [Writing Thens](Writing-Thens.md)
