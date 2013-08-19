@@ -111,3 +111,5 @@ In this example, we use the _seq_ keyword because we want the SMS to go out befo
 back. One thing to note here is that if the SMS fails, the next send does not execute.
 
 More info on [Writing Thens](Writing-Thens.md)
+
+### Platform API
