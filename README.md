@@ -251,4 +251,3 @@ If we would like to send an SMS to a customer after the two abandons to let them
 
 In this example, we use the _seq_ keyword because we want the SMS to go out before the agent calls
 back. One thing to note here is that if the SMS fails, the next send does not execute.
-
