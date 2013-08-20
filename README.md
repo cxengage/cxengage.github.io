@@ -12,7 +12,7 @@ Here is some information on how to setup your instance of CxEngage
 * [Setting up and using VHT endpoint service](Using-the-VHT-Endpoint-Service.md)
 * [How to augment your events](How-to-Augment-your-events.md)
 
-### Setting up your patterns
+<b> Setting up your patterns </b>
 
 Next, we get to the fun part of creating patterns for things that matter to your enterprise. To enable this we have a simple DSL. 
 
@@ -20,7 +20,7 @@ Next, we get to the fun part of creating patterns for things that matter to your
 * [Writing Whens](Writing-Whens.md)
 * [Writing Thens](Writing-Thens.md)
 
-### Integrate with CxEngage
+<b> Integrate with CxEngage </b>
 
 Finally, CxEngage has APIs you can use to interact or integrate with. 
 
