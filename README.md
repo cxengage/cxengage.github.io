@@ -706,7 +706,6 @@ Integrate with CxEngage
 
 CxEngage has APIs you can use to interact or integrate with
 
-Integrate
 ---------
 
 #### Sending Events to CxEngage
