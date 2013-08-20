@@ -134,9 +134,11 @@ You could also use message templating for setting it in the pattern
                       :message +MT1})
 ```
 
-### Setting up your patterns
+Setting up your patterns
+========================
 
 Next, we get to the fun part of creating patterns for things that matter to your enterprise. To enable this we have a simple, yet powerful DSL.
 
-### Intro to the CxEngage DSL
+Intro to the CxEngage DSL
+=========================
 
