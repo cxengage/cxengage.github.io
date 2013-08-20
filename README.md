@@ -42,3 +42,46 @@ You could also test out your message template with the echo
 (message-template {:message +MT1}))
 ```
 
+### Using the Twilio endpoint
+
+With CxEngage you can use a Twilio service, with which you can use to send either SMS or Phone calls. To start up the Twilio endpoint service, you need the following items  
+
+* Twilio SID
+* Twilio token
+
+With the Twilio service, you can send either sms or phone calls. The keyword to use for each of it is
+
+* sms
+* call
+
+The mandatory parameters that the Twilio endpoint needs are 
+
+* to-phone-number - The phone number to call via the endpoint
+* from-phone-number - The from phone number that your would like the call to originate from. You get this from Twilio
+* message - The message that you want 
+
+So, to be able to use the Twilio endpoint, you need to pass in these parameters. You can do this a few different ways. 
+
+You can use any of the event record parameters that sends in each of these values. So, if you would like to use the following event record parameters toPhoneNumber, fromPhoneNumber and message, your Then in your pattern would look like this - 
+
+```clojure
+(send twilio sms {:to-phone-number *toPhoneNumber*
+                  :from-phone-number *fromPhoneNumber*
+                  :message *message*})
+```
+You could also set these values. Lets say that your from-phone-number is always the same, you don't need to send that in, you could just write your pattern this way. 
+
+```clojure
+(send twilio call {:to-phone-number *toPhoneNumber*
+                  :from-phone-number "15068009013"
+                  :message *message*})
+```
+Note that in the pattern above, we are sending a phone call instead of sms. 
+
+You could also use message templating instead of setting it in the pattern
+
+```clojure
+(send twilio call {:to-phone-number *toPhoneNumber*
+                  :from-phone-number "15068009013"} 
+      (message-template {:message +MT1}))
+```
