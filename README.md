@@ -139,6 +139,6 @@ Setting up your patterns
 
 Next, we get to the fun part of creating patterns for things that matter to your enterprise. To enable this we have a simple, yet powerful DSL.
 
-Intro to the CxEngage DSL
-=========================
+### Intro to the CxEngage DSL
+
 
