@@ -86,3 +86,51 @@ You could also use message templating instead of setting it in the pattern
                   :from-phone-number "15068009013"} 
       (message-template {:message +MT1}))
 ```
+
+### Sendgrid endpoint
+
+With CxEngage, you can use Sendgrid to send emails as a pattern reaction. To start up the Sendgrid Endpoint Service, you need the following items
+
+* Sendgrid Account name
+* Sendgrid Password
+
+With the Sendgrid service, you can send emails. The keyword to use for it is
+
+* email
+
+The mandatory parameters that the Sendgrid endpoint needs are
+
+* to - to email address
+* from - from email address
+* subject - subject of the email
+* message - body of your email
+
+So, to be able to use the Sendgrid endpoint, you need to pass in these parameters. You can do this a few different ways.
+
+You can use any of the event record parameters that sends in each of these values. So, if you would like to use the following event record parameters to-email-address, from-email-address, subject and message, your Then in your pattern would look like this -
+
+```clojure
+(send sendgrid email {:to *to-email-address*
+                      :from *from-email-address*
+                      :subject *subject*
+                      :message *message*})
+```
+
+You could also set your values. Let's says you want the from email address to always be no-reply@cxengage.com. You can write the pattern this way
+
+```clojure
+(send sendgrid email {:to *to-email-address*
+                      :from "no-reply@cxengage.com"
+                      :subject *subject*
+                      :message *message*})
+```
+
+You could also use message templating for setting it in the pattern
+
+```clojure
+(send sendgrid email {:to *to-email-address*
+                      :from "no-reply@cxengage.com"
+                      :subject *subject*
+                      :message +MT1})
+```
+
