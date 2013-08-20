@@ -811,9 +811,9 @@ Content-Type: application/json
 
 Resource | Description
 --- | ---
-[<code>GET</code> account](https://github.com/cxengage.github.io/blob/master/apidocs/account/GET.md) | Returns the authenticated user's account information
-[<code>GET</code> account/instances](https://github.com/cxengage.github.io/blob/master/apidocs/account/GET_instances.md) | Returns the active instaces the authenticated user has permission to use
-[<code>POST</code> account/change_password](https://github.com/cxengage.github.io/blob/master/apidocs/account/POST_change_password.md) | Updates the authenticated user’s password
+[<code>GET</code> account](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/account/GET.md) | Returns the authenticated user's account information
+[<code>GET</code> account/instances](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/account/GET_instances.md) | Returns the active instaces the authenticated user has permission to use
+[<code>POST</code> account/change_password](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/account/POST_change_password.md) | Updates the authenticated user’s password
 
 ## Instance
 
@@ -821,10 +821,10 @@ Authenticated methods that allow you to get more information about an instance w
 
 Resource | Description
 --- | ---
-[<code>GET</code> instance/:iid](https://github.com/cxengage.github.io/blob/master/apidocs/instance/GET_instance_iid.md) | Returns `iid` instance information
-[<code>GET</code> instance/:iid/enabled](https://github.com/cxengage.github.io/blob/master/apidocs/instance/GET_instance_iid_enabled.md) | Returns whether or not instance `iid` is enabled
-[<code>GET</code> instance/:iid/expiration](https://github.com/cxengage.github.io/blob/master/apidocs/instance/GET_instance_iid_expiration.md) | Returns the expiration of instance `iid`
-[<code>POST</code> instance/:iid/validate](https://github.com/cxengage.github.io/blob/master/apidocs/instance/POST_instance_iid_validate.md) | Validate a DSL expression against the event record on instance `iid`
+[<code>GET</code> instance/:iid](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/instance/GET_instance_iid.md) | Returns `iid` instance information
+[<code>GET</code> instance/:iid/enabled](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/instance/GET_instance_iid_enabled.md) | Returns whether or not instance `iid` is enabled
+[<code>GET</code> instance/:iid/expiration](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/instance/GET_instance_iid_expiration.md) | Returns the expiration of instance `iid`
+[<code>POST</code> instance/:iid/validate](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/instance/POST_instance_iid_validate.md) | Validate a DSL expression against the event record on instance `iid`
 
 ## Event Record
 
@@ -832,8 +832,8 @@ Authenticated methods that allow you to manage the event record of one your inst
 
 Resource | Description
 --- | ---
-[<code>GET</code> instance/:iid/event_record](https://github.com/cxengage.github.io/blob/master/apidocs/event_record/GET_instance_iid_event_record.md) | Returns the event record on instance `iid`
-[<code>POST</code> instance/:iid/event_record](https://github.com/cxengage.github.io/blob/master/apidocs/event_record/POST_instance_iid_event_record.md) | Updates the event record on instance `iid`
+[<code>GET</code> instance/:iid/event_record](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/event_record/GET_instance_iid_event_record.md) | Returns the event record on instance `iid`
+[<code>POST</code> instance/:iid/event_record](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/event_record/POST_instance_iid_event_record.md) | Updates the event record on instance `iid`
 
 ## Lists
 
@@ -841,11 +841,11 @@ Authenticated methods that allow you to manage the lists of one of your instance
 
 Resource | Description
 --- | ---
-[<code>GET</code> instance/:iid/lists](https://github.com/cxengage.github.io/blob/master/apidocs/lists/GET_instance_iid_lists.md) | Returns all lists on instance `iid`
-[<code>POST</code> instance/:iid/lists](https://github.com/cxengage.github.io/blob/master/apidocs/lists/POST_instance_iid_lists.md) | Creates a new list on instance `iid`
-[<code>GET</code> instance/:iid/lists/:id](https://github.com/cxengage.github.io/blob/master/apidocs/lists/GET_instance_iid_lists_id.md) | Returns the list matching `id` on instance `iid`
-[<code>POST</code> instance/:iid/lists/:id](https://github.com/cxengage.github.io/blob/master/apidocs/lists/POST_instance_iid_lists_id.md) | Updates the list matching `id` on instance `iid`
-[<code>DELETE</code> instance/:iid/lists/:id](https://github.com/cxengage.github.io/blob/master/apidocs/lists/DELETE_instance_iid_lists_id.md) | Deletes the list matching `id` on instance `iid`
+[<code>GET</code> instance/:iid/lists](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/lists/GET_instance_iid_lists.md) | Returns all lists on instance `iid`
+[<code>POST</code> instance/:iid/lists](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/lists/POST_instance_iid_lists.md) | Creates a new list on instance `iid`
+[<code>GET</code> instance/:iid/lists/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/lists/GET_instance_iid_lists_id.md) | Returns the list matching `id` on instance `iid`
+[<code>POST</code> instance/:iid/lists/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/lists/POST_instance_iid_lists_id.md) | Updates the list matching `id` on instance `iid`
+[<code>DELETE</code> instance/:iid/lists/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/lists/DELETE_instance_iid_lists_id.md) | Deletes the list matching `id` on instance `iid`
 
 ## Patterns
 
@@ -853,11 +853,11 @@ Authenticated methods that allow you to manage the patterns of one of your insta
 
 Resource | Description
 --- | ---
-[<code>GET</code> instance/:iid/patterns](https://github.com/cxengage.github.io/blob/master/apidocs/patterns/GET_instance_iid_patterns.md) | Returns all patterns on instance `iid`
-[<code>POST</code> instance/:iid/patterns](https://github.com/cxengage.github.io/blob/master/apidocs/patterns/POST_instance_iid_patterns.md) | Creates a new pattern on instance `iid`
-[<code>GET</code> instance/:iid/patterns/:id](https://github.com/cxengage.github.io/blob/master/apidocs/patterns/GET_instance_iid_patterns_id.md) | Returns the pattern matching `id` on instance `iid`
-[<code>POST</code> instance/:iid/patterns/:id](https://github.com/cxengage.github.io/blob/master/apidocs/patterns/POST_instance_iid_patterns_id.md) | Updates the pattern matching `id` on instance `iid`
-[<code>DELETE</code> instance/:iid/patterns/:id](https://github.com/cxengage.github.io/blob/master/apidocs/patterns/DELETE_instance_iid_patterns_id.md) | Deletes the pattern matching `id` on instance `iid`
+[<code>GET</code> instance/:iid/patterns](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/patterns/GET_instance_iid_patterns.md) | Returns all patterns on instance `iid`
+[<code>POST</code> instance/:iid/patterns](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/patterns/POST_instance_iid_patterns.md) | Creates a new pattern on instance `iid`
+[<code>GET</code> instance/:iid/patterns/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/patterns/GET_instance_iid_patterns_id.md) | Returns the pattern matching `id` on instance `iid`
+[<code>POST</code> instance/:iid/patterns/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/patterns/POST_instance_iid_patterns_id.md) | Updates the pattern matching `id` on instance `iid`
+[<code>DELETE</code> instance/:iid/patterns/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/patterns/DELETE_instance_iid_patterns_id.md) | Deletes the pattern matching `id` on instance `iid`
 
 ## Nodes
 
@@ -865,11 +865,11 @@ Authenticated methods that allow you to manage the nodes of one of your instance
 
 Resource | Description
 --- | ---
-[<code>GET</code> instance/:iid/nodes](https://github.com/cxengage.github.io/blob/master/apidocs/nodes/GET_instance_iid_nodes.md) | Returns all nodes on instance `iid`
-[<code>POST</code> instance/:iid/nodes](https://github.com/cxengage.github.io/blob/master/apidocs/nodes/POST_instance_iid_nodes.md) | Creates a new node on instance `iid`
-[<code>GET</code> instance/:iid/nodes/:id](https://github.com/cxengage.github.io/blob/master/apidocs/nodes/GET_instance_iid_nodes_id.md) | Returns the node matching `id` on instance `iid`
-[<code>POST</code> instance/:iid/nodes/:id](https://github.com/cxengage.github.io/blob/master/apidocs/nodes/POST_instance_iid_nodes_id.md) | Updates the node matching `id` on instance `iid`
-[<code>DELETE</code> instance/:iid/nodes/:id](https://github.com/cxengage.github.io/blob/master/apidocs/nodes/DELETE_instance_iid_nodes_id.md) | Deletes the node matching `id` on instance `iid`
+[<code>GET</code> instance/:iid/nodes](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/nodes/GET_instance_iid_nodes.md) | Returns all nodes on instance `iid`
+[<code>POST</code> instance/:iid/nodes](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/nodes/POST_instance_iid_nodes.md) | Creates a new node on instance `iid`
+[<code>GET</code> instance/:iid/nodes/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/nodes/GET_instance_iid_nodes_id.md) | Returns the node matching `id` on instance `iid`
+[<code>POST</code> instance/:iid/nodes/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/nodes/POST_instance_iid_nodes_id.md) | Updates the node matching `id` on instance `iid`
+[<code>DELETE</code> instance/:iid/nodes/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/nodes/DELETE_instance_iid_nodes_id.md) | Deletes the node matching `id` on instance `iid`
 
 ## Services
 
@@ -879,21 +879,21 @@ Additionally contains methods for service management by starting, stopping servi
 
 Resource | Description
 ---- | ----
-[<code>GET</code> instance/:iid/services](https://github.com/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services.md) | Returns all services on instance `iid`
-[<code>POST</code> instance/:iid/services](https://github.com/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services.md) | Creates a new service on instance `iid`
-[<code>GET</code> instance/:iid/services/:id](https://github.com/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id.md) | Returns the service matching `id` on instance `iid`
-[<code>POST</code> instance/:iid/services/:id](https://github.com/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id.md) | Updates the service matching `id` on instance `iid`
-[<code>DELETE</code> instance/:iid/services/:id](https://github.com/cxengage.github.io/blob/master/apidocs/services/DELETE_instance_iid_services_id.md) | Deletes the service matching `id` on instance `iid`
-[<code>POST</code> instance/:iid/services/:id/start](https://github.com/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_start.md) | Starts the service matching `id` on instance `iid`
-[<code>POST</code> instance/:iid/services/:id/stop](https://github.com/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_stop.md) | Stops the service matching `id` on instance `iid`
-[<code>GET</code> instance/:iid/services/:id/status](https://github.com/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id_status.md) | Returns the status of the service matching `id` on instance `iid`
-[<code>GET</code> instance/:iid/services/:id/primary](https://github.com/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id_primary.md) | Returns the primary node of the service matching `id` on instance `iid`
-[<code>POST</code> instance/:iid/services/:id/:nid/start](https://github.com/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_nid_start.md) | Starts the service matching `id` on node `nid` for instance `iid`
-[<code>POST</code> instance/:iid/services/:id/:nid/stop](https://github.com/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_nid_stop.md) | Stops the service matching `id` on node `nid` for instance `iid`
-[<code>GET</code> instance/:iid/services/:id/:nid/status](https://github.com/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id_status.md) | Returns the status of the service matching `id` on node `nid` for instance `iid`
-[<code>GET</code> instance/:iid/services/:id/files](https://github.com/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id_files.md) | Returns the list of files for the service matching `id` for instance `iid`
-[<code>POST</code> instance/:iid/services/:id/files](https://github.com/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_file_upload.md) | Upload files for the service matching `id` for instance `iid`
-[<code>DELETE</code> instance/:iid/services/:id/files/:fid](https://github.com/cxengage.github.io/blob/master/apidocs/services/DELETE_instance_iid_service_id_file.md) | Deletes the files matching `fid` for the service matching `id` for instance `iid`
+[<code>GET</code> instance/:iid/services](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services.md) | Returns all services on instance `iid`
+[<code>POST</code> instance/:iid/services](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services.md) | Creates a new service on instance `iid`
+[<code>GET</code> instance/:iid/services/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id.md) | Returns the service matching `id` on instance `iid`
+[<code>POST</code> instance/:iid/services/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id.md) | Updates the service matching `id` on instance `iid`
+[<code>DELETE</code> instance/:iid/services/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/DELETE_instance_iid_services_id.md) | Deletes the service matching `id` on instance `iid`
+[<code>POST</code> instance/:iid/services/:id/start](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_start.md) | Starts the service matching `id` on instance `iid`
+[<code>POST</code> instance/:iid/services/:id/stop](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_stop.md) | Stops the service matching `id` on instance `iid`
+[<code>GET</code> instance/:iid/services/:id/status](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id_status.md) | Returns the status of the service matching `id` on instance `iid`
+[<code>GET</code> instance/:iid/services/:id/primary](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id_primary.md) | Returns the primary node of the service matching `id` on instance `iid`
+[<code>POST</code> instance/:iid/services/:id/:nid/start](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_nid_start.md) | Starts the service matching `id` on node `nid` for instance `iid`
+[<code>POST</code> instance/:iid/services/:id/:nid/stop](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_nid_stop.md) | Stops the service matching `id` on node `nid` for instance `iid`
+[<code>GET</code> instance/:iid/services/:id/:nid/status](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id_status.md) | Returns the status of the service matching `id` on node `nid` for instance `iid`
+[<code>GET</code> instance/:iid/services/:id/files](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id_files.md) | Returns the list of files for the service matching `id` for instance `iid`
+[<code>POST</code> instance/:iid/services/:id/files](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_file_upload.md) | Upload files for the service matching `id` for instance `iid`
+[<code>DELETE</code> instance/:iid/services/:id/files/:fid](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/DELETE_instance_iid_service_id_file.md) | Deletes the files matching `fid` for the service matching `id` for instance `iid`
 
 ## Endpoint Definitions
 
@@ -901,11 +901,8 @@ Authenticated methods that allow you to get the endpoint definitions that are av
 
 Resource | Description
 ---- | ---
-[<code>GET</code> instance/:iid/endpoints](https://github.com/cxengage.github.io/blob/master/apidocs/endpoints/GET_instance_iid_endpoints.md) | Returns all endpoint definitions on instance `iid`
-[<code>GET</code> instance/:iid/endpoints/:id](https://github.com/cxengage.github.io/blob/master/apidocs/endpoints/GET_instance_iid_endpoints_id.md) | Returns the endpoint matching `id` on instance `iid`
-
-
-
+[<code>GET</code> instance/:iid/endpoints](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/endpoints/GET_instance_iid_endpoints.md) | Returns all endpoint definitions on instance `iid`
+[<code>GET</code> instance/:iid/endpoints/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/endpoints/GET_instance_iid_endpoints_id.md) | Returns the endpoint matching `id` on instance `iid`
 
 
 
