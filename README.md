@@ -1,7 +1,7 @@
 CxEngage Documentation
 ====================
 
-<b> Getting Started </b>
+### Getting Started 
 
 Here is some information on how to setup your instance of CxEngage 
 
