@@ -1,4 +1,3 @@
-CxEngage Documentation
 ====================
 
 Getting Started 
