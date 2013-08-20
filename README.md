@@ -139,5 +139,4 @@ You could also use message templating for setting it in the pattern
 
 Next, we get to the fun part of creating patterns for things that matter to your enterprise. To enable this we have a simple, yet powerful DSL.
 
-
-Testing
+### Test
