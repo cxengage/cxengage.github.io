@@ -813,10 +813,6 @@ Content-Type: application/json
 
 # CxEngage API Documentation
 
-## Authentication
-
-See [Authentication article](https://github.com/userevents/public-documentation/blob/master/Authentication.md).
-
 ## Account
 
 Authenticated methods that allow you to manage your account.
