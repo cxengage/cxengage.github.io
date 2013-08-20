@@ -809,6 +809,8 @@ Content-Type: application/json
 }
 ```
 
+## Accounts
+
 Resource | Description
 --- | ---
 [<code>GET</code> account](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/account/GET.md) | Returns the authenticated user's account information
