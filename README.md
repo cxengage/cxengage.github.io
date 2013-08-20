@@ -150,22 +150,22 @@ The following keywords are available to describe the **"when"** portion of the p
 
 | When keywords|
 |-------------|
-| =             |
-| >             |
-| <             |
-| not           |
-| and           |
-| or            |
-| Within        |
-| inSequence    |
-| allOf         |
-| anyOf         |
-| count         |
-| failWhen      |
-| seconds       |
-| minutes       |
-| hours         |
-| days          |
+|  =             |
+|  >             |
+|  <             |
+|  not           |
+|  and           |
+|  or            |
+|  Within        |
+|  inSequence    |
+|  allOf         |
+|  anyOf         |
+|  count         |
+|  failWhen      |
+|  seconds       |
+|  minutes       |
+|  hours         |
+|  days          |
 
 For example, the following is a pattern where if a customer calls into a contact center twice and abandons the call twice within an hour, then we would call the customer back:
 
