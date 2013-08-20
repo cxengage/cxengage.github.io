@@ -701,3 +701,113 @@ duration of the reaction, a **set** command can be used to persist the value in 
             (send echo message {:message *custId*})))))
 ```
 
+Integrate with CxEngage
+=======================
+
+CxEngage has APIs you can use to interact or integrate with
+
+Integrate
+---------
+
+#### Sending Events to CxEngage
+
+Once an event record and pattern have been configured, you can start sending events into CxEngage.
+
+## Getting the Event Record
+
+```
+GET events/new
+```
+
+### Description
+
+This will return to you the event record which has been configured for your instance.
+
+These are the fields which may be included in your request when you send an event.
+
+### Example
+
+**Request**
+
+```
+GET http://api.cxengage.com:8086/events/new
+```
+
+**Return**
+
+```json
+{
+    "custId": "",
+    "eventType": "",
+    "customerSegment": "",
+    "program": "",
+    "device": "",
+    "kbtopic": "",
+    "phoneNumber": "",
+    "emailAddress": "",
+    "firstName": "",
+    "lastName": "",
+    "deviceId": "",
+    "contact": ""
+}
+```
+
+## Sending an Event
+
+```
+POST events/create
+```
+
+### Description
+
+This resource allows you to send in events to CxEngage. Events must be a JSON object.
+
+**NOTE**: Make sure that your `Content-Type` is set to `application/json`.
+**NOTE**: You must include the key attribute which was defined when you setup your event record.
+
+
+### Example
+
+**Request**
+
+```
+POST http://api.cxengage.com:8086/events/create
+Content-Type: application/json
+```
+
+```json
+{
+"custId" : "101",
+"customerSegment" : "bronze",
+"contact" : "15062592237"
+}
+```
+
+**Return**
+
+```json
+{
+    "status": "partial",
+    "contributed": false,
+    "created": "2013-06-12T20:07:41.569Z",
+    "id": "EV1-99",
+    "matched": {
+        "custId": "101",
+        "customerSegment": "brsonze",
+        "contact": "15062592237"
+    },
+    "missing": [
+        "eventType",
+        "program",
+        "device",
+        "kbtopic",
+        "phoneNumber",
+        "emailAddress",
+        "firstName",
+        "lastName",
+        "deviceId"
+    ]
+}
+```
+
+
