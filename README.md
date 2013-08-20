@@ -136,11 +136,9 @@ You could also use message templating for setting it in the pattern
 
 
 Setting up your patterns
-========================
+------------------------
 
 Next, we get to the fun part of creating patterns for things that matter to your enterprise. To enable this we have a simple, yet powerful DSL.
 
-The DSL
--------
+### Intro to the CxEngage DSL
 
-### Then
