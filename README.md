@@ -149,7 +149,7 @@ CxEngage's customer Domain-Specific Language (DSL) offers incredible flexibility
 The following keywords are available to describe the **"when"** portion of the pattern:
 
 | When keywords|
-|-------------:|
+|-------------|
 | =             |
 | >             |
 | <             |
@@ -211,7 +211,7 @@ More info on [Writing Whens](Writing-Whens.md)
 The following keywords are available to describe the **"then"** portion of the pattern:
 
    | Then keywords|
-   | :-----------: |
+   | ----------- |
    | par        |
    | seq        |
    | delay      |
