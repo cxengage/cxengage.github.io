@@ -11,3 +11,18 @@ Here is some information on how to setup your instance of CxEngage
 * [Setting up and using Sendgrid endpoint service](Using-the-Sendgrid-Endpoint-Service.md)
 * [Setting up and using VHT endpoint service](Using-the-VHT-Endpoint-Service.md)
 * [How to augment your events](How-to-Augment-your-events.md)
+
+### Setting up your patterns
+
+Next, we get to the fun part of creating patterns for things that matter to your enterprise. To enable this we have a simple DSL. 
+
+* [Intro to the CxEngage DSL](CxEngage-DSL-Intro.md)
+* [Writing Whens](Writing-Whens.md)
+* [Writing Thens](Writing-Thens.md)
+
+### Integrate with CxEngage
+
+Finally, CxEngage has APIs you can use to interact or integrate with. 
+
+* [Sending Events to CxEngage](How-to-send-events-to-CxEngage.md)
+* [API Docs](Headless-API-Doc.md)
