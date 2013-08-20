@@ -1,4 +1,2 @@
 CxEngage Documentation
 ====================
-
-### Getting Started
