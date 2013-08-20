@@ -25,3 +25,20 @@ These attributes can now be used in a pattern. As an example, here is the patter
 ```
 
 If you have any further questions, do not hesitate to reach us by creating a ticket, or e-mailing CxEngage Support at [support@cxengage.com](mailto:support@cxengage.com).
+
+### Using the Echo Endpoint
+
+The Echo endpoint service can be used to test out your patterns. There are no mandatory parameters for the echo service. There is one optional parameter, which is 
+* message
+
+Here is a way to use the echo endpoint in your Then
+```clojure
+(send echo message {:message "send message"})
+```
+
+You could also test out your message template with the echo
+```clojure
+(send echo message {:message "send message"}
+(message-template {:message +MT1}))
+```
+
