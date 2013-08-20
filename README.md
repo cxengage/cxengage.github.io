@@ -873,30 +873,6 @@ Resource | Description
 [<code>POST</code> instance/:iid/nodes/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/nodes/POST_instance_iid_nodes_id.md) | Updates the node matching `id` on instance `iid`
 [<code>DELETE</code> instance/:iid/nodes/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/nodes/DELETE_instance_iid_nodes_id.md) | Deletes the node matching `id` on instance `iid`
 
-## Services
-
-Authenticated methods that allow you to manage the services of one of your instances.
-
-Additionally contains methods for service management by starting, stopping services and querying their running state.
-
-Resource | Description
----- | ----
-[<code>GET</code> instance/:iid/services](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services.md) | Returns all services on instance `iid`
-[<code>POST</code> instance/:iid/services](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services.md) | Creates a new service on instance `iid`
-[<code>GET</code> instance/:iid/services/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id.md) | Returns the service matching `id` on instance `iid`
-[<code>POST</code> instance/:iid/services/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id.md) | Updates the service matching `id` on instance `iid`
-[<code>DELETE</code> instance/:iid/services/:id](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/DELETE_instance_iid_services_id.md) | Deletes the service matching `id` on instance `iid`
-[<code>POST</code> instance/:iid/services/:id/start](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_start.md) | Starts the service matching `id` on instance `iid`
-[<code>POST</code> instance/:iid/services/:id/stop](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_stop.md) | Stops the service matching `id` on instance `iid`
-[<code>GET</code> instance/:iid/services/:id/status](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id_status.md) | Returns the status of the service matching `id` on instance `iid`
-[<code>GET</code> instance/:iid/services/:id/primary](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id_primary.md) | Returns the primary node of the service matching `id` on instance `iid`
-[<code>POST</code> instance/:iid/services/:id/:nid/start](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_nid_start.md) | Starts the service matching `id` on node `nid` for instance `iid`
-[<code>POST</code> instance/:iid/services/:id/:nid/stop](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_nid_stop.md) | Stops the service matching `id` on node `nid` for instance `iid`
-[<code>GET</code> instance/:iid/services/:id/:nid/status](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id_status.md) | Returns the status of the service matching `id` on node `nid` for instance `iid`
-[<code>GET</code> instance/:iid/services/:id/files](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/GET_instance_iid_services_id_files.md) | Returns the list of files for the service matching `id` for instance `iid`
-[<code>POST</code> instance/:iid/services/:id/files](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/POST_instance_iid_services_id_file_upload.md) | Upload files for the service matching `id` for instance `iid`
-[<code>DELETE</code> instance/:iid/services/:id/files/:fid](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/services/DELETE_instance_iid_service_id_file.md) | Deletes the files matching `fid` for the service matching `id` for instance `iid`
-
 ## Endpoint Definitions
 
 Authenticated methods that allow you to get the endpoint definitions that are available to your instance.
