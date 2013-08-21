@@ -167,6 +167,16 @@ The following keywords are available to describe the **"when"** portion of the p
 |  hours         |
 |  days          |
 
+
+<table>
+<tr>
+<td> = </td>
+<td> > </td>
+</table>
+
+
+
+
 For example, the following is a pattern where if a customer calls into a contact center twice and abandons the call twice within an hour, then we would call the customer back:
 
 ```clojure
