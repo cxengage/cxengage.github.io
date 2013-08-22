@@ -212,18 +212,19 @@ More info on [Writing Whens](Writing-Whens.md)
 
 The following keywords are available to describe the **"then"** portion of the pattern:
 
-   | Then keywords|
-   | ----------- |
-   | par        |
-   | seq        |
-   | delay      |
-   | send       |
-   | if         |
-   | on-success |
-   | on-failure |
-   | timeout    |
-   | message-template |
-   | set |
+```
+    Then keyword
+    par        
+    seq        
+    delay      
+    send       
+    if         
+    on-success 
+    on-failure 
+    timeout    
+    message-template 
+    set 
+```
 
 Continuing the examples from above, we can replace the _echos_ with the above _"thens"_. Now, when a caller abandons the call twice, we can use our Twilio integration to trigger an outbound call:
 
