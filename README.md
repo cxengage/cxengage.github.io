@@ -148,14 +148,13 @@ CxEngage's customer Domain-Specific Language (DSL) offers incredible flexibility
 
 The following keywords are available to describe the **"when"** portion of the pattern:
 
-<html>
+```
 <table>
-<tr>
 <td> = </td>
 <td> > </td>
 </table>
 </html>
-
+```
 
 
 For example, the following is a pattern where if a customer calls into a contact center twice and abandons the call twice within an hour, then we would call the customer back:
