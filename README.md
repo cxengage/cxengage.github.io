@@ -149,8 +149,23 @@ CxEngage's customer Domain-Specific Language (DSL) offers incredible flexibility
 The following keywords are available to describe the **"when"** portion of the pattern:
 
 ```
+When keywords
  = 
  >
+ <
+ not
+ and
+ or
+ Within
+ inSequence
+ allOf
+ anyOf
+ count
+ failWhen
+ seconds
+ minutes
+ hours
+ days
 ```
 
 
