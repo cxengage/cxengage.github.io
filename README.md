@@ -149,11 +149,8 @@ CxEngage's customer Domain-Specific Language (DSL) offers incredible flexibility
 The following keywords are available to describe the **"when"** portion of the pattern:
 
 ```
-<table>
-<td> = </td>
-<td> > </td>
-</table>
-</html>
+ = 
+ >
 ```
 
 
