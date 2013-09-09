@@ -731,7 +731,7 @@ CxEngage has APIs you can use to interact or integrate with
 
 ## Key Attribute
 
-   [Get Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Key-Attribute) 
+   [Get Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/event_record/GET_instance_iid_event_record.md) 
    ```
    Get the event record for a given tenant
    ```
