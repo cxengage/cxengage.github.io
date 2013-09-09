@@ -716,95 +716,95 @@ CxEngage has APIs you can use to interact or integrate with
 
 ## Tenants
 
-   [Get Tenant](wiki/Get-Tenant)  
+   [Get Tenant](cxengage-api-doc/Get-Tenant)  
    ```
    Get information for a tenant
    ```
-   [Add Tenant to User](wiki/Add-Tenant-to-User)  
+   [Add Tenant to User](cxengage-api-doc/Add-Tenant-to-User)  
    ```
    Give permission to account to access a given tenant
    ```
-   [Remove Tenant from User](wiki/Remove-Tenant-from-User)  
+   [Remove Tenant from User](cxengage-api-doc/Remove-Tenant-from-User)  
    ```
    Revoke permission of an account to access a given tenant
    ```
 
 ## Key Attribute
 
-   [Get Key Attribute](wiki/Get-Key-Attribute) 
+   [Get Key Attribute](cxengage-api-doc/Get-Key-Attribute) 
    ```
    Get the event record for a given tenant
    ```
-   [Update Key Attribute](wiki/Update-Key-Attribute) 
+   [Update Key Attribute](cxengage-api-doc/Update-Key-Attribute) 
    ```
    Update the event record for a given tenant
    ```
    
 ## Patterns
 
-   [Get Patterns](wiki/Get-Patterns)
+   [Get Patterns](cxengage-api-doc/Get-Patterns)
    ```
    Get all patterns for a given tenant
    ```
-   [Create Pattern](wiki/Create-Pattern) 
+   [Create Pattern](cxengage-api-doc/Create-Pattern) 
    ```
    Create a new pattern for a given tenant
    ```
-   [Get Pattern](wiki/Get-Pattern) 
+   [Get Pattern](cxengage-api-doc/Get-Pattern) 
    ```
    Get a specific pattern for a given tenant
    ```
-   [Update Pattern](wiki/Update-Pattern) 
+   [Update Pattern](cxengage-api-doc/Update-Pattern) 
    ```
    Update a specific pattern for a given tenant
    ```
-   [Delete Pattern](wiki/Delete-Pattern) 
+   [Delete Pattern](cxengage-api-doc/Delete-Pattern) 
    ```
    Delete a specific pattern for a given tenant
    ```
    
    ## Message Templates
 
-   [Get Message Templates](wiki/Get-Message-Templates) 
+   [Get Message Templates](cxengage-api-doc/Get-Message-Templates) 
    ```
    Get all message templates for a given tenant
    ```
-   [Create Message Template](wiki/Create-Message-Template)
+   [Create Message Template](cxengage-api-doc/Create-Message-Template)
    ```
    Create a new message template for a given tenant
    ```
-   [Get Message Template](wiki/Get-Message-Template) 
+   [Get Message Template](cxengage-api-doc/Get-Message-Template) 
    ```
    Get a specific message template for a given tenant
    ```
-   [Update Message Template](wiki/Update-Message-Template) 
+   [Update Message Template](cxengage-api-doc/Update-Message-Template) 
    ```
    Update a specific message template for a given tenant
    ```
-   [Delete Message Template](wiki/Delete-Message-Template) 
+   [Delete Message Template](cxengage-api-doc/Delete-Message-Template) 
    ```
    Delete a specific Message template for a given tenant
    ```
    
    ## Listeners
 
-   [Get Listeners](wiki/Get-Listeners) 
+   [Get Listeners](cxengage-api-doc/Get-Listeners) 
    ```
    Get all listeners for a given tenant
    ```
-   [Create Listener](wiki/Create-Listener) 
+   [Create Listener](cxengage-api-doc/Create-Listener) 
    ```
    Create a new listener for a given tenant
    ```
-   [Get Listener](wiki/Get-Listener) 
+   [Get Listener](cxengage-api-doc/Get-Listener) 
    ```
    Get a specific listener for a given tenant
    ```
-   [Update Listener](wiki/Update-Listener) 
+   [Update Listener](cxengage-api-doc/Update-Listener) 
    ```
    Update a specific listener for a given tenant
    ```
-   [Delete Listener](wiki/Delete-Listener) 
+   [Delete Listener](cxengage-api-doc/Delete-Listener) 
    ```
    Delete a specific listener for a given tenant
    ```
