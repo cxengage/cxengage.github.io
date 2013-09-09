@@ -279,7 +279,7 @@ Now, let's say you want the pattern to match for anyone with customer Segment Pl
 ```
 As you can see, we use the **and** keyword to do this. Here is a list of those type of operators
 
- Event keywords 
+ 
  =             
  >             
  <            
@@ -294,8 +294,6 @@ Ok, now let's say if we would like the pattern to match if two events happen. Fo
                      (= eventType "flcheck")))) 
 ```
 The other option for items similar to the count keyword are 
-
- Event keywords - Usage                   
 
  Within         Within Duration Trigger 
  InSequence     InSequence [Trigger]    
@@ -326,12 +324,10 @@ Now, for this to be more useful, we would only want this to happen for a particu
 
 The options for duration are the following. The unit used is integer
 
-| Duration      | 
-| ------------- |
-| Seconds       | 
-| Minutes       | 
-| Hours         |
-| Days          | 
+ Seconds       
+ Minutes       
+ Hours        
+ Days          
 
 Now, if we want the pattern to only match if a cancelled ticket happens after a failed check-in, we can use the **inSequence** keyword. The previous pattern would match if there is a cancelled ticket first and then 2 failed check ins. We only want the pattern to match if a cancel ticket event happens after a failed check in event
 
