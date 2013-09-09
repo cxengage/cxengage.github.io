@@ -656,7 +656,13 @@ Parameters which are to be templated, do not need to be defined in the main send
 
 The **on-success** and **on-failure** options can be used to provide additional actions to be
 taken based upon the success and/or failure of a command. One does not need to define both success
-and failure option if not required.
+and failure option if not required. In the presence of an **on-failure** option the failure of the command is swallowed and the reaction
+will continue processing after evaluating the *then* commands. The **on-failure** option will only be
+evaluated once a command has exhausted all of its defined retries. The **on-success** block is the only scope in which commands have access to the endpoint response
+values (those prefaced with a **$**). If the persistence of a response value is required for the
+duration of the reaction, a **set** command can be used to persist the value in a reaction variable.
+
+
 
 ```clojure
 ; Syntax
@@ -670,13 +676,7 @@ and failure option if not required.
   (on-failure (send echo message {:message "No it didn't"})))
 ```
 
-In the presence of an **on-failure** option the failure of the command is swallowed and the reaction
-will continue processing after evaluating the *then* commands. The **on-failure** option will only be
-evaluated once a command has exhausted all of its defined retries.
 
-The **on-success** block is the only scope in which commands have access to the endpoint response
-values (those prefaced with a **$**). If the persistence of a response value is required for the
-duration of the reaction, a **set** command can be used to persist the value in a reaction variable.
 
 
 
