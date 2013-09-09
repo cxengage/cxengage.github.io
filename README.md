@@ -480,6 +480,18 @@ for creating chains of events. Events support message templates and the control 
 
 #### delay
 
+The **delay** command will delay further evaluation of a reaction. This delay respects the execution block
+in which it is evaluated. In a sequential block, it will block further evaluation until the delay expires.
+In a parallel execution block the delay is evaluated in parallel to the other members of the block, thus
+causing the delay to act as a *minimum evaluation time* command rather than a strict delay.
+
+Valid time durations are:
+* seconds
+* minutes
+* hours
+* days
+
+
 Example:
 ```clojure
 ; Syntax
@@ -492,18 +504,11 @@ Example:
 (delay 30 seconds)
 ```
 
-The **delay** command will delay further evaluation of a reaction. This delay respects the execution block
-in which it is evaluated. In a sequential block, it will block further evaluation until the delay expires.
-In a parallel execution block the delay is evaluated in parallel to the other members of the block, thus
-causing the delay to act as a *minimum evaluation time* command rather than a strict delay.
-
-Valid time durations are:
-* seconds
-* minutes
-* hours
-* days
 
 #### expect
+
+The **expect** command will pause execution of the reaction until an event enters the notification service which matches the provided predicate. It is recommended to use a **within** when using **expect**, otherwise the reaction may never finish.
+
 
 Example:
 ```clojure
@@ -521,9 +526,15 @@ Example:
   (on-failure (set got-event false)))
 ```
 
-The **expect** command will pause execution of the reaction until an event enters the notification service which matches the provided predicate. It is recommended to use a **within** when using **expect**, otherwise the reaction may never finish.
 
 #### await
+
+The *await* command is used to perform asynchronous communication with an endpoint. In truth,
+*await* is syntactic sugar to perform a poll against a command in an endpoint. The body of the
+*await* must consist of an *if* statement, whose predicate represents what you are waiting for.
+The *on-success* and *on-failure* within the *if* will be executed based on the final outcome of
+the await. A *within* option must also be present to denote the total time the poll should last.
+The poll cycle is hard coded to wait one second between polls.
 
 Example:
 ```clojure
@@ -536,12 +547,7 @@ Example:
   (send twilio sms {:message msg ...}))
 ```
 
-The *await* command is used to perform asynchronous communication with an endpoint. In truth,
-*await* is syntactic sugar to perform a poll against a command in an endpoint. The body of the
-*await* must consist of an *if* statement, whose predicate represents what you are waiting for.
-The *on-success* and *on-failure* within the *if* will be executed based on the final outcome of
-the await. A *within* option must also be present to denote the total time the poll should last.
-The poll cycle is hard coded to wait one second between polls.
+
 
 #### if
 
@@ -592,6 +598,9 @@ The following options can be applied to **seq**, **par**, **send**, and **await*
 
 #### retries
 
+If a command has a defined retry option, when the command fails, it will be retried. A command will
+only be treated as *failed* when all of its retries have been exhausted.
+
 Example:
 ```clojure
 ; Syntax
@@ -602,10 +611,11 @@ Example:
   (retries 2))
 ```
 
-If a command has a defined retry option, when the command fails, it will be retried. A command will
-only be treated as *failed* when all of its retries have been exhausted.
-
 #### within
+
+When a command is evaluated which has a defined timeout, if it does not complete within the defined duration,
+the event will be failed. Retries will be respected by timeouts, if the timeout occurs, and retries remain,
+the command will be retried.
 
 Example:
 ```clojure
@@ -620,11 +630,14 @@ Example:
   (within 5 seconds))
 ```
 
-When a command is evaluated which has a defined timeout, if it does not complete within the defined duration,
-the event will be failed. Retries will be respected by timeouts, if the timeout occurs, and retries remain,
-the command will be retried.
+
 
 #### message-template
+
+Parameters defined using the **message-template** option will be sent to the endpoint as the rendered
+version of the provided template. The template will have access to the canonical event record when
+being rendered. The value for the template can be any of the value types defined in the Notification DSL.
+Parameters which are to be templated, do not need to be defined in the main send parameter definition.
 
 Example:
 ```clojure
@@ -642,12 +655,19 @@ Example:
                      :twil-ml +MT3}))
 ```
 
-Parameters defined using the **message-template** option will be sent to the endpoint as the rendered
-version of the provided template. The template will have access to the canonical event record when
-being rendered. The value for the template can be any of the value types defined in the Notification DSL.
-Parameters which are to be templated, do not need to be defined in the main send parameter definition.
-
 #### on-success and on-failure
+
+The **on-success** and **on-failure** options can be used to provide additional actions to be
+taken based upon the success and/or failure of a command. One does not need to define both success
+and failure option if not required.
+
+In the presence of an **on-failure** option the failure of the command is swallowed and the reaction
+will continue processing after evaluating the *then* commands. The **on-failure** option will only be
+evaluated once a command has exhausted all of its defined retries.
+
+The **on-success** block is the only scope in which commands have access to the endpoint response
+values (those prefaced with a **$**). If the persistence of a response value is required for the
+duration of the reaction, a **set** command can be used to persist the value in a reaction variable.
 
 Example:
 ```clojure
@@ -661,18 +681,6 @@ Example:
   (on-success (send echo message {:message "It sent"}))
   (on-failure (send echo message {:message "No it didn't"})))
 ```
-
-The **on-success** and **on-failure** options can be used to provide additional actions to be
-taken based upon the success and/or failure of a command. One does not need to define both success
-and failure option if not required.
-
-In the presence of an **on-failure** option the failure of the command is swallowed and the reaction
-will continue processing after evaluating the *then* commands. The **on-failure** option will only be
-evaluated once a command has exhausted all of its defined retries.
-
-The **on-success** block is the only scope in which commands have access to the endpoint response
-values (those prefaced with a **$**). If the persistence of a response value is required for the
-duration of the reaction, a **set** command can be used to persist the value in a reaction variable.
 
 ### Big Example
 
