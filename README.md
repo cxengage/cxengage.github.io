@@ -376,6 +376,7 @@ block will be resent regardless of existing inflight invocations.
 
 #### seq
 
+
 ```clojure
 ; Syntax
 (seq <members> <options>)
@@ -391,6 +392,8 @@ block will be resent regardless of existing inflight invocations.
 manner, it is safe to create dependencies between elements (in a sequential manner). As with the parallel
 block, the block will fail if the current member fails. On failure, if a retry is defined, the sequential
 block will restart from its first member.
+
+
 
 ### Variables
 
