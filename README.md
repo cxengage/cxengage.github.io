@@ -706,7 +706,7 @@ CxEngage has APIs you can use to interact or integrate with
 
 ## Tenants
 
-⋅⋅* [Get Tenant](wiki/Get-Tenant) 
-⋅⋅* [Add Tenant to User](wiki/Add-Tenant-to-User) 
-⋅⋅* [Remove Tenant from User](wiki/Remove-Tenant-from-User)
+  * [Get Tenant](wiki/Get-Tenant) 
+  * [Add Tenant to User](wiki/Add-Tenant-to-User) 
+  * [Remove Tenant from User](wiki/Remove-Tenant-from-User)
 
