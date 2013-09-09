@@ -675,6 +675,8 @@ duration of the reaction, a **set** command can be used to persist the value in 
 
 ### Big Example
 
+This pattern showcases the flexibility and strength of the DSL
+
 ```clojure
 (par (send twilio sms {:to-phone-number *to-phone-number*}
            (message-template {:message *template3*}))
