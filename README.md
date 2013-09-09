@@ -706,66 +706,7 @@ CxEngage has APIs you can use to interact or integrate with
 
 ## Tenants
 
-Action | Description
---- | ---
-[Get Tenant](wiki/Get-Tenant) | Get information for a tenant
-[Add Tenant to User](wiki/Add-Tenant-to-User) | Give permission to an account to access a given tenant
-[Remove Tenant from User](wiki/Remove-Tenant-from-User) | Revoke permission of an account to access a given tenant
-
-## Key Attribute
-
-Action | Description
---- | ---
-[Get Key Attribute](wiki/Get-Key-Attribute) | Get the event record for a given tenant
-[Update Key Attribute](wiki/Update-Key-Attribute) | Update the event record for a given tenant
-
-## Patterns
-
-Action | Description
---- | ---
-[Get Patterns](wiki/Get-Patterns) | Get all patterns for a given tenant
-[Create Pattern](wiki/Create-Pattern) | Create a new pattern for a given tenant
-[Get Pattern](wiki/Get-Pattern) | Get a specific pattern for a given tenant
-[Update Pattern](wiki/Update-Pattern) | Update a specific pattern for a given tenant
-[Delete Pattern](wiki/Delete-Pattern) | Delete a specific pattern for a given tenant
-
-## Message Templates
-
-Action | Description
---- | ---
-[Get Message Templates](wiki/Get-Message-Templates) | Get all message templates for a given tenant
-[Create Message Template](wiki/Create-Message-Template) | Create a new message template for a given tenant
-[Get Message Template](wiki/Get-Message-Template) | Get a specific message template for a given tenant
-[Update Message Template](wiki/Update-Message-Template) | Update a specific message template for a given tenant
-[Delete Message Template](wiki/Delete-Message-Template) | Delete a specific Message template for a given tenant
-
-## Listeners
-
-Action | Description
---- | ---
-[Get Listeners](wiki/Get-Listeners) | Get all listeners for a given tenant
-[Create Listener](wiki/Create-Listener) | Create a new listener for a given tenant
-[Get Listener](wiki/Get-Listener) | Get a specific listener for a given tenant
-[Update Listener](wiki/Update-Listener) | Update a specific listener for a given tenant
-[Delete Listener](wiki/Delete-Listener) | Delete a specific listener for a given tenant
-
-## Integrations
-
-Action | Description
---- | ---
-[Get Integrations](wiki/Get-Integrations) | Get all integrations for a given tenant
-[Get Integration](wiki/Get-Integration) | Get a specific integration for a given tenant
-[Update Integration](wiki/Update-Integration) | Update a specific integration for a given tenant
-
-## Augments
-
-Action | Description
---- | ---
-[Get Augments](wiki/Get-Augments) | Get all augments for a given tenant
-[Create Augment](wiki/Create-Augment) | Create a new augment for a given tenant
-[Get Augment](wiki/Get-Augment) | Get a specific augment for a given tenant
-[Update Augment](wiki/Update-Augment) | Update a specific augment for a given tenant
-[Delete Augment](wiki/Delete-Augment) | Delete a specific augment for a given tenant
-
-
+[Get Tenant](wiki/Get-Tenant) 
+[Add Tenant to User](wiki/Add-Tenant-to-User) 
+[Remove Tenant from User](wiki/Remove-Tenant-from-User)
 
