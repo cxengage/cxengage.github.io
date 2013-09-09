@@ -757,6 +757,27 @@ CxEngage has APIs you can use to interact or integrate with
    Delete a specific pattern for a given tenant
    ```
    
-   
+   ## Message Templates
+
+   [Get Message Templates](wiki/Get-Message-Templates) 
+   ```
+   Get all message templates for a given tenant
+   ```
+   [Create Message Template](wiki/Create-Message-Template)
+   ```
+   Create a new message template for a given tenant
+   ```
+   [Get Message Template](wiki/Get-Message-Template) 
+   ```
+   Get a specific message template for a given tenant
+   ```
+   [Update Message Template](wiki/Update-Message-Template) 
+   ```
+   Update a specific message template for a given tenant
+   ```
+   [Delete Message Template](wiki/Delete-Message-Template) 
+   ```
+   Delete a specific Message template for a given tenant
+   ```
 
    
