@@ -779,5 +779,28 @@ CxEngage has APIs you can use to interact or integrate with
    ```
    Delete a specific Message template for a given tenant
    ```
+   
+   ## Listeners
+
+   [Get Listeners](wiki/Get-Listeners) 
+   ```
+   Get all listeners for a given tenant
+   ```
+   [Create Listener](wiki/Create-Listener) 
+   ```
+   Create a new listener for a given tenant
+   ```
+   [Get Listener](wiki/Get-Listener) 
+   ```
+   Get a specific listener for a given tenant
+   ```
+   [Update Listener](wiki/Update-Listener) 
+   ```
+   Update a specific listener for a given tenant
+   ```
+   [Delete Listener](wiki/Delete-Listener) 
+   ```
+   Delete a specific listener for a given tenant
+   ```
 
    
