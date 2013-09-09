@@ -708,7 +708,7 @@ Integrate with CxEngage
 
 CxEngage has APIs you can use to interact or integrate with
 
-### Tenants
+## Tenants
 
    [Get Tenant](wiki/Get-Tenant)  
    ```
@@ -723,7 +723,7 @@ CxEngage has APIs you can use to interact or integrate with
    Revoke permission of an account to access a given tenant
    ```
 
-### Key Attribute
+## Key Attribute
 
    [Get Key Attribute](wiki/Get-Key-Attribute) 
    ```
@@ -734,7 +734,7 @@ CxEngage has APIs you can use to interact or integrate with
    Update the event record for a given tenant
    ```
    
-### Patterns
+## Patterns
 
    [Get Patterns](wiki/Get-Patterns)
    ```
