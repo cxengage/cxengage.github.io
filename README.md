@@ -356,6 +356,12 @@ Both of the execution blocks can be nested within one another.
 
 #### par
 
+**par** blocks will evaluate in parallel. One must be conscious of the repercussions of
+evaluating their blocks in parallel. Results will be returned in a non-deterministic manner,
+thus all members of the parallel block should be independent of one another. Also to note is
+that if one member of the block fails, the entire block fails. If a retry is defined, the entire
+block will be resent regardless of existing inflight invocations.
+
 ```clojure
 ; Syntax
 (par <members> <options>)
@@ -367,11 +373,6 @@ Both of the execution blocks can be nested within one another.
   (send echo message {:message "Hello World3"}))
 ```
 
-**par** blocks will evaluate in parallel. One must be conscious of the repercussions of
-evaluating their blocks in parallel. Results will be returned in a non-deterministic manner,
-thus all members of the parallel block should be independent of one another. Also to note is
-that if one member of the block fails, the entire block fails. If a retry is defined, the entire
-block will be resent regardless of existing inflight invocations.
 
 #### seq
 
