@@ -725,15 +725,11 @@ CxEngage has APIs you can use to interact or integrate with
 
 ### Key Attribute
 
-   [Get Tenant](wiki/Get-Tenant)  
-   ``` 
-   Get information for a tenant 
+   [Get Key Attribute](wiki/Get-Key-Attribute) 
+    ```
+    Get the event record for a given tenant
+    ```
+   [Update Key Attribute](wiki/Update-Key-Attribute) 
    ```
-   [Add Tenant to User](wiki/Add-Tenant-to-User) 
-   ``` 
-   Give permission to an account to access a given tenant 
-   ```
-   [Remove Tenant from User](wiki/Remove-Tenant-from-User) 
-   ``` 
-   Revoke permission of an account to access a given tenant 
+   Update the event record for a given tenant
    ```
