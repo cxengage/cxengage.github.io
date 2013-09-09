@@ -295,14 +295,14 @@ Ok, now let's say if we would like the pattern to match if two events happen. Fo
 ```
 The other option for items similar to the count keyword are 
 
-| Event keywords| Usage                   |
-| ------------- |-------------------------|
-| Within        |  Within Duration Trigger| 
-| InSequence    | InSequence [Trigger]    |
-| AllOf         | AllOf [Trigger]         |
-| AnyOf         | AnyOf [Trigger]         | 
-| Count         | Count Int Trigger       |
-| FailWhen      | FailWhen Trigger        |
+ Event keywords - Usage                   
+
+ Within         Within Duration Trigger 
+ InSequence     InSequence [Trigger]    
+ AllOf          AllOf [Trigger]         
+ AnyOf          AnyOf [Trigger]          
+ Count          Count Int Trigger       
+ FailWhen       FailWhen Trigger        
 
 
 
