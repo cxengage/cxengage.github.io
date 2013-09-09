@@ -733,4 +733,30 @@ CxEngage has APIs you can use to interact or integrate with
    ```
    Update the event record for a given tenant
    ```
+   
+### Patterns
 
+   [Get Patterns](wiki/Get-Patterns)
+   ```
+   Get all patterns for a given tenant
+   ```
+   [Create Pattern](wiki/Create-Pattern) 
+   ```
+   Create a new pattern for a given tenant
+   ```
+   [Get Pattern](wiki/Get-Pattern) 
+   ```
+   Get a specific pattern for a given tenant
+   ```
+   [Update Pattern](wiki/Update-Pattern) 
+   ```
+   Update a specific pattern for a given tenant
+   ```
+   [Delete Pattern](wiki/Delete-Pattern) 
+   ```
+   Delete a specific pattern for a given tenant
+   ```
+   
+   
+
+   
