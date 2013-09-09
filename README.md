@@ -471,7 +471,6 @@ Example:
 The **event** command will create and send a new event into the rest receiver. This functionality is useful
 for creating chains of events. Events support message templates and the control flow operators: **on-success** and **on-failure**.
 
-Example:
 ```clojure
 ; Syntax
 (event {<params>} <options>)
@@ -495,8 +494,6 @@ Valid time durations are:
 * hours
 * days
 
-
-Example:
 ```clojure
 ; Syntax
 (delay <duration> <unit>)
@@ -513,8 +510,6 @@ Example:
 
 The **expect** command will pause execution of the reaction until an event enters the notification service which matches the provided predicate. It is recommended to use a **within** when using **expect**, otherwise the reaction may never finish.
 
-
-Example:
 ```clojure
 ; Syntax
 (expect <predicate>
@@ -540,7 +535,6 @@ The *on-success* and *on-failure* within the *if* will be executed based on the 
 the await. A *within* option must also be present to denote the total time the poll should last.
 The poll cycle is hard coded to wait one second between polls.
 
-Example:
 ```clojure
 (seq
   (await twilio call-status {:sid 12345}
@@ -557,7 +551,6 @@ Example:
 
 The **if** command is the most complex in the notification DSL.
 
-Example:
 ```clojure
 ; Syntax
 (if <predicate> (on-success <then>) (on-failure <else>))
@@ -607,7 +600,6 @@ The following options can be applied to **seq**, **par**, **send**, and **await*
 If a command has a defined retry option, when the command fails, it will be retried. A command will
 only be treated as *failed* when all of its retries have been exhausted.
 
-Example:
 ```clojure
 ; Syntax
 (retries <count>)
@@ -623,7 +615,6 @@ When a command is evaluated which has a defined timeout, if it does not complete
 the event will be failed. Retries will be respected by timeouts, if the timeout occurs, and retries remain,
 the command will be retried.
 
-Example:
 ```clojure
 ; Syntax
 (within <duration> <unit>)
@@ -645,7 +636,7 @@ version of the provided template. The template will have access to the canonical
 being rendered. The value for the template can be any of the value types defined in the Notification DSL.
 Parameters which are to be templated, do not need to be defined in the main send parameter definition.
 
-Example:
+
 ```clojure
 ; Syntax
 (message-template {<params>})
@@ -675,7 +666,6 @@ The **on-success** block is the only scope in which commands have access to the 
 values (those prefaced with a **$**). If the persistence of a response value is required for the
 duration of the reaction, a **set** command can be used to persist the value in a reaction variable.
 
-Example:
 ```clojure
 ; Syntax
 (on-success <then>)
