@@ -443,11 +443,8 @@ Within an execution block the following actions can be taken:
 
 The **send** command is used to send notifications to specific endpoints. The endpoint, type, and params are
 mandatory fields. Additional options will are outlined in the options section. The params must include all
-mandatory fields outlined in the definition of the endpoint.
+mandatory fields outlined in the definition of the endpoint. A single send may be used outside of an execution block. This can be useful when using the **if** command.
 
-A single send may be used outside of an execution block. This can be useful when using the **if** command.
-
-Example:
 ```clojure
 ; Syntax
 (send <endpoint> <type> {<params>} <options>)
