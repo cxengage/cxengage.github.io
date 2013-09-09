@@ -279,14 +279,13 @@ Now, let's say you want the pattern to match for anyone with customer Segment Pl
 ```
 As you can see, we use the **and** keyword to do this. Here is a list of those type of operators
 
-| Event keywords| 
-| ------------- |
-| =             | 
-| >             | 
-| <             |
-| Not           |
-| And           |
-| Or            | 
+ Event keywords 
+ =             
+ >             
+ <            
+ Not          
+ And           
+ Or             
 
 Ok, now let's say if we would like the pattern to match if two events happen. For example, a pattern that matches if a person with Customer Segment platinum has 2 failed checkin events. To do this, all we need to do is use the **count** keyword
 
