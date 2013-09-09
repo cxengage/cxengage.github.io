@@ -279,13 +279,14 @@ Now, let's say you want the pattern to match for anyone with customer Segment Pl
 ```
 As you can see, we use the **and** keyword to do this. Here is a list of those type of operators
 
- 
+``` 
  **=**             
  **>**             
  **<**            
  **Not**          
  **And**           
  **Or**             
+```
 
 Ok, now let's say if we would like the pattern to match if two events happen. For example, a pattern that matches if a person with Customer Segment platinum has 2 failed checkin events. To do this, all we need to do is use the **count** keyword
 
@@ -324,10 +325,12 @@ Now, for this to be more useful, we would only want this to happen for a particu
 
 The options for duration are the following. The unit used is integer
 
+```
  Seconds       
  Minutes       
  Hours        
  Days          
+```
 
 Now, if we want the pattern to only match if a cancelled ticket happens after a failed check-in, we can use the **inSequence** keyword. The previous pattern would match if there is a cancelled ticket first and then 2 failed check ins. We only want the pattern to match if a cancel ticket event happens after a failed check in event
 
@@ -706,7 +709,7 @@ CxEngage has APIs you can use to interact or integrate with
 
 ## Tenants
 
-  * [Get Tenant](wiki/Get-Tenant) - Gen information for a tenant
-  * [Add Tenant to User](wiki/Add-Tenant-to-User) - Give permission to account to access a given tenant
-  * [Remove Tenant from User](wiki/Remove-Tenant-from-User) - Revoke permission of an account to access a given tenant
+  * [Get Tenant](wiki/Get-Tenant) - ```Gen information for a tenant```
+  * [Add Tenant to User](wiki/Add-Tenant-to-User) - ```Give permission to account to access a given tenant```
+  * [Remove Tenant from User](wiki/Remove-Tenant-from-User) - ```Revoke permission of an account to access a given tenant```
 
