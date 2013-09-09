@@ -376,6 +376,10 @@ block will be resent regardless of existing inflight invocations.
 
 #### seq
 
+**seq** blocks will be evaluated sequentially. As the sequential block is executed in a deterministic
+manner, it is safe to create dependencies between elements (in a sequential manner). As with the parallel
+block, the block will fail if the current member fails. On failure, if a retry is defined, the sequential
+block will restart from its first member.
 
 ```clojure
 ; Syntax
@@ -387,13 +391,6 @@ block will be resent regardless of existing inflight invocations.
   (delay 1 minutes)
   (send echo message {:message "Hello World2"}))
 ```
-
-**seq** blocks will be evaluated sequentially. As the sequential block is executed in a deterministic
-manner, it is safe to create dependencies between elements (in a sequential manner). As with the parallel
-block, the block will fail if the current member fails. On failure, if a retry is defined, the sequential
-block will restart from its first member.
-
-
 
 ### Variables
 
