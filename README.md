@@ -296,13 +296,14 @@ Ok, now let's say if we would like the pattern to match if two events happen. Fo
 ```
 The other option for items similar to the count keyword are 
 
+```
  Within         Within Duration Trigger 
  InSequence     InSequence [Trigger]    
  AllOf          AllOf [Trigger]         
  AnyOf          AnyOf [Trigger]          
  Count          Count Int Trigger       
  FailWhen       FailWhen Trigger        
-
+```
 
 
 Now, if we want to add another event type to the pattern, for example, you would like the pattern to match when there is 2 failed checkins and 1 cancelled ticket. We use the **allOf** keyword for this. The UETL is written this way - 
