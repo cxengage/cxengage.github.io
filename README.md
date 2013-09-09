@@ -716,95 +716,95 @@ CxEngage has APIs you can use to interact or integrate with
 
 ## Tenants
 
-   [Get Tenant](apidocs/Get-Tenant)  
+   [Get Tenant](https://github.com/cxengage/cxengage.github.io/blob/master/https://github.com/cxengage/cxengage.github.io/blob/master/account/GET.md)  
    ```
    Get information for a tenant
    ```
-   [Add Tenant to User](apidocs/Add-Tenant-to-User)  
+   [Add Tenant to User](https://github.com/cxengage/cxengage.github.io/blob/master/Add-Tenant-to-User)  
    ```
    Give permission to account to access a given tenant
    ```
-   [Remove Tenant from User](apidocs/Remove-Tenant-from-User)  
+   [Remove Tenant from User](https://github.com/cxengage/cxengage.github.io/blob/master/Remove-Tenant-from-User)  
    ```
    Revoke permission of an account to access a given tenant
    ```
 
 ## Key Attribute
 
-   [Get Key Attribute](apidocs/Get-Key-Attribute) 
+   [Get Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Key-Attribute) 
    ```
    Get the event record for a given tenant
    ```
-   [Update Key Attribute](apidocs/Update-Key-Attribute) 
+   [Update Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/Update-Key-Attribute) 
    ```
    Update the event record for a given tenant
    ```
    
 ## Patterns
 
-   [Get Patterns](apidocs/Get-Patterns)
+   [Get Patterns](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Patterns)
    ```
    Get all patterns for a given tenant
    ```
-   [Create Pattern](apidocs/Create-Pattern) 
+   [Create Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/Create-Pattern) 
    ```
    Create a new pattern for a given tenant
    ```
-   [Get Pattern](apidocs/Get-Pattern) 
+   [Get Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Pattern) 
    ```
    Get a specific pattern for a given tenant
    ```
-   [Update Pattern](apidocs/Update-Pattern) 
+   [Update Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/Update-Pattern) 
    ```
    Update a specific pattern for a given tenant
    ```
-   [Delete Pattern](apidocs/Delete-Pattern) 
+   [Delete Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/Delete-Pattern) 
    ```
    Delete a specific pattern for a given tenant
    ```
    
    ## Message Templates
 
-   [Get Message Templates](apidocs/Get-Message-Templates) 
+   [Get Message Templates](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Message-Templates) 
    ```
    Get all message templates for a given tenant
    ```
-   [Create Message Template](apidocs/Create-Message-Template)
+   [Create Message Template](https://github.com/cxengage/cxengage.github.io/blob/master/Create-Message-Template)
    ```
    Create a new message template for a given tenant
    ```
-   [Get Message Template](apidocs/Get-Message-Template) 
+   [Get Message Template](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Message-Template) 
    ```
    Get a specific message template for a given tenant
    ```
-   [Update Message Template](apidocs/Update-Message-Template) 
+   [Update Message Template](https://github.com/cxengage/cxengage.github.io/blob/master/Update-Message-Template) 
    ```
    Update a specific message template for a given tenant
    ```
-   [Delete Message Template](apidocs/Delete-Message-Template) 
+   [Delete Message Template](https://github.com/cxengage/cxengage.github.io/blob/master/Delete-Message-Template) 
    ```
    Delete a specific Message template for a given tenant
    ```
    
    ## Listeners
 
-   [Get Listeners](apidocs/Get-Listeners) 
+   [Get Listeners](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Listeners) 
    ```
    Get all listeners for a given tenant
    ```
-   [Create Listener](apidocs/Create-Listener) 
+   [Create Listener](https://github.com/cxengage/cxengage.github.io/blob/master/Create-Listener) 
    ```
    Create a new listener for a given tenant
    ```
-   [Get Listener](apidocs/Get-Listener) 
+   [Get Listener](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Listener) 
    ```
    Get a specific listener for a given tenant
    ```
-   [Update Listener](apidocs/Update-Listener) 
+   [Update Listener](https://github.com/cxengage/cxengage.github.io/blob/master/Update-Listener) 
    ```
    Update a specific listener for a given tenant
    ```
-   [Delete Listener](apidocs/Delete-Listener) 
+   [Delete Listener](https://github.com/cxengage/cxengage.github.io/blob/master/Delete-Listener) 
    ```
    Delete a specific listener for a given tenant
    ```
