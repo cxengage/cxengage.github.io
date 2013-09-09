@@ -441,6 +441,12 @@ Within an execution block the following actions can be taken:
 
 #### send
 
+The **send** command is used to send notifications to specific endpoints. The endpoint, type, and params are
+mandatory fields. Additional options will are outlined in the options section. The params must include all
+mandatory fields outlined in the definition of the endpoint.
+
+A single send may be used outside of an execution block. This can be useful when using the **if** command.
+
 Example:
 ```clojure
 ; Syntax
@@ -458,13 +464,12 @@ Example:
                   :message sms-message})
 ```
 
-The **send** command is used to send notifications to specific endpoints. The endpoint, type, and params are
-mandatory fields. Additional options will are outlined in the options section. The params must include all
-mandatory fields outlined in the definition of the endpoint.
 
-A single send may be used outside of an execution block. This can be useful when using the **if** command.
 
 #### event
+
+The **event** command will create and send a new event into the rest receiver. This functionality is useful
+for creating chains of events. Events support message templates and the control flow operators: **on-success** and **on-failure**.
 
 Example:
 ```clojure
@@ -475,8 +480,7 @@ Example:
 (event {:id *id* :type "b"})
 ```
 
-The **event** command will create and send a new event into the rest receiver. This functionality is useful
-for creating chains of events. Events support message templates and the control flow operators: **on-success** and **on-failure**.
+
 
 #### delay
 
@@ -551,6 +555,8 @@ Example:
 
 #### if
 
+The **if** command is the most complex in the notification DSL.
+
 Example:
 ```clojure
 ; Syntax
@@ -563,7 +569,7 @@ Example:
   (on-failure (send echo message {:message message-two})))
 ```
 
-The **if** command is the most complex in the notification DSL.
+
 Predicates can be composed of the following commands:
 ```clojure
 ; AND
