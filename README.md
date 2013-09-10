@@ -716,79 +716,83 @@ CxEngage has APIs you can use to interact or integrate with
 
 ## Tenants
 
-   [Get Tenant](https://github.com/cxengage/cxengage.github.io/blob/master/https://github.com/cxengage/cxengage.github.io/blob/master/account/GET.md)  
+   [Get Tenant](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Tenant.md)  
    ```
    Get information for a tenant
    ```
-   [Add Tenant to User](https://github.com/cxengage/cxengage.github.io/blob/master/Add-Tenant-to-User)  
+   [Add Tenant to User](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Add-Tenant-to-User.md)  
    ```
    Give permission to account to access a given tenant
    ```
-   [Remove Tenant from User](https://github.com/cxengage/cxengage.github.io/blob/master/Remove-Tenant-from-User)  
+   [Remove Tenant from User](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Remove-Tenant-from-User.md)  
    ```
    Revoke permission of an account to access a given tenant
    ```
 
 ## Key Attribute
 
-   [Get Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/apidocs/event_record/GET_instance_iid_event_record.md) 
+   [Get Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Key-Attribute.md) 
    ```
-   Get the event record for a given tenant
+   Get the key attribute for a given tenant
    ```
    [Update Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/Update-Key-Attribute) 
    ```
-   Update the event record for a given tenant
+   Update the key attribute for a given tenant
    ```
    
 ## Patterns
 
-   [Get Patterns](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Patterns)
+   [Get Patterns](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Patterns.md)
    ```
    Get all patterns for a given tenant
    ```
-   [Create Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/Create-Pattern) 
+   [Create Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Pattern.md) 
    ```
    Create a new pattern for a given tenant
    ```
-   [Get Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Pattern) 
+   [Get Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Pattern.md) 
    ```
    Get a specific pattern for a given tenant
    ```
-   [Update Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/Update-Pattern) 
+   [Update Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Pattern.md) 
    ```
    Update a specific pattern for a given tenant
    ```
-   [Delete Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/Delete-Pattern) 
+   [Delete Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Pattern.md) 
    ```
    Delete a specific pattern for a given tenant
    ```
    
    ## Message Templates
 
-   [Get Message Templates](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Message-Templates) 
+   [Get Message Templates](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Message-Template.md) 
    ```
    Get all message templates for a given tenant
    ```
-   [Create Message Template](https://github.com/cxengage/cxengage.github.io/blob/master/Create-Message-Template)
+   [Create Message Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Message-Template.md)
    ```
    Create a new message template for a given tenant
    ```
-   [Get Message Template](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Message-Template) 
+   [Get Message Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Message-Template.md) 
    ```
    Get a specific message template for a given tenant
    ```
-   [Update Message Template](https://github.com/cxengage/cxengage.github.io/blob/master/Update-Message-Template) 
+   [Update Message Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Message-Template.md) 
    ```
    Update a specific message template for a given tenant
    ```
-   [Delete Message Template](https://github.com/cxengage/cxengage.github.io/blob/master/Delete-Message-Template) 
+   [Delete Message Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Message-Template.md) 
    ```
    Delete a specific Message template for a given tenant
    ```
    
+   <!---
+your comment goes here
+and here
+
    ## Listeners
 
-   [Get Listeners](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Listeners) 
+   [Get Listeners](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listener.md) 
    ```
    Get all listeners for a given tenant
    ```
@@ -808,5 +812,5 @@ CxEngage has APIs you can use to interact or integrate with
    ```
    Delete a specific listener for a given tenant
    ```
-
+-->
    
