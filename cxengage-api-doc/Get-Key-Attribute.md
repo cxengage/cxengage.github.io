@@ -6,7 +6,7 @@
 
 ## Description
 
-Retrieves event record for the given instance.
+Retrieves key attribute for the given tenant.
 
 ### Authentication
 
