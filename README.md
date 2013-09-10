@@ -733,11 +733,11 @@ CxEngage has APIs you can use to interact or integrate with
 
    [Get Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Key-Attribute.md) 
    ```
-   Get the event record for a given tenant
+   Get the key attribute for a given tenant
    ```
    [Update Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/Update-Key-Attribute) 
    ```
-   Update the event record for a given tenant
+   Update the key attribute for a given tenant
    ```
    
 ## Patterns
