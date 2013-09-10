@@ -1,4 +1,4 @@
-## Event Record Resources
+## Key Attribute Resources
 
 ```
   GET tenants/:iid/key-attribute
