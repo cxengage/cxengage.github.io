@@ -709,16 +709,16 @@ This pattern showcases the flexibility and strength of the DSL
             (send echo message {:message *custId*})))))
 ```
 
-Manage the CxEngage Platform
+Manage CxEngage 
 =========================
 
-CxEngage has APIs for Service Management, Node Management and Tenant Management. 
+Nodes, Tenants and Services on CxEngage can be managed and configured via the CxEngage Platform API. 
 
 
 Integrate with CxEngage
 =======================
 
-CxEngage has APIs you can use to interact or integrate with
+CxEngage can be integrated with by using CxEngage API.
 
 ## Tenants
 
