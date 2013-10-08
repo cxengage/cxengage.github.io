@@ -725,7 +725,7 @@ CxEngage can be integrated with by using CxEngage API.
    ```
    Get the key attribute for a given tenant
    ```
-   [Update Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/Update-Key-Attribute) 
+   [Update Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/Update-Key-Attribute.md) 
    ```
    Update the key attribute for a given tenant
    ```
