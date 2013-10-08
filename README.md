@@ -16,7 +16,7 @@ These attributes can now be used in a pattern. As an example, here is the patter
 
 ```clojure 
 ;;When
-(event (= CallAction "AbandonedCall")
+(event (= callAction "AbandonedCall")
 
 ;;Then
 (send twilio call {:to-phone-number *To-PhoneNumber*}))
