@@ -1,14 +1,13 @@
 # Pattern Resources
 
 ```
-  POST instance/:iid/patterns
+  POST tenants/:iid/patterns
 ```
 
 ## Description
 
-Creates a pattern on the given instance.
+Creates a pattern on the given tenants.
 
-### Authentication
 
 ### Authentication
 
@@ -16,7 +15,7 @@ Creates a pattern on the given instance.
 
 ### Parameters
 
-- **iid** _(required)_ — Selected instance
+- **iid** _(required)_ — Selected tenants
 
 ### Errors
 
@@ -28,7 +27,7 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  POST instance/IN1/patterns
+  POST tenants/tenant1/patterns
   Content-Type: application/json
 ```
 
