@@ -196,7 +196,7 @@ As another example, what if when a customer calls in once, talks to an agent, an
 ```clojure
 ;;When
 (within 30 minutes
-        (inSequence (event (= "CallAction" "answered")
+        (seq (event (= "CallAction" "answered")
                     (event (= "CallAction" "inqueue"))))
                     
 ;Then
@@ -329,14 +329,14 @@ The options for duration are the following. The unit used is integer
  Days          
 ```
 
-Now, if we want the pattern to only match if a cancelled ticket happens after a failed check-in, we can use the **inSequence** keyword. The previous pattern would match if there is a cancelled ticket first and then 2 failed check ins. We only want the pattern to match if a cancel ticket event happens after a failed check in event
+Now, if we want the pattern to only match if a cancelled ticket happens after a failed check-in, we can use the **seq** keyword. The previous pattern would match if there is a cancelled ticket first and then 2 failed check ins. We only want the pattern to match if a cancel ticket event happens after a failed check in event
 
 ```clojure
 (all (seq (event (= eventType "flcheck")) 
                    (event (= eventType "cnclticket"))))
 ```
 
-All the more commonly used operators are shown being used above. You can use other keywords such as **FailWhen** etc similarly. 
+All the more commonly used operators are shown being used above. You can use other keywords such as **fail** etc similarly. 
 
 ### Writing Thens
 
