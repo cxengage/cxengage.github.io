@@ -18,7 +18,6 @@ Updates the pattern for the given instance based on the pattern id given
 
 All known errors will be returned in a JSON map with key "error".
 
-- **403 Forbidden** - You do not have access to the instance or OAuth error - see [OAuth](https://github.com/userevents/charon) for more information.
 - **404 Not Found** - The requested node or instance does not exist or has been deleted.
 
 ### Example
