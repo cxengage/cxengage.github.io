@@ -1,7 +1,7 @@
-# Instance Resources
+# Tenant Resources
 
 ```
-  GET /instance/IN1
+  GET /tenants
 ```
 
 ## Description
@@ -12,9 +12,6 @@ Retrieves instance info
 
 [OAuth](https://github.com/userevents/charon)
 
-### Parameters
-
-- **iid** _(required)_ — Selected instance
 
 ### Errors
 
@@ -27,28 +24,22 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  GET instance/IN1
+  GET /tenants
 ```
 
 **Return**
 
 ```json
 
-{
-    "notification-attributes": [],
-    "attributes": [
-        {
-            "name": "custId",
-            "type": "string"
-        },
-        {
-            "name": "eventType",
-            "type": "string",
-            "list": "LS1"
-        }
-     
-    ]
-}
+[
+    {
+        "id": "tenant-two"
+    },
+    {
+        "id": "tenant1",
+        "name": "Tenant Number One"
+    }
+]
 
 ```
 
