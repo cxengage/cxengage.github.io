@@ -22,7 +22,7 @@ These attributes can now be used in a pattern. As an example, here is the patter
 (send twilio call {:to-phone-number *To-PhoneNumber*}))
 ```
 
-If you have any further questions, do not hesitate to reach us by creating a ticket, or e-mailing CxEngage Support at [support@cxengage.com](mailto:support@cxengage.com).
+If you have any further questions about this or anything below, do not hesitate to reach us by creating a ticket, or e-mailing CxEngage Support at [support@cxengage.com](mailto:support@cxengage.com).
 
 ### Using the Echo Endpoint
 
