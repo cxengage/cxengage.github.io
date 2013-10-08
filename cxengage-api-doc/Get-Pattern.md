@@ -1,7 +1,7 @@
 #Pattern Resources
 
 ```
-  GET instance/:iid/patterns/:id
+  GET tenants/:iid/patterns/:id
 ```
 
 ## Description
@@ -14,8 +14,8 @@ Retrieves the node for the given instance.
 
 ### Parameters
 
-- **iid** _(required)_ — Selected instance
-- **id** _(required)_ — Node to retrieve
+- **iid** _(required)_ — Selected tenant
+- **id** _(required)_ — Pattern to retrieve
 
 ### Errors
 
@@ -29,7 +29,7 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  GET instance/IN1/patterns/PT2
+  GET tenants/tenant1/patterns/PT2
 ```
 
 **Return**
