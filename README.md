@@ -711,20 +711,6 @@ Integrate with CxEngage
 
 CxEngage can be integrated with by using CxEngage API.
 
-## Tenants
-
-   [Get Tenant](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Tenant.md)  
-   ```
-   Get information for a tenant
-   ```
-   [Add Tenant to User](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Add-Tenant-to-User.md)  
-   ```
-   Give permission to account to access a given tenant
-   ```
-   [Remove Tenant from User](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Remove-Tenant-from-User.md)  
-   ```
-   Revoke permission of an account to access a given tenant
-   ```
 
 ## Key Attribute
 
