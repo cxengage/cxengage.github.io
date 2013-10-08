@@ -8,9 +8,7 @@
 
 Retrieves the node for the given instance.
 
-### Authentication
 
-[OAuth](https://github.com/userevents/charon)
 
 ### Parameters
 
