@@ -1,19 +1,21 @@
 # Tenant Resources
 
 ```
-  GET /tenants
+  GET /tenants/:tid
 ```
 
 ## Description
 
-Retrieves instance info
+Retrieves tenant info
 
+
+### Parameters
+
+- **tid** _(required)_ — Selected tenant
 
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
-
-- **403 Forbidden** - You do not have access to the instance or OAuth error - see [OAuth](https://github.com/userevents/charon) for more information.
 
 ### Example
 
@@ -27,15 +29,10 @@ All known errors will be returned in a JSON map with key "error".
 
 ```json
 
-[
-    {
-        "id": "tenant-two"
-    },
-    {
-        "id": "tenant1",
-        "name": "Tenant Number One"
-    }
-]
+{
+    "id": "tenant1",
+    "name": "Tenant Number One"
+}
 
 ```
 
