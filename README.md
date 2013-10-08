@@ -711,6 +711,10 @@ Integrate with CxEngage
 
 CxEngage can be integrated with by using CxEngage API.
 
+## Tenants
+   [Get Tenants](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Tenant.md) 
+   ```
+
 
 ## Key Attribute
 
