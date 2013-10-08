@@ -181,7 +181,7 @@ Now, what if a customer calls a 3rd time and gets an agent before the agent call
 
 ```clojure
 ;;When
-(allOf (within 1 hours
+(all (within 1 hours
                  (count 2 (event (= "CallAction" "abandoned")))))
                  (fail (count 1 (event (= "CallAction" "answered"))))
        
