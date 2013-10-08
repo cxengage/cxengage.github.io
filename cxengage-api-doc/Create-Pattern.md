@@ -9,10 +9,6 @@
 Creates a pattern on the given tenants.
 
 
-### Authentication
-
-[OAuth](https://github.com/userevents/charon)
-
 ### Parameters
 
 - **iid** _(required)_ — Selected tenants
