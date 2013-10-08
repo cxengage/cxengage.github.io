@@ -462,7 +462,7 @@ mandatory fields outlined in the definition of the endpoint. A single send may b
 #### event
 
 The **event** command will create and send a new event into the rest receiver. This functionality is useful
-for creating chains of events. Events support message templates and the control flow operators: **on-success** and **on-failure**.
+for creating chains of events. Events support message templates and the control flow operators: **success** and **failure**.
 
 ```clojure
 ; Syntax
@@ -524,7 +524,7 @@ The **expect** command will pause execution of the reaction until an event enter
 The *await* command is used to perform asynchronous communication with an endpoint. In truth,
 *await* is syntactic sugar to perform a poll against a command in an endpoint. The body of the
 *await* must consist of an *if* statement, whose predicate represents what you are waiting for.
-The *on-success* and *on-failure* within the *if* will be executed based on the final outcome of
+The *success* and *failure* within the *if* will be executed based on the final outcome of
 the await. A *within* option must also be present to denote the total time the poll should last.
 The poll cycle is hard coded to wait one second between polls.
 
