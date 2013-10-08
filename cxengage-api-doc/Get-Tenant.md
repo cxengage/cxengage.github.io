@@ -8,10 +8,6 @@
 
 Retrieves instance info
 
-### Authentication
-
-[OAuth](https://github.com/userevents/charon)
-
 
 ### Errors
 
