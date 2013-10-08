@@ -1,7 +1,7 @@
 # Pattern Resources
 
 ```
-  POST instance/:iid/patterns/:id
+  POST tenants/:iid/patterns/:id
 ```
 
 ## Description
@@ -14,8 +14,8 @@ Updates the pattern for the given instance based on the pattern id given
 
 ### Parameters
 
-- **iid** _(required)_ — Selected instance
-- **id** _(required)_ — Node to be updated
+- **iid** _(required)_ — Selected tenant
+- **id** _(required)_ — Pattern id
 
 ### Errors
 
@@ -29,7 +29,7 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  POST instance/IN1/patterns/PT1
+  POST tenants/tenant1/patterns/PT1
 ```
 
 ```json
