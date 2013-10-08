@@ -37,7 +37,7 @@ Here is a way to use the echo endpoint in your Then
 You could also test out your message template with the echo
 ```clojure
 (send echo message {:message "send message"}
-(message-template {:message +MT1}))
+(template {:message +MT1}))
 ```
 
 ### Using the Twilio endpoint
@@ -81,7 +81,7 @@ You could also use message templating instead of setting it in the pattern
 ```clojure
 (send twilio call {:to-phone-number *toPhoneNumber*
                   :from-phone-number "15068009013"} 
-      (message-template {:message +MT1}))
+      (template {:message +T1}))
 ```
 
 ### Sendgrid endpoint
@@ -128,7 +128,7 @@ You could also use message templating for setting it in the pattern
 (send sendgrid email {:to *to-email-address*
                       :from "no-reply@cxengage.com"
                       :subject *subject*
-                      :message +MT1})
+                      :message +T1})
 ```
 
 
@@ -184,7 +184,7 @@ Now, what if a customer calls a 3rd time and gets an agent before the agent call
 ;;When
 (allOf (within 1 hours
                  (count 2 (event (= "CallAction" "abandoned")))))
-       (failWhen (count 1 (event (= "CallAction" "answered"))))
+       (fail (count 1 (event (= "CallAction" "answered"))))
        
 ;;Then
 (send echo message {:message "Call abandoned twice , call customer back"}))
@@ -227,7 +227,7 @@ Continuing the examples from above, we can replace the _echos_ with the above _"
 
 ```clojure
 ;;When
-(allOf (within 1 hours
+(all (within 1 hours
                (count 2 (event (= "CallAction" "abandoned"))))
 
 ;;Then
@@ -238,7 +238,7 @@ If we would like to send an SMS to a customer after the two abandons to let them
 
 ```clojure
 ;;When
-(allOf (within 1 hours
+(all (within 1 hours
                (count 2 (event (= "CallAction" "abandoned"))))
                 
 ;;Then
@@ -272,7 +272,7 @@ Now, let's say you want the pattern to match for anyone with customer Segment Pl
 
 ```clojure
 (event (and (= customerSegment "platinum")
-            (= eventType "flcheck")))
+            (= event "flcheck")))
 ```
 As you can see, we use the **and** keyword to do this. Here is a list of those type of operators
 
@@ -289,17 +289,17 @@ Ok, now let's say if we would like the pattern to match if two events happen. Fo
 
 ```clojure
 (count 2 (event (and (= customerSegment "platinum")
-                     (= eventType "flcheck")))) 
+                     (= event "flcheck")))) 
 ```
 The other option for items similar to the count keyword are 
 
 ```
- Within         Within Duration Trigger 
- InSequence     InSequence [Trigger]    
- AllOf          AllOf [Trigger]         
- AnyOf          AnyOf [Trigger]          
- Count          Count Int Trigger       
- FailWhen       FailWhen Trigger        
+ within      Within Duration Trigger 
+ seq         Sequence [Trigger]    
+ all         All [Trigger]         
+ any         Any [Trigger]          
+ count       Count Int Trigger       
+ fail        Fail Trigger        
 ```
 
 
@@ -333,7 +333,7 @@ The options for duration are the following. The unit used is integer
 Now, if we want the pattern to only match if a cancelled ticket happens after a failed check-in, we can use the **inSequence** keyword. The previous pattern would match if there is a cancelled ticket first and then 2 failed check ins. We only want the pattern to match if a cancel ticket event happens after a failed check in event
 
 ```clojure
-(allOf (inSequence (event (= eventType "flcheck")) 
+(allOf (seq (event (= eventType "flcheck")) 
                    (event (= eventType "cnclticket"))))
 ```
 
