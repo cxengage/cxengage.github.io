@@ -1,20 +1,17 @@
 # Pattern Resources
 
 ```
-  GET instance/:iid/patterns
+  GET tenants/:iid/patterns
 ```
 
 ## Description
 
 Retrieves all patterns on instance :iid
 
-### Authentication
-
-[OAuth](https://github.com/userevents/charon)
 
 ### Parameters
 
-- **iid** _(required)_ — Selected instance
+- **iid** _(required)_ — Selected tenant
 
 ### Errors
 
@@ -27,7 +24,7 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  GET instance/IN1/patterns
+  GET tenants/tenant1/patterns
 ```
 
 **Return**
