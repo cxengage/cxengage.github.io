@@ -153,12 +153,12 @@ When keywords
  not
  and
  or
- Within
- inSequence
+ within
+ seq
  allOf
  anyOf
  count
- failWhen
+ fail
  seconds
  minutes
  hours
@@ -216,10 +216,10 @@ The following keywords are available to describe the **"then"** portion of the p
     delay      
     send       
     if         
-    on-success 
-    on-failure 
+    success
+    failure 
     timeout    
-    message-template 
+    template 
     set 
 ```
 
