@@ -8,9 +8,6 @@
 
 Updates the pattern for the given instance based on the pattern id given
 
-### Authentication
-
-[OAuth](https://github.com/userevents/charon)
 
 ### Parameters
 
