@@ -8,11 +8,10 @@ Here is some information on how to setup your instance of CxEngage
 
 ### Key Attribute
 
-CxEngage uses **Key Attribute** to help identify an event record. For example, a key attribute to describe a specific customer or user could be _CustomerID_ or _UserID_. You will only have one key attribute.
+CxEngage uses **Key Attribute** to identify an event. For example, a key attribute to describe a specific customer or user could be _CustomerID_ or _UserID_. You will only have one key attribute.
    
 
-
-These attributes can now be used in a pattern. As an example, here is the pattern where a call gets abandoned from the IVR, and an agent calls the customer back using our integration with twilio: 
+As an example, here is a pattern where a call gets abandoned from the IVR, and an agent calls the customer back using our integration with twilio: 
 
 ```clojure 
 ;;When
@@ -155,8 +154,8 @@ When keywords
  or
  within
  seq
- allOf
- anyOf
+ all
+ any
  count
  fail
  seconds
@@ -184,7 +183,7 @@ Now, what if a customer calls a 3rd time and gets an agent before the agent call
 ;;When
 (allOf (within 1 hours
                  (count 2 (event (= "CallAction" "abandoned")))))
-       (fail (count 1 (event (= "CallAction" "answered"))))
+                 (fail (count 1 (event (= "CallAction" "answered"))))
        
 ;;Then
 (send echo message {:message "Call abandoned twice , call customer back"}))
@@ -305,7 +304,7 @@ The other option for items similar to the count keyword are
 
 Now, if we want to add another event type to the pattern, for example, you would like the pattern to match when there is 2 failed checkins and 1 cancelled ticket. We use the **allOf** keyword for this. The UETL is written this way - 
 ```clojure
-(allOf (count 2 (event (and (= customerSegment "platinum") 
+(all (count 2 (event (and (= customerSegment "platinum") 
                             (= eventType "flcheck")))) 
        (count 1 (event (and (= customerSegment "platinum") 
                             (= eventType "cnclticket")))))
@@ -315,7 +314,7 @@ Now, for this to be more useful, we would only want this to happen for a particu
 
 ```clojure
 (within 1 hours 
-        (allOf (count 2 (event (and (= customerSegment "platinum") 
+        (all (count 2 (event (and (= customerSegment "platinum") 
                                     (= eventType "flcheck")))) 
                (count 1 (event (and (= customerSegment "platinum") 
                                     (= eventType "cnclticket"))))))
@@ -333,7 +332,7 @@ The options for duration are the following. The unit used is integer
 Now, if we want the pattern to only match if a cancelled ticket happens after a failed check-in, we can use the **inSequence** keyword. The previous pattern would match if there is a cancelled ticket first and then 2 failed check ins. We only want the pattern to match if a cancel ticket event happens after a failed check in event
 
 ```clojure
-(allOf (seq (event (= eventType "flcheck")) 
+(all (seq (event (= eventType "flcheck")) 
                    (event (= eventType "cnclticket"))))
 ```
 
@@ -507,16 +506,16 @@ The **expect** command will pause execution of the reaction until an event enter
 ```clojure
 ; Syntax
 (expect <predicate>
-  (on-success <then>)
-  (on-failure <then>)
+  (success <then>)
+  (failure <then>)
   <options>)
 
 ; Wait 5 minutes for an event with type "b" and the current id
 (expect (and (= $id *id*)
              (= $type "b"))
   (within 5 minutes)
-  (on-success (set got-event true))
-  (on-failure (set got-event false)))
+  (success (set got-event true))
+  (failure (set got-event false)))
 ```
 
 
@@ -533,8 +532,8 @@ The poll cycle is hard coded to wait one second between polls.
 (seq
   (await twilio call-status {:sid 12345}
     (if (= "answered" $call-status)
-        (on-success (set msg "The call was answered"))
-        (on-failure (set msg "No one was there")))
+        (success (set msg "The call was answered"))
+        (failure (set msg "No one was there")))
     (within 10 minutes))
   (send twilio sms {:message msg ...}))
 ```
@@ -547,13 +546,13 @@ The **if** command is the most complex in the notification DSL.
 
 ```clojure
 ; Syntax
-(if <predicate> (on-success <then>) (on-failure <else>))
+(if <predicate> (success <then>) (failure <else>))
 ; If the cust-seg event record value is "gold" then send message-one to echo otherwise send
 ; message-two
 
 (if (= *cust-seg* "gold")
-  (on-success (send echo message {:message message-one}))
-  (on-failure (send echo message {:message message-two})))
+  (success (send echo message {:message message-one}))
+  (failure (send echo message {:message message-two})))
 ```
 
 
@@ -633,26 +632,26 @@ Parameters which are to be templated, do not need to be defined in the main send
 
 ```clojure
 ; Syntax
-(message-template {<params>})
+(template {<params>})
 
 ;Use a message template when sending an sms to twilio
 (send twilio sms {:to-phone-number *phone-number*
                   :from-phone-number "1-506-555-1234"}
-  (message-template {:message "Hello {{first-name}}"}))
+  (template {:message "Hello {{first-name}}"}))
 
 (send twilio sms {:to-phone-number *phone-number*
                   :from-phone-number "1-506-555-1234"}
-  (message-template {:message +TM1
+  (template {:message +TM1
                      :twil-ml +TM3}))
 ```
 
-#### on-success and on-failure
+#### success and failure
 
-The **on-success** and **on-failure** options can be used to provide additional actions to be
+The **success** and **failure** options can be used to provide additional actions to be
 taken based upon the success and/or failure of a command. One does not need to define both success
-and failure option if not required. In the presence of an **on-failure** option the failure of the command is swallowed and the reaction
-will continue processing after evaluating the *then* commands. The **on-failure** option will only be
-evaluated once a command has exhausted all of its defined retries. The **on-success** block is the only scope in which commands have access to the endpoint response
+and failure option if not required. In the presence of a **failure** option the failure of the command is swallowed and the reaction
+will continue processing after evaluating the *then* commands. The **failure** option will only be
+evaluated once a command has exhausted all of its defined retries. The **success** block is the only scope in which commands have access to the endpoint response
 values (those prefaced with a **$**). If the persistence of a response value is required for the
 duration of the reaction, a **set** command can be used to persist the value in a reaction variable.
 
@@ -680,14 +679,14 @@ This pattern showcases the flexibility and strength of the DSL
 
 ```clojure
 (par (send twilio sms {:to-phone-number *to-phone-number*}
-           (message-template {:message *template3*}))
+           (template {:message *template3*}))
      (seq (send echo message {:message *eventType*}
                 (success
                  (set twilio-message *template1*))
                 (failure
                  (set twilio-message *template2*)))
           (send twilio sms {:to-phone-number *to-phone-number*}
-                (message-template {:message twilio-message})
+                (template {:message twilio-message})
                 (success
                  (set sms-id $call-id)))
           (send vht set-top-pop {:message "Hello"
