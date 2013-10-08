@@ -700,7 +700,7 @@ This pattern showcases the flexibility and strength of the DSL
             (send echo message {:message "Pressed OK"}))
           (retries 3)
           (within 30 minutes)
-          (on-failure
+          (failure
            (seq
             (send echo message {:message *custId*})))))
 ```
