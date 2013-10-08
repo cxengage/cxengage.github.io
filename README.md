@@ -37,7 +37,7 @@ Here is a way to use the echo endpoint in your Then
 You could also test out your message template with the echo
 ```clojure
 (send echo message {:message "send message"}
-(template {:message +MT1}))
+(template {:message +TM1}))
 ```
 
 ### Using the Twilio endpoint
@@ -81,7 +81,7 @@ You could also use message templating instead of setting it in the pattern
 ```clojure
 (send twilio call {:to-phone-number *toPhoneNumber*
                   :from-phone-number "15068009013"} 
-      (template {:message +T1}))
+      (template {:message +TM1}))
 ```
 
 ### Sendgrid endpoint
@@ -128,7 +128,7 @@ You could also use message templating for setting it in the pattern
 (send sendgrid email {:to *to-email-address*
                       :from "no-reply@cxengage.com"
                       :subject *subject*
-                      :message +T1})
+                      :message +TM1})
 ```
 
 
@@ -660,14 +660,14 @@ duration of the reaction, a **set** command can be used to persist the value in 
 
 ```clojure
 ; Syntax
-(on-success <then>)
-(on-failure <then>)
+(success <then>)
+(failure <then>)
 
 ; Send an sms, and send a different message to echo depending on the success of the sms
 (send twilio sms {:to-phone-number *phone-number*
                   :from-phone-number "1-506-555-1234"}
-  (on-success (send echo message {:message "It sent"}))
-  (on-failure (send echo message {:message "No it didn't"})))
+  (success (send echo message {:message "It sent"}))
+  (failure (send echo message {:message "No it didn't"})))
 ```
 
 
@@ -682,18 +682,18 @@ This pattern showcases the flexibility and strength of the DSL
 (par (send twilio sms {:to-phone-number *to-phone-number*}
            (message-template {:message *template3*}))
      (seq (send echo message {:message *eventType*}
-                (on-success
+                (success
                  (set twilio-message *template1*))
-                (on-failure
+                (failure
                  (set twilio-message *template2*)))
           (send twilio sms {:to-phone-number *to-phone-number*}
                 (message-template {:message twilio-message})
-                (on-success
+                (success
                  (set sms-id $call-id)))
           (send vht set-top-pop {:message "Hello"
                                  :target "127.0.0.1"}
                 (within 5 minutes)
-                (on-success
+                (success
                  (seq
                   (send echo message {:message $pop-id})
                   (set pressed-ok $pop-id))))
