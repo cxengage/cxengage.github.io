@@ -622,9 +622,9 @@ the command will be retried.
 
 
 
-#### message-template
+#### template
 
-Parameters defined using the **message-template** option will be sent to the endpoint as the rendered
+Parameters defined using the **template** option will be sent to the endpoint as the rendered
 version of the provided template. The template will have access to the canonical event record when
 being rendered. The value for the template can be any of the value types defined in the Notification DSL.
 Parameters which are to be templated, do not need to be defined in the main send parameter definition.
@@ -634,7 +634,7 @@ Parameters which are to be templated, do not need to be defined in the main send
 ; Syntax
 (template {<params>})
 
-;Use a message template when sending an sms to twilio
+;Use a template when sending an sms to twilio
 (send twilio sms {:to-phone-number *phone-number*
                   :from-phone-number "1-506-555-1234"}
   (template {:message "Hello {{first-name}}"}))
