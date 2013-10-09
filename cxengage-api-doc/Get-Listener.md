@@ -6,7 +6,7 @@
 
 ## Description
 
-Retrieves listeners for the given instance.
+Retrieves listeners for the given tenant.
 
 
 ### Parameters
