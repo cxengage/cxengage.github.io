@@ -1,35 +1,31 @@
-## Message Template Resources
+## Template Resources
 
 ```
-  GET instance/:iid/message_templates/:id
+  GET tenants/:iid/templates/:id
 ```
 
 ## Description
 
 Retrieves message templates for the given instance.
 
-### Authentication
-
-[OAuth](https://github.com/userevents/charon)
 
 ### Parameters
 
-- **iid** _(required)_ — Selected instance
-- **id** _(required)_ - Message Template to retrieve
+- **iid** _(required)_ — Selected tenant
+- **id** _(required)_ - Template to retrieve
 
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
 
-- **403 Forbidden** - You do not have access to the instance or OAuth error - see [OAuth](https://github.com/userevents/charon) for more information.
-- **404 Not Found** - The requested node or instance does not exist or has been deleted.
+- **404 Not Found** - The requested tenant or message template does not exist or has been deleted.
 
 ### Example
 
 **Request**
 
 ```
-  GET instance/IN1/message_templates/MT1
+  GET tenants/tenant1/templates/TM1
 ```
 
 ```json
