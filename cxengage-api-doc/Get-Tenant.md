@@ -1,7 +1,7 @@
 # Tenant Resources
 
 ```
-  GET /tenants/:tid
+  GET /tenants
 ```
 
 ## Description
@@ -18,7 +18,7 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  GET /tenants/tenant1
+  GET /tenants
 ```
 
 **Return**
