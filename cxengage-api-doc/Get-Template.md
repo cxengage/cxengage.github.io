@@ -1,4 +1,4 @@
-## Message Template Resources
+## Template Resources
 
 ```
   GET tenants/:iid/templates/:id
