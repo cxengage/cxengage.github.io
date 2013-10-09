@@ -1,12 +1,16 @@
 # Tenant Resources
 
 ```
-  GET /tenants
+  GET /tenants/:tid
 ```
 
 ## Description
 
 Retrieves tenant info
+
+## Parameters
+
+- **iid** _(required)_ — Selected tenant
 
 
 ### Errors
@@ -18,23 +22,17 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  GET /tenants
+  GET /tenants/tenant1
 ```
 
 **Return**
 
 ```json
 
-[
-    {
-        "id": "tenant-two",
-        "name" : "another tenant"
-    },
-    {
-        "id": "tenant1",
-        "name": "Tenant Number One"
-    }
-]
+{
+    "id": "tenant1",
+    "name": "Tenant Number One"
+}
 
 ```
 
