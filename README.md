@@ -790,7 +790,7 @@ and here
    ```
    Create a new listener for a given tenant
    ```
-   [Get Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listener.d) 
+   [Get Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listener.md) 
    ```
    Get a specific listener for a given tenant
    ```
