@@ -1,26 +1,23 @@
 # Message Template Resources
 
 ```
-  POST instance/:iid/message_templates/:id
+  POST tenants/:iid/templates/:id
 ```
 
 ## Description
 
 Creates/Updates event record on given instance
 
-### Authentication
-
-[OAuth](https://github.com/userevents/charon)
 
 ### Parameters
 
-- **iid** _(required)_ — Selected instance
+- **iid** _(required)_ — Selected tenant
+- **id** _(required)_ - Selected template
 
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
 
-- **403 Forbidden** - You do not have access to the instance or OAuth error - see [OAuth](https://github.com/userevents/charon) for more information.
 
 ### Example
 
@@ -28,7 +25,7 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  POST instance/IN1/message_templates/MT1
+  POST tenants/tenant1/templates/TM1
   Content-Type: application/json
 ```
 
