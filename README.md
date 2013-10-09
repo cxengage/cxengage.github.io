@@ -801,4 +801,28 @@ CxEngage can be integrated with by using CxEngage API.
    Delete a specific listener for a given tenant
    ```
 
-   
+## Integrations
+
+   [Get Integrations](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Integrations.md) 
+   ```
+   Get all integrations for a given tenant
+   ```
+   [Create Integration](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Integration.md) 
+   ```
+   Create a new integration for a given tenant
+   ```
+   [Get Integrations](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Integration.md) 
+   ```
+   Get a specific integration for a given tenant
+   ```
+   [Update Integration](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Integration.md) 
+   ```
+   Update a specific integration for a given tenant
+   ```
+   [Delete Integration](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Integration.md) 
+   ```
+   Delete a specific integration for a given tenant
+   ```
+ 
+ 
+ 
