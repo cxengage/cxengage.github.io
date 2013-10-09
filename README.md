@@ -755,23 +755,23 @@ CxEngage can be integrated with by using CxEngage API.
    
 ## Templates
 
-   [Get Templates](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Message-Template.md) 
+   [Get Templates](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Template.md) 
    ```
    Get all message templates for a given tenant
    ```
-   [Create Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Message-Template.md)
+   [Create Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Template.md)
    ```
    Create a new message template for a given tenant
    ```
-   [Get Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Message-Template.md) 
+   [Get Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Template.md) 
    ```
    Get a specific message template for a given tenant
    ```
-   [Update Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Message-Template.md) 
+   [Update Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Template.md) 
    ```
    Update a specific message template for a given tenant
    ```
-   [Delete Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Message-Template.md) 
+   [Delete Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Template.md) 
    ```
    Delete a specific Message template for a given tenant
    ```
