@@ -26,7 +26,7 @@ All known errors will be returned in a JSON map with key "error".
 
 ```
   POST tenants/tenant1/templates/TM1
-  Content-Type: application/json
+  Content-Type: application/json; charset=utf-8
 ```
 
 ```json
