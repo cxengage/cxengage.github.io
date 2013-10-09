@@ -25,14 +25,19 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  GET /tenants/tenant1/integrations/datasift
+  GET /tenants/tenant1/integrations
 ```
 
 ```json
-
+[
   {
     "id": "datasift",
     "api-key": "keyvalue",
     "username": "usernamevalue"
 }
+
+    {
+        "id": "echo"
+    }
+]
 ```
