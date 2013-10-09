@@ -1,4 +1,4 @@
-# Message Template Resources
+# Template Resources
 
 ```
   POST tenants/:iid/templates/:id
