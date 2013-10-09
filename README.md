@@ -815,7 +815,3 @@ CxEngage can be integrated with by using CxEngage API.
    ```
    Get a specific integration for a given tenant
    ```
-   [Update Integration](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Integration.md) 
-   ```
-   Update a specific integration for a given tenant
-   ```
