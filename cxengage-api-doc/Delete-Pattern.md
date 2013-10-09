@@ -17,7 +17,7 @@ Deletes the node from the given instance.
 
 All known errors will be returned in a JSON map with key "error".
 
-- **404 Not Found** - The requested node or instance does not exist or has already been deleted.
+- **404 Not Found** - The requested tenant or pattern does not exist or has already been deleted.
 
 ### Example
 

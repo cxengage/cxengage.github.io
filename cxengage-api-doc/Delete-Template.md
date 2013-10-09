@@ -8,9 +8,6 @@
 
 Deletes the list from the given instance.
 
-### Authentication
-
-[OAuth](https://github.com/userevents/charon)
 
 ### Parameters
 

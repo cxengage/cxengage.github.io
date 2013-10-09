@@ -757,50 +757,72 @@ CxEngage can be integrated with by using CxEngage API.
 
    [Get Templates](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Template.md) 
    ```
-   Get all message templates for a given tenant
+   Get all templates for a given tenant
    ```
    [Create Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Template.md)
    ```
-   Create a new message template for a given tenant
+   Create a new template for a given tenant
    ```
    [Get Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Template.md) 
    ```
-   Get a specific message template for a given tenant
+   Get a specific template for a given tenant
    ```
    [Update Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Template.md) 
    ```
-   Update a specific message template for a given tenant
+   Update a specific template for a given tenant
    ```
    [Delete Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Template.md) 
    ```
-   Delete a specific Message template for a given tenant
+   Delete a specific template for a given tenant
    ```
    
-   <!---
-your comment goes here
-and here
+ 
 
-   ## Listeners
+## Listeners
 
-   [Get Listeners](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listener.md) 
+   [Get Listeners](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listeners.md) 
    ```
    Get all listeners for a given tenant
    ```
-   [Create Listener](https://github.com/cxengage/cxengage.github.io/blob/master/Create-Listener) 
+   [Create Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Listener.md) 
    ```
    Create a new listener for a given tenant
    ```
-   [Get Listener](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Listener) 
+   [Get Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listener.md) 
    ```
    Get a specific listener for a given tenant
    ```
-   [Update Listener](https://github.com/cxengage/cxengage.github.io/blob/master/Update-Listener) 
+   [Update Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Listener.md) 
    ```
    Update a specific listener for a given tenant
    ```
-   [Delete Listener](https://github.com/cxengage/cxengage.github.io/blob/master/Delete-Listener) 
+   [Delete Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Listener.md) 
    ```
    Delete a specific listener for a given tenant
    ```
--->
-   
+
+## Integrations
+
+   [Get Integrations](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Integrations.md) 
+   ```
+   Get all integrations for a given tenant
+   ```
+   [Create Integration](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Integration.md) 
+   ```
+   Create a new integration for a given tenant
+   ```
+   [Get Integrations](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Integration.md) 
+   ```
+   Get a specific integration for a given tenant
+   ```
+   [Update Integration](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Integration.md) 
+   ```
+   Update a specific integration for a given tenant
+   ```
+   [Delete Integration](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Integration.md) 
+   ```
+   Delete a specific integration for a given tenant
+   ```
+ 
+ 
+ 
