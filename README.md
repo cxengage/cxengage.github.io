@@ -786,19 +786,19 @@ and here
    ```
    Get all listeners for a given tenant
    ```
-   [Create Listener](https://github.com/cxengage/cxengage.github.io/blob/master/Create-Listener.md) 
+   [Create Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Listener.md) 
    ```
    Create a new listener for a given tenant
    ```
-   [Get Listener](https://github.com/cxengage/cxengage.github.io/blob/master/Get-Listener.d) 
+   [Get Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listener.d) 
    ```
    Get a specific listener for a given tenant
    ```
-   [Update Listener](https://github.com/cxengage/cxengage.github.io/blob/master/Update-Listener.md) 
+   [Update Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Listener.md) 
    ```
    Update a specific listener for a given tenant
    ```
-   [Delete Listener](https://github.com/cxengage/cxengage.github.io/blob/master/Delete-Listener.md) 
+   [Delete Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Listener.md) 
    ```
    Delete a specific listener for a given tenant
    ```
