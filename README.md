@@ -776,11 +776,9 @@ CxEngage can be integrated with by using CxEngage API.
    Delete a specific template for a given tenant
    ```
    
-   <!---
-your comment goes here
-and here
+ 
 
-   ## Listeners
+## Listeners
 
    [Get Listeners](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listeners.md) 
    ```
@@ -802,5 +800,5 @@ and here
    ```
    Delete a specific listener for a given tenant
    ```
--->
+
    
