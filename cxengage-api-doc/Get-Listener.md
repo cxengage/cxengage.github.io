@@ -1,7 +1,7 @@
 ## Listener Resources
 
 ```
-  GET tenants/:iid/listeners
+  GET tenants/:iid/listener/:id
 ```
 
 ## Description
@@ -12,7 +12,7 @@ Retrieves listeners for the given instance.
 ### Parameters
 
 - **iid** _(required)_ — Selected tenant
-
+- **id** _(required)_ - Selected listener
 
 ### Errors
 
@@ -25,12 +25,11 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  GET tenants/tenant1/listeners
+  GET tenants/tenant1/listener/LI2
 ```
 
 ```json
 
-  [
     {
         "status": true,
         "topic": "CxDemo_0720v2",
@@ -47,18 +46,5 @@ All known errors will be returned in a JSON map with key "error".
         },
         "id": "LI2"
      
-    },
-    {
-        "id": "LI1",
-        "name": "Demo Datasift",
-        "type": "datasift",
-        "mapping": {
-            "username": "interaction.author.username",
-            "sentiment": "salience.content.sentiment",
-            "id": "twitter.user.screen_name"
-        },
-        "hash": "xxxxxxxxxxxxxx",
-        "status": true
     }
-]
 ```
