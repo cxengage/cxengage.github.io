@@ -819,10 +819,3 @@ CxEngage can be integrated with by using CxEngage API.
    ```
    Update a specific integration for a given tenant
    ```
-   [Delete Integration](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Integration.md) 
-   ```
-   Delete a specific integration for a given tenant
-   ```
- 
- 
- 
