@@ -6,7 +6,7 @@
 
 ## Description
 
-Retrieves integrations for the given instance.
+Retrieves integrations for the given tenant.
 
 
 ### Parameters
