@@ -18,7 +18,7 @@ Retrieves listeners for the given instance.
 
 All known errors will be returned in a JSON map with key "error".
 
-- **404 Not Found** - The requested tenant does not exist or has been deleted.
+- **404 Not Found** - The requested tenant or listener does not exist or has been deleted.
 
 ### Example
 
