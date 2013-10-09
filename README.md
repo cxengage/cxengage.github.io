@@ -753,7 +753,7 @@ CxEngage can be integrated with by using CxEngage API.
    Delete a specific pattern for a given tenant
    ```
    
-   ## Message Templates
+## Message Templates
 
    [Get Message Templates](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Message-Template.md) 
    ```
