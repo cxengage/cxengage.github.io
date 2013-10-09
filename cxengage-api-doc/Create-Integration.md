@@ -1,7 +1,7 @@
 ## Integration Resources
 
 ```
-  GET tenants/:iid/integrations
+  POST tenants/:iid/integrations/:id
 ```
 
 ## Description
@@ -12,7 +12,7 @@ Retrieves integrations for the given instance.
 ### Parameters
 
 - **iid** _(required)_ — Selected tenant
-
+- **id**  _(required)_ - Selected listener or endpoint
 
 ### Errors
 
@@ -25,19 +25,34 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  GET /tenants/tenant1/integrations
+  POST /tenants/tenant1/integrations/salesforce
 ```
 
 ```json
-[
-  {
-    "id": "datasift",
-    "api-key": "keyvalue",
-    "username": "usernamevalue"
+ {
+        "id": "salesforce",
+        "type": "salesforce",
+        "consumer-key": "consumerkey",
+        "consumer-secret": "consumersecret",
+        "username": "dev@userevents.com",
+        "secret-token": "secret-token",
+        "password": "password"
+    }
+
+```
+
+**Return**
+
+```json
+
+{
+    "id": "salesforce",
+    "type": "salesforce",
+    "consumer-key": "consumerkey",
+    "consumer-secret": "consumersecret",
+    "username": "dev@userevents.com",
+    "secret-token": "secret-token",
+    "password": "password"
 }
 
-    {
-        "id": "echo"
-    }
-]
 ```
