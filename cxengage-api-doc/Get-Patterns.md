@@ -6,7 +6,7 @@
 
 ## Description
 
-Retrieves all patterns on instance :iid
+Retrieves all patterns on tenant :iid
 
 
 ### Parameters
