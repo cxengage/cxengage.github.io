@@ -35,7 +35,7 @@ All known errors will be returned in a JSON map with key "error".
    "then": "(par (send echo message {:message \"We should probably call the customer\"}) (send echo message {:message \"We should probably call the customer now now now now\"}))",
    "when": "(within 1 minutes (allOf (count 4 (event (and (= customerSegment \"Gold\") (= eventType \"flcheck\")))) (event (and (= customerSegment \"Gold\") (= eventType \"cnclTicket\"))))))",
    "description": "Loyalty Pattern for Gold customers",
-   "name": "Loyaltly Pattern"
+   "name": "Loyalty Pattern"
   }
 
 
