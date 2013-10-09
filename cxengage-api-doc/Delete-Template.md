@@ -1,7 +1,7 @@
-# List Resources
+# Template Resources
 
 ```
-  DELETE instance/:iid/message_templates/:id
+  DELETE tenants/:iid/templates/:id
 ```
 
 ## Description
@@ -14,14 +14,13 @@ Deletes the list from the given instance.
 
 ### Parameters
 
-- **iid** _(required)_ — Selected instance
-- **id** _(required)_ — List to delete
+- **iid** _(required)_ — Selected tenant
+- **id** _(required)_ — Template to delete
 
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
 
-- **403 Forbidden** - You do not have access to the instance or OAuth error - see [OAuth](https://github.com/userevents/charon) for more information.
 - **404 Not Found** - The requested list or instance does not exist or has already been deleted.
 
 ### Example
@@ -29,7 +28,7 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  DELETE instance/IN1/message_templates/MT1
+  DELETE tenants/tenants/templates/TM1
 ```
 
 **Return**
@@ -37,7 +36,6 @@ All known errors will be returned in a JSON map with key "error".
 ```json
 {
 
-  "MT1"
-  
+  "TM1"
 }
 ```

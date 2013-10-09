@@ -11,7 +11,7 @@ Retrieves templates for the given instance.
 
 ### Parameters
 
-- **iid** _(required)_ — Selected tenants
+- **iid** _(required)_ — Selected tenant
 - **id** _(required)_ - Selected template
 
 ### Errors

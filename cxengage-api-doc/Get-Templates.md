@@ -1,7 +1,7 @@
-## Message Template Resources
+## Template Resources
 
 ```
-  GET instance/:iid/message_templates
+  GET tenants/:iid/tenant1/templates
 ```
 
 ## Description
@@ -14,13 +14,12 @@ Retrieves message templates for the given instance.
 
 ### Parameters
 
-- **iid** _(required)_ — Selected instance
+- **iid** _(required)_ — Selected tenant
 
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
 
-- **403 Forbidden** - You do not have access to the instance or OAuth error - see [OAuth](https://github.com/userevents/charon) for more information.
 - **404 Not Found** - The requested node or instance does not exist or has been deleted.
 
 ### Example
@@ -28,20 +27,20 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  GET instance/IN1/message_template
+  GET tenants/tenant1/templates
 ```
 
 ```json
 [
     {
-        "id": "MT1",
+        "id": "TM1",
         "template": "Hi {{FirstName}}, sorry we missed your call. Call Joe at
 +14153159430 re: 401K needs. Gelson Bank.",
         "description": "Default SMS message with click-to-call",
         "name": "SMS"
     },
     {
-        "id": "MT2",
+        "id": "TM2",
         "template": "Hi {{first-name}}\r\n\r\nWe apologize for the
 inconvenience. Please contact us at {{email-address}} at your earliest
 convenience.\r\n\r\nThank You\r\n",
