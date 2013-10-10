@@ -21,7 +21,7 @@ As an example, here is a pattern where a call gets abandoned from the IVR, and a
 (send twilio call {:to-phone-number *To-PhoneNumber*}))
 ```
 
-So,if the key attribute is user, an event that would match this pattern would be
+So, if the key attribute is user, an event that would match this pattern would be
 
 ```json
 {
@@ -30,7 +30,6 @@ So,if the key attribute is user, an event that would match this pattern would be
 
 }
 ```
-
 
 
 If you have any further questions about this or anything below, do not hesitate to reach us by creating a ticket, or e-mailing CxEngage Support at [support@cxengage.com](mailto:support@cxengage.com).
