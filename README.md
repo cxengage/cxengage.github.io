@@ -15,7 +15,7 @@ As an example, here is a pattern where a call gets abandoned from the IVR, and a
 
 ```clojure 
 ;;When
-(event (= callAction "AbandonedCall")
+(event (= callAction "AbandonedCall"))
 
 ;;Then
 (send twilio call {:to-phone-number *To-PhoneNumber*}))
