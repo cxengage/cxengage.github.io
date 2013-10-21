@@ -270,7 +270,7 @@ Let's start with trying to write a simple expression. A pattern I use a lot is o
 (event (= customerSegment "platinum"))
 ```
 
-* All UETL expressions are of the form - When trigger Then
+* All CxEngage DSL expressions are of the form - When trigger Then
 * So, let's go through all the keywords from the expression above
    1.  When keyword - This is what is used to put in before the expression you want to match
    3.  event - this keyword just means event
@@ -313,7 +313,7 @@ The other option for items similar to the count keyword are
 ```
 
 
-Now, if we want to add another event type to the pattern, for example, you would like the pattern to match when there is 2 failed checkins and 1 cancelled ticket. We use the **allOf** keyword for this. The UETL is written this way - 
+Now, if we want to add another event type to the pattern, for example, you would like the pattern to match when there is 2 failed checkins and 1 cancelled ticket. We use the **allOf** keyword for this. The Pattern is written this way - 
 ```clojure
 (all (count 2 (event (and (= customerSegment "platinum") 
                             (= eventType "flcheck")))) 
@@ -351,9 +351,7 @@ All the more commonly used operators are shown being used above. You can use oth
 
 ### Writing Thens
 
-As of CxEngage 3.0 the Notification Service consumes a new format for describing reactions,
-the Notification DSL (real name pending). This language is necessarily more complex than
-UETL, as the requirements for reactions are quite robust.
+As of CxEngage 3.0 the Notification Service consumes a new format for describing reactions, the Notification DSL. 
 
 ### Execution Blocks
 
