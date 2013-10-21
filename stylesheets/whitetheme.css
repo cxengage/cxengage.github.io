@@ -80,6 +80,7 @@ body {
 ol,
 ul {
   list-style: none;
+  font-size: 108%;
 }
 table {
   border-collapse: separate;
@@ -121,11 +122,11 @@ input {
   }
 }
 a {
-  color: #2badad;
+  color: #f68f1e;
   text-decoration: none;
 }
 a:hover {
-  color: #228a8a;
+  color: #fdb60f;
 }
 /* ----------------------------------------------------------------------------
  * Content styling
@@ -429,14 +430,14 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   font-weight: bold;
   display: inline-block;
   padding: 3px 25px;
-  border: solid 2px #2badad;
+  border: solid 2px #f68f1e;
   -webkit-border-radius: 20px;
   border-radius: 20px;
   margin-right: 15px;
 }
 .button,
 .button:visited {
-  background: #2badad;
+  background: #f68f1e;
   color: #fff;
   text-shadow: none;
 }
@@ -567,6 +568,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
 }
 .header .left {
   float: left;
+  font-size: 110%;
 }
 .header .right {
   text-align: right;
@@ -583,7 +585,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   text-rendering: optimizeLegibility;
   font-weight: bold;
   font-family: montserrat, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
 }
 .header h1,
 .header h1 a,
@@ -662,18 +664,18 @@ a.big.button {
   font-weight: bold;
   font-size: 1.1em;
   background: transparent;
-  border: solid 3px #2badad;
+  border: solid 3px #f68f1e;
   -webkit-border-radius: 30px;
   border-radius: 30px;
   font-family: montserrat, sans-serif;
 }
 a.big.button,
 a.big.button:visited {
-  color: #2badad;
+  color: #f68f1e;
   text-decoration: none;
 }
 a.big.button:hover {
-  background: #2badad;
+  background: #f68f1e;
 }
 a.big.button:hover,
 a.big.button:hover:visited {
@@ -744,15 +746,15 @@ a.big.button:hover:visited {
 }
 .menu a,
 .menu a:visited {
-  color: #2badad;
+  color: #f68f1e;
 }
 .menu a:hover {
-  color: #228a8a;
+  color: #fdb60f;
 }
 .menu a.level-1 {
   font-family: montserrat, sans-serif;
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: bold;
 }
 .menu a.level-1,
@@ -791,7 +793,7 @@ a.big.button:hover:visited {
   height: 3px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  background: #2badad;
+  background: #f68f1e;
 }
 code .string,
 code .number {
