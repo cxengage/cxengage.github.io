@@ -6,7 +6,7 @@ Getting Started
 
 Here is some information on how to setup your instance of CxEngage 
 
-### Key Attribute
+### Cx Key Attribute
 
 CxEngage uses **Key Attribute** to identify an event. For example, a key attribute to describe a specific customer or user could be _CustomerID_ or _UserID_. You will only have one key attribute.
    
