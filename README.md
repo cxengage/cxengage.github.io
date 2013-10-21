@@ -193,8 +193,8 @@ Now, what if a customer calls a 3rd time and gets an agent before the agent call
 ```clojure
 ;;When
 (all (within 1 hours
-                 (count 2 (event (= "CallAction" "abandoned")))))
-                 (fail (count 1 (event (= "CallAction" "answered"))))
+                 (count 2 (event (= CallAction "abandoned")))))
+                 (fail (count 1 (event (= CallAction "answered"))))
        
 ;;Then
 (send echo message {:message "Call abandoned twice , call customer back"}))
@@ -207,8 +207,8 @@ As another example, what if when a customer calls in once, talks to an agent, an
 ```clojure
 ;;When
 (within 30 minutes
-        (seq (event (= "CallAction" "answered")
-                    (event (= "CallAction" "inqueue"))))
+        (seq (event (= CallAction "answered")
+                    (event (= CallAction "inqueue"))))
                     
 ;Then
 (send echo message {:message "Transfer call to senior agent"})
@@ -238,7 +238,7 @@ Continuing the examples from above, we can replace the _echos_ with the above _"
 ```clojure
 ;;When
 (all (within 1 hours
-               (count 2 (event (= "CallAction" "abandoned"))))
+               (count 2 (event (= CallAction "abandoned"))))
 
 ;;Then
 (send twilio call {:to-phone-number *phone-number*}))
@@ -249,7 +249,7 @@ If we would like to send an SMS to a customer after the two abandons to let them
 ```clojure
 ;;When
 (all (within 1 hours
-               (count 2 (event (= "CallAction" "abandoned"))))
+               (count 2 (event (= CallAction "abandoned"))))
                 
 ;;Then
 (seq
