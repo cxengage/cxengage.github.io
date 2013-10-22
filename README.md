@@ -4,7 +4,14 @@ CxEngage Docs
 Getting Started 
 ---------------
 
-Here is some information on how to setup your instance of CxEngage 
+CxEngage accepts events from various systems, allowing you to stitch them together to understand and respond to customer's journeys as they happen. Before you dive in and start creating customer journey patterns, though, there is a bit of work that you'll need to do to get events into the system.
+
+To begin, if you would like to integrate with any 3rd-party systems like SendGrid or DataSift, you'll need to create an account with them first. We come pre-integrated with a number of solutions, but if there is one that you use that isn't available, don't hesitate to reach out to us. We're creating new integrations every week, and we will prioritize our work based on customer feedback.
+
+For any custom system, you can submit events into our API. We'll get to how to do that in just a moment, but first, let's start with some definitions.
+
+Definitions
+---------------
 
 ### Key Attribute
 
