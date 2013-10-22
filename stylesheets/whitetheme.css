@@ -267,20 +267,30 @@ a:hover {
 .content h3 ol {
   padding-top: 10px;
 }
-.content h1,
-.content h2 {
+.content h1 {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.5em;
 }
+.content h2 {
+  text-transform: none;
+  letter-spacing: 1px;
+  font-size: 1.5em;
+}
+
 .content h3 {
   font-size: 1.2em;
 }
-.content h1,
+
 .content h2,
 .content .big-heading,
 body.big-h3 .content h3 {
   padding-top: 80px;
+}
+
+.content h1 {
+  padding-top: 80px;
+  font-size: 160%;
 }
 .content h1:before,
 .content h2:before,
@@ -319,7 +329,7 @@ body.big-h3 .content h3:before {
     width: 120%;
   }
 }
-.content h4,
+
 .content h5,
 .content .small-heading,
 body:not(.big-h3) .content h3 {
@@ -328,6 +338,10 @@ body:not(.big-h3) .content h3 {
   padding-top: 30px;
   padding-bottom: 10px;
 }
+.content h4 {
+  font-style: italic;
+}
+
 body:not(.big-h3) .content h3 {
   /*font-size: 0.9em;*/
 }
