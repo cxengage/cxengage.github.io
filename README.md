@@ -13,7 +13,7 @@ For any custom system, you can submit events into our API. We'll get to how to d
 Definitions
 ---------------
 
-### Cx Key Attribute
+### Key Attribute
 
 CxEngage uses **Key Attribute** to identify an event. For example, a key attribute to describe a specific customer or user could be _CustomerID_ or _UserID_. You will only have one key attribute.
    
