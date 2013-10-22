@@ -1,4 +1,4 @@
-CxEngage Docs
+CxEngage Documentation
 =============
 
 Getting Started 
