@@ -4,7 +4,7 @@ CxEngage Documentation
 Getting Started 
 ---------------
 
-CxEngage accepts events from various systems, allowing you to stitch them together to understand and respond to customer's journeys as they happen. Before you dive in and start creating customer journey patterns, though, there is a bit of work that you'll need to do to get events into the system.
+CxEngage accepts events from various systems, allowing you to stitch them together to understand and respond to customer's journeys as they happen. Before you dive in and start creating customer journey patterns though, there is a bit of work that you'll need to do to get events into the system.
 
 To begin, if you would like to integrate with any 3rd-party systems like SendGrid or DataSift, you'll need to create an account with them first. We come pre-integrated with a number of solutions, but if there is one that you use that isn't available, don't hesitate to reach out to us. We're creating new integrations every week, and we will prioritize our work based on customer feedback.
 
@@ -15,7 +15,9 @@ Definitions
 
 ### Key Attribute
 
-CxEngage uses **Key Attribute** to identify an event. For example, a key attribute to describe a specific customer or user could be _CustomerID_ or _UserID_. You will only have one key attribute.
+A **Key Attribute** is the term used for the unique identifier for a given customer. It could be an e-mail, a phone number or something else, but the important part is that there is only one - every other identifier is mapped to this key attribute.
+
+For example, a key attribute to describe a specific customer or user could be _CustomerID_, 
    
 
 As an example, here is a pattern where a call gets abandoned from the IVR, and an agent calls the customer back using our integration with twilio: 

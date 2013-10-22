@@ -640,7 +640,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   text-rendering: optimizeLegibility;
 }
 .menubar .section {
-  padding: 30px 30px;
+  padding: 20px 30px;
   background: white;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
