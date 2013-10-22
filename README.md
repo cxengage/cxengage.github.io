@@ -10,10 +10,9 @@ To begin, if you would like to integrate with any 3rd-party systems like SendGri
 
 For any custom system, you can submit events into our API. We'll get to how to do that in just a moment, but first, let's start with some definitions.
 
-Definitions
----------------
+# Definitions
 
-### Key Attribute
+## Key Attribute
 
 A **Key Attribute** is the term used for the unique identifier for a given customer. It could be an e-mail, a phone number or something else, but the important part is that there is only one key attribute, and every other identifier is mapped to it using our Augment Service (described later).
 
@@ -42,7 +41,21 @@ So, if the key attribute is user, an event that would match this pattern would b
 
 If you have any further questions about this or anything below, do not hesitate to reach us by creating a ticket, or e-mailing CxEngage Support at [support@cxengage.com](mailto:support@cxengage.com).
 
-### Using the Echo Endpoint
+## Listener
+
+## Endpoint
+
+## Tenant
+
+## Patterns
+
+## Message Template
+
+# Setting Up CxEngage
+
+## Endpoints
+
+### Echo
 
 The Echo endpoint service can be used to test out your patterns. There are no mandatory parameters for the echo service. There is one optional parameter, which is 
 * message
@@ -58,7 +71,7 @@ You could also test out your message template with the echo
 (template {:message +TM1}))
 ```
 
-### Using the Twilio endpoint
+### Twilio
 
 With CxEngage you can use a Twilio service, with which you can use to send either SMS or Phone calls. To start up the Twilio endpoint service, you need the following items  
 
@@ -102,7 +115,7 @@ You could also use message templating instead of setting it in the pattern
       (template {:message +TM1}))
 ```
 
-### Sendgrid endpoint
+### Sendgrid
 
 With CxEngage, you can use Sendgrid to send emails as a pattern reaction. To start up the Sendgrid Endpoint Service, you need the following items
 
@@ -150,8 +163,7 @@ You could also use message templating for setting it in the pattern
 ```
 
 
-Setting up your patterns
-------------------------
+## Setting up your patterns
 
 Next, we get to the fun part of creating patterns for things that matter to your enterprise. To enable this we have a simple, yet powerful DSL.
 
@@ -221,56 +233,8 @@ As another example, what if when a customer calls in once, talks to an agent, an
 ;Then
 (send echo message {:message "Transfer call to senior agent"})
 ```
-More info on [Writing Whens](Writing-Whens.md)
 
-### "Thens"
-
-The following keywords are available to describe the **"then"** portion of the pattern:
-
-```
-    Then keyword
-    par        
-    seq        
-    delay      
-    send       
-    if         
-    success
-    failure 
-    timeout    
-    template 
-    set 
-```
-
-Continuing the examples from above, we can replace the _echos_ with the above _"thens"_. Now, when a caller abandons the call twice, we can use our Twilio integration to trigger an outbound call:
-
-```clojure
-;;When
-(all (within 1 hours
-               (count 2 (event (= CallAction "abandoned"))))
-
-;;Then
-(send twilio call {:to-phone-number *phone-number*}))
-```
-
-If we would like to send an SMS to a customer after the two abandons to let them know they will receive a call shortly, we can write the pattern using _seq_ (short for _sequence_) as: 
-
-```clojure
-;;When
-(all (within 1 hours
-               (count 2 (event (= CallAction "abandoned"))))
-                
-;;Then
-(seq
-  (send twilio sms {:to-phone-number *phone-number*
-                    :message "We apologize for the long waits, an agent
-                              will call you back shortly"})
-  (send twilio call {:to-phone-number *phone-number*}))
-```
-
-In this example, we use the _seq_ keyword because we want the SMS to go out before the agent calls
-back. One thing to note here is that if the SMS fails, the next send does not execute.
-
-### Writing Whens 
+#### Writing "Whens" 
 
 Let's start with trying to write a simple expression. A pattern I use a lot is of the form when CustomerSegment is Platinum, do "something". The pattern for that is written this way 
 
@@ -357,9 +321,52 @@ Now, if we want the pattern to only match if a cancelled ticket happens after a 
 
 All the more commonly used operators are shown being used above. You can use other keywords such as **fail** etc similarly. 
 
-### Writing Thens
+### "Thens"
 
-As of CxEngage 3.0 the Notification Service consumes a new format for describing reactions, the Notification DSL. 
+The following keywords are available to describe the **"then"** portion of the pattern:
+
+```
+    Then keyword
+    par        
+    seq        
+    delay      
+    send       
+    if         
+    success
+    failure 
+    timeout    
+    template 
+    set 
+```
+
+Continuing the examples from above, we can replace the _echos_ with the above _"thens"_. Now, when a caller abandons the call twice, we can use our Twilio integration to trigger an outbound call:
+
+```clojure
+;;When
+(all (within 1 hours
+               (count 2 (event (= CallAction "abandoned"))))
+
+;;Then
+(send twilio call {:to-phone-number *phone-number*}))
+```
+
+If we would like to send an SMS to a customer after the two abandons to let them know they will receive a call shortly, we can write the pattern using _seq_ (short for _sequence_) as: 
+
+```clojure
+;;When
+(all (within 1 hours
+               (count 2 (event (= CallAction "abandoned"))))
+                
+;;Then
+(seq
+  (send twilio sms {:to-phone-number *phone-number*
+                    :message "We apologize for the long waits, an agent
+                              will call you back shortly"})
+  (send twilio call {:to-phone-number *phone-number*}))
+```
+
+In this example, we use the _seq_ keyword because we want the SMS to go out before the agent calls
+back. One thing to note here is that if the SMS fails, the next send does not execute.
 
 ### Execution Blocks
 
@@ -723,12 +730,13 @@ This pattern showcases the flexibility and strength of the DSL
 ```
 
 
-Integrate with CxEngage
-=======================
+## Using the API
 
 CxEngage can be integrated with by using CxEngage API.
 
-## Tenants
+### Using Postman
+
+### Tenants
 
    [Get Tenants](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Tenant.md) 
  
@@ -736,7 +744,7 @@ CxEngage can be integrated with by using CxEngage API.
    Get the tenant info
    ```
 
-## Key Attribute
+### Key Attribute
 
    [Get Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Key-Attribute.md) 
    ```
@@ -747,7 +755,7 @@ CxEngage can be integrated with by using CxEngage API.
    Update the key attribute for a given tenant
    ```
    
-## Patterns
+### Patterns
 
    [Get Patterns](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Patterns.md)
    ```
@@ -770,7 +778,7 @@ CxEngage can be integrated with by using CxEngage API.
    Delete a specific pattern for a given tenant
    ```
    
-## Templates
+### Templates
 
    [Get Templates](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Template.md) 
    ```
@@ -795,7 +803,7 @@ CxEngage can be integrated with by using CxEngage API.
    
  
 
-## Listeners
+### Listeners
 
    [Get Listeners](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listeners.md) 
    ```
@@ -818,7 +826,7 @@ CxEngage can be integrated with by using CxEngage API.
    Delete a specific listener for a given tenant
    ```
 
-## Integrations
+### Integrations
 
    [Get Integrations](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Integrations.md) 
    ```
