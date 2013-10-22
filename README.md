@@ -17,7 +17,7 @@ Definitions
 
 A **Key Attribute** is the term used for the unique identifier for a given customer. It could be an e-mail, a phone number or something else, but the important part is that there is only one - every other identifier is mapped to this key attribute.
 
-For example, a key attribute to describe a specific customer or user could be _CustomerID_, 
+For example, a key attribute to describe a specific customer or user could be _CustomerID_. If a separate event comes in later with that user's e-mail address, that e-mail address will be mapped to _CustomerID_ using our Augment Service (described later).
    
 
 As an example, here is a pattern where a call gets abandoned from the IVR, and an agent calls the customer back using our integration with twilio: 
