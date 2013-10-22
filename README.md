@@ -21,7 +21,7 @@ For example, a key attribute to describe a specific customer could be _CustomerI
    
 To give a specific example, here is a pattern where a call gets abandoned from the IVR, and an agent calls the customer back using our integration with Twilio: 
 
-```clojure 
+``` clojure 
 ;;When
 (event (= callAction "AbandonedCall"))
 
@@ -31,7 +31,7 @@ To give a specific example, here is a pattern where a call gets abandoned from t
 
 So, if the key attribute is user, an event that would match this pattern would be
 
-```json
+``` json
 {
   "user" : "3458676",
   "calAction" : "AbandonedCall",
@@ -48,12 +48,12 @@ The Echo endpoint service can be used to test out your patterns. There are no ma
 * message
 
 Here is a way to use the echo endpoint in your Then
-```clojure
+``` clojure
 (send echo message {:message "send message"})
 ```
 
 You could also test out your message template with the echo
-```clojure
+``` clojure
 (send echo message {:message "send message"}
 (template {:message +TM1}))
 ```
