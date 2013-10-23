@@ -743,13 +743,13 @@ This pattern showcases the flexibility and strength of the DSL
 ```
 
 
-## Using the API
+# Using the API
 
 CxEngage can be integrated with by using CxEngage API.
 
 ### Using Postman
 
-### Tenants
+## Tenants
 
    [Get Tenants](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Tenant.md) 
  
@@ -757,7 +757,7 @@ CxEngage can be integrated with by using CxEngage API.
    Get the tenant info
    ```
 
-### Key Attribute
+## Key Attribute
 
    [Get Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Key-Attribute.md) 
    ```
@@ -768,7 +768,7 @@ CxEngage can be integrated with by using CxEngage API.
    Update the key attribute for a given tenant
    ```
    
-### Patterns
+## Patterns
 
    [Get Patterns](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Patterns.md)
    ```
@@ -791,7 +791,7 @@ CxEngage can be integrated with by using CxEngage API.
    Delete a specific pattern for a given tenant
    ```
    
-### Templates
+## Templates
 
    [Get Templates](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Template.md) 
    ```
@@ -816,7 +816,7 @@ CxEngage can be integrated with by using CxEngage API.
    
  
 
-### Listeners
+## Listeners
 
    [Get Listeners](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listeners.md) 
    ```
@@ -839,7 +839,7 @@ CxEngage can be integrated with by using CxEngage API.
    Delete a specific listener for a given tenant
    ```
 
-### Integrations
+## Integrations
 
    [Get Integrations](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Integrations.md) 
    ```
