@@ -756,11 +756,11 @@ In order to authenticate a user, a service must provide the users login informat
 Once a user has its access token, he or she will be able to make authenticated requests to any resources it has permission to access.
 
 
-`grant_type` - Must be `password`
-`client_id` - Provided client id
-`client_secret` - Provided client secret
-`username` - End-user's username
-`password` - End-user's password
+grant_type - password
+client_id - Provided client id
+client_secret - Provided client secret
+username - your username
+password - your password
 
 
 
@@ -897,7 +897,7 @@ curl -X GET https://api.cxengage.com/tenants/my-tenant
    ```
    Create a new integration for a given tenant
    ```
-   [Get Integrations](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Integration.md) 
+   [Get Integration](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Integration.md) 
    ```
    Get a specific integration for a given tenant
    ```
