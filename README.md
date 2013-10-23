@@ -756,16 +756,13 @@ In order to authenticate a user, a service must provide the users login informat
 Once a user has its access token, he or she will be able to make authenticated requests to any resources it has permission to access.
 
 
-```
-Parameter | Description
---- | ---
-`grant_type` | Must be `password`
-`client_id` | Provided client id
-`client_secret` | Provided client secret
-`username` | End-user's username
-`password` | End-user's password
+`grant_type` - Must be `password`
+`client_id` - Provided client id
+`client_secret` - Provided client secret
+`username` - End-user's username
+`password` - End-user's password
 
-```
+
 
 **Example Request:**
 
