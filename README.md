@@ -80,7 +80,7 @@ Here is a way to use the echo endpoint in your Then
 
 You could also test out your message template with the echo
 ``` clojure
-(send echo message {:message "send message"}
+(send echo message {}
 (template {:message +TM1}))
 ```
 
@@ -743,7 +743,7 @@ This pattern showcases the flexibility and strength of the DSL
 ```
 
 
-## Using the API
+# Using the API
 
 CxEngage can be integrated with by using CxEngage API.
 
