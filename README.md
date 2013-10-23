@@ -47,10 +47,6 @@ A Listener is a CxEngage Service that integrates with a 3rd Party service to rec
 For example, if you have a Datasift stream that monitors tweets for your company, you can connect that stream to CxEngage via a Listener
 
 
-## Receiver
-
-A Receiver is a CxEngage Service that you can send events to get processed by CxEngage. Events are sent in JSON format.
-
 ## Patterns
 
 As a user of CxEngage, you would write patterns that are important to your organization. A pattern has two parts, When and Then. For example, you would like to be notified when a customer with a certain Klout score has tweeted and has called in to your call centre queue, this would be the Then part of your pattern. The Then is the notification part, this is where you tell CxEngage what should happen when the pattern matches. For example, you can send a twilio call, open a Salesforce opportunity or send a test notification via the echo endpoint service.
