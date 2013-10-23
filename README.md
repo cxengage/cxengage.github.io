@@ -805,7 +805,7 @@ curl -X GET https://api.cxengage.com/tenants/my-tenant
    Get the tenant info
    ```
 
-## Key Attribute
+## Cx Key Attribute
 
    [Get Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Key-Attribute.md) 
    ```
