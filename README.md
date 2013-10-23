@@ -784,8 +784,6 @@ grant_type=password&client_id=66EFTGN33N7NGU37A4JTWLRPJOPWYTOG&client_secret=4ND
 }
 ```
 
-## Making Authenticated Requests
-
 Now that you have your access token, you can make authenticated requests.
 
 ```bash
