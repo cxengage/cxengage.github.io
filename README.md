@@ -12,7 +12,7 @@ For any custom system, you can submit events into our API. We'll get to how to d
 
 # Definitions
 
-## Key Attribute
+## Key-Attribute
 
 A **Key Attribute** is the term used for the unique identifier for a given customer. It could be an e-mail, a phone number or something else, but the important part is that there is only one key attribute, and every other identifier is mapped to it using our Augment Service (described later).
 
@@ -42,8 +42,18 @@ So, if the key attribute is user, an event that would match this pattern would b
 If you have any further questions about this or anything below, do not hesitate to reach us by creating a ticket, or e-mailing CxEngage Support at [support@cxengage.com](mailto:support@cxengage.com).
 
 ## Listener
+A Listener is a CxEngage Service that integrates with a 3rd Party service to receive events. Currently, we have a Datasift Listener and a Salesforce Listener.
+
+For example, if you have a Datasift stream that monitors tweets for your company, you can connect that stream to CxEngage via a Listener
+
+
+## Receiver
+
+A Receiver is a CxEngage Service that you can send events to get processed by CxEngage. Events are sent in JSON format.
 
 ## Endpoint
+
+
 
 ## Tenant
 
