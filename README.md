@@ -751,6 +751,51 @@ CxEngage can be integrated with by using CxEngage API.
 
 To connect with the CxEngage API, you need to authenticate with a token.
 
+In order to authenticate a user, a service must provide the users login information along with its `client_id` and `client_secret`.
+
+Once a user has its access token, he or she will be able to make authenticated requests to any resources it has permission to access.
+
+
+Parameter | Description
+--- | ---
+`grant_type` | Must be `password`
+`client_id` | Provided client id
+`client_secret` | Provided client secret
+`username` | End-user's username
+`password` | End-user's password
+
+**Example Request:**
+
+```http
+POST /token HTTP/1.1
+Host: http://auth.cxengage.com/token
+Authorization: Basic {{SSL TOKEN HERE}}
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&client_id=66EFTGN33N7NGU37A4JTWLRPJOPWYTOG&client_secret=4NDLKSW6KQWW6W36UIG6H3JVXVRSDQOV&username=admin&password=Password1
+```
+
+**Example Response:**
+
+```json
+{
+  "access_token":"FO2TVQIXHHEY2MROX3SQDBVGJMPXP3L2",
+  "token_type":"bearer"
+}
+```
+
+## Making Authenticated Requests
+
+Now that you have your access token, you can make authenticated requests.
+
+```bash
+curl -X GET https://api.cxengage.com/tenants/my-tenant
+     -H 'Authorization: Bearer FO2TVQIXHHEY2MROX3SQDBVGJMPXP3L2'
+```
+
+
+
+
 
 ## Tenants
 
