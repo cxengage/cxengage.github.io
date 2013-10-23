@@ -743,7 +743,7 @@ This pattern showcases the flexibility and strength of the DSL
 ```
 
 
-# Using the API
+## Using the API
 
 CxEngage can be integrated with by using CxEngage API.
 
