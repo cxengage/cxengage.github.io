@@ -747,7 +747,10 @@ This pattern showcases the flexibility and strength of the DSL
 
 CxEngage can be integrated with by using CxEngage API.
 
-### Using Postman
+## Authentication
+
+To connect with the CxEngage API, you need to authenticate with a token.
+
 
 ## Tenants
 
