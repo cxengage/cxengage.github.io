@@ -39,7 +39,7 @@ All known errors will be returned in a JSON map with key "error".
 ### curl Example
 
 ```
-curl -X GET http://192.168.0.28:8182/tenants/tenant1 \
+curl -X GET http://api.cxengage.com/tenants/{{tenant-name}} \
      -H 'Authorization: Bearer {{token}}'
 ```
 
