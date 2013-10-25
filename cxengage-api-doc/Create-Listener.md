@@ -66,3 +66,12 @@ All known errors will be returned in a JSON map with key "error".
     }
 }
 ```
+
+### curl Example
+
+```
+curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/listeners \
+     -H 'Authorization: Bearer {{token}}' \
+-H 'Content-Type: application/json; charset=utf-8' \
+-d '{"name":"Demo Datasift","type":"datasift","mapping":{"username":"interaction.author.username","sentiment":"salience.content.sentiment","id":"twitter.user.screen_name"},"hash":{{{datasift-hash}},"status":true}'
+```
