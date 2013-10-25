@@ -26,7 +26,19 @@ All known errors will be returned in a JSON map with key "error".
 ```
 
 ```json
-{ "url" : "http://hostname/augment", "type" : "engine", "attributes" : ["customerSegment"]}
+{
+    "service": "engine",
+    "name": "rest augment api",
+    "description": "description",
+    "augment-service": "engine",
+    "type": "api",
+    "options": {
+        "url": "hostname",
+        "attributes": [
+            "customerSegment"
+        ]
+    }
+}
 ```
 
 
@@ -34,19 +46,27 @@ All known errors will be returned in a JSON map with key "error".
 
 ```json
 {
-    "id": "AU4",
-    "url": "http://hostname/augment",
-    "type": "engine",
-    "attributes": [
-        "customerSegment"
-    ]
+    "service": "engine",
+    "id": "AU2",
+    "name": "rest-augment from api",
+    "description": "description",
+    "augment-service": "engine",
+    "type": "api",
+    "options": {
+        "url": "hostname",
+        "attributes": [
+            "customerSegment"
+        ]
+    }
 }
+
+
 ```
 
 ```
 curl -X POST http://api.cxengage.com/tenants/{{tenant-name}}/augment \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
- -d '{ "url" : "http://hostname/augment", "type" : "engine", "attributes" : ["customerSegment"]}'
+ -d '{"service": "engine", "id": "AU2", "name": "rest augment api", "description": "describe", "augment-service": "engine", "type": "api", "options": { "url": "hostname", "attributes": ["customerSegment"]}}'
  ```
 
