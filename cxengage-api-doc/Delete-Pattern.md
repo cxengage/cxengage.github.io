@@ -38,6 +38,6 @@ All known errors will be returned in a JSON map with key "error".
 ```
 
 ```
-curl -X DELETE http://api.cxengage.com/tenants/{{tenant-name}}/patterns/PT10 \
+curl -IX DELETE http://api.cxengage.com/tenants/{{tenant-name}}/patterns/PT10 \
  -H 'Authorization: Bearer {{token}}' 
 ```
