@@ -38,3 +38,10 @@ All known errors will be returned in a JSON map with key "error".
         "name": "SMS"
     }
 ```
+
+### curl Example
+
+```
+curl -XGET http://api.cxengage.com/tenants/{{tenant-name}}/templates \
+     -H 'Authorization: Bearer {{token}}'
+```
