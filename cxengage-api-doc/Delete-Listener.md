@@ -27,3 +27,11 @@ All known errors will be returned in a JSON map with key "error".
 ```
   DELETE tenants/tenant1/listeners/LI3
 ```
+
+
+### curl Example
+
+```
+curl -I -XDELETE http://api.cxengage.com/tenants/{{tenant-name}}/listeners/LI4 \
+     -H 'Authorization: Bearer {{token}}'  
+```
