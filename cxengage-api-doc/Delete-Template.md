@@ -36,3 +36,10 @@ All known errors will be returned in a JSON map with key "error".
   "TM1"
 }
 ```
+
+### curl Example
+
+```
+curl -IX DELETE http://api.cxengage.com/tenants/{{tenant-name}}/templates/TM2 \
+ -H 'Authorization: Bearer {{token}}' \ 
+```
