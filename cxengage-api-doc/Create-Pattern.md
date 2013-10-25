@@ -48,3 +48,11 @@ All known errors will be returned in a JSON map with key "error".
   "then": "(seq (send echo message {:message \"Hello world\"}))"
 }
 ```
+
+```
+curl -X POST http://api.cxengage.com/tenants/{{tenant-name}}/patterns \
+ -H 'Authorization: Bearer {{token}}' \
+ -H 'Content-Type: application/json; charset=utf-8' \
+ -d '{"then":"(send echo message {:message \"Hello curl\"})","when":"(event (= type \"curl\"))","status":true,"name":"curl Pattern"}'
+ ```
+
