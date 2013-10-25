@@ -49,3 +49,8 @@ convenience.\r\n\r\nThank You\r\n",
     }
 ]
 ```
+
+```
+curl -XGET http://api.cxengage.com/tenants/{{tenant-name}}/templates \
+     -H 'Authorization: Bearer {{token}}'
+```
