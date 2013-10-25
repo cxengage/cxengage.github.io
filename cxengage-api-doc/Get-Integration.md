@@ -39,3 +39,11 @@ All known errors will be returned in a JSON map with key "error".
     "password": "password"
 }
 ```
+
+### curl Example
+
+```
+curl -XGET http://api.cxengage.com/tenants/{{tenant-name}}/integrations/twilio \
+     -H 'Authorization: Bearer {{token}}'
+```
+
