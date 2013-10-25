@@ -48,3 +48,10 @@ All known errors will be returned in a JSON map with key "error".
      
     }
 ```
+
+### curl Example
+
+```
+curl -XGET http://api.cxengage.com/tenants/{{tenant-name}}/listeners/LI4 \
+     -H 'Authorization: Bearer {{token}}'  
+```
