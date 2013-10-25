@@ -33,5 +33,12 @@ All known errors will be returned in a JSON map with key "error".
 }
 ```
  
+### curl Example
 
+```
+curl -X POST http://api.cxengage.com/tenants/{{tenant-name}}/key-attribute \
+ -H 'Authorization: Bearer {{token}}' \
+ -H 'Content-Type: application/json; charset=utf-8' \
+ -d '{"key" : "username"}' 
+```
 
