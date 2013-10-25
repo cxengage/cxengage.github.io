@@ -41,3 +41,9 @@ All known errors will be returned in a JSON map with key "error".
   "name":"Sample Pattern"
 }
 ```
+
+```
+curl -XGET http://api.cxengage.com/tenants/{{tenant-name}}/patterns \
+     -H 'Authorization: Bearer {{token}}'
+```
+
