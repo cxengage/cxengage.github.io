@@ -56,3 +56,13 @@ All known errors will be returned in a JSON map with key "error".
 }
 
 ```
+
+### curl Example
+
+```
+curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/twilio \
+     -H 'Authorization: Bearer {{token}}' \
+-H 'Content-Type: application/json; charset=utf-8' \
+-d '{"id": "twilio", "account": "{{account-sid}}", "password": "{{auth-token}}"}'
+
+```
