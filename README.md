@@ -903,3 +903,19 @@ curl -X GET https://api.cxengage.com/tenants/my-tenant
    ```
    Get a specific integration for a given tenant
    ```
+   
+## Augments
+   
+   [Get Augments](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Augments.md)
+   ```
+   Get all Augments for a given tenant
+   ```
+   [Create Augment](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Augment.md)
+   ```
+   Create a new Augment for a given tenant
+   ```
+   [Get Augment](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Augment.md)
+   ```
+   Get a specific Augment for a given tenant
+   ```
+   
