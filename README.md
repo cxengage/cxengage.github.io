@@ -59,6 +59,10 @@ A message template is used for storing common messages that you would like to us
 
 An endpoint is used in the Then portion of the pattern to send notifications. Examples of endpoints are Salesforce, Twilio (Call) , Sendgrid (E-Mail), Echo (Test)
 
+## Augment
+
+You can use our Augment feature to augment the events that come in to CxEngage. For example, if you would like all events that come in that have a customerSegment value of Gold to be switched to Platinum. You could do this via the Augment feature. There are two ways of doing augments, API based and file (csv) based.
+
 ## Tenant
 
 A tenant is your portion of CxEngage. You set up your Key Attributes, Listeners, Patterns, Message templates and Endpoint credentials in your tenant. 
@@ -86,12 +90,12 @@ You could also test out your message template with the echo
 
 ### Twilio
 
-With CxEngage you can use a Twilio service, with which you can use to send either SMS or Phone calls. To start up the Twilio endpoint service, you need the following items  
+With CxEngage you can use a Twilio service, with which you can use to send either SMS or Phone calls. To configure the Twilio endpoint service, you need the following items  
 
 * Twilio SID
 * Twilio token
 
-With the Twilio service, you can send either sms or phone calls. The keyword to use for each of it is
+With the Twilio endpoint, you can send either sms or phone calls. The keyword to use for each of it is
 
 * sms
 * call
@@ -130,7 +134,7 @@ You could also use message templating instead of setting it in the pattern
 
 ### Sendgrid
 
-With CxEngage, you can use Sendgrid to send emails as a pattern reaction. To start up the Sendgrid Endpoint Service, you need the following items
+With CxEngage, you can use Sendgrid to send emails as a pattern reaction. To configure Sendgrid, you need the following items
 
 * Sendgrid Account name
 * Sendgrid Password
