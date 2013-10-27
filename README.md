@@ -70,6 +70,10 @@ A tenant is your portion of CxEngage. You set up your Key Attributes, Listeners,
 
 # Setting Up CxEngage
 
+## Key Attribute
+
+The Key Attribute is set up and updated in the CxEngage UI by clicking the tenant link on the left.
+
 ## Endpoints
 
 ### Echo
@@ -94,6 +98,8 @@ With CxEngage you can use a Twilio service, with which you can use to send eithe
 
 * Twilio SID
 * Twilio token
+
+This is configured via the Integrations link in the CxEngage UI.
 
 With the Twilio endpoint, you can send either sms or phone calls. The keyword to use for each of it is
 
@@ -138,6 +144,8 @@ With CxEngage, you can use Sendgrid to send emails as a pattern reaction. To con
 
 * Sendgrid Account name
 * Sendgrid Password
+
+This is configured via the Integrations link in the CxEngage UI.
 
 With the Sendgrid service, you can send emails. The keyword to use for it is
 
