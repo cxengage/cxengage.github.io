@@ -977,7 +977,7 @@ curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}
    ```
    [Create Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Listener.md) 
    ```
-   Create a new listener for a given tenant
+   Create a new listener for a given tenant, i.e Datasift and Salesforce
    ```
    [Get Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listener.md) 
    ```
