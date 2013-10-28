@@ -50,9 +50,10 @@ All known errors will be returned in a JSON map with key "error".
     "type": "salesforce",
     "consumer-key": "consumerkey",
     "consumer-secret": "consumersecret",
-    "username": "dev@userevents.com",
+    "username": "email@userevents.com",
     "secret-token": "secret-token",
-    "password": "password"
+    "password": "password",
+    "instance" : "instance-id"
 }
 
 ```
@@ -60,9 +61,10 @@ All known errors will be returned in a JSON map with key "error".
 ### curl Example
 
 ```
-curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/twilio \
+curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/salesforce \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
--d '{"id": "twilio", "account": "{{account-sid}}", "password": "{{auth-token}}"}'
+-d '{"id": "twilio", "type": "salesforce", "consumer-key": "{{consumerkey}}", "consumer-secret":"consumersecret","username":"email@userevents.com"
+"secret-token":"secret-token","password":"password","instance":"instance-id"}'
 
 ```
