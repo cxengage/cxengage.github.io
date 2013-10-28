@@ -784,6 +784,12 @@ Content-Type: application/x-www-form-urlencoded
 grant_type=password&client_id={{client-id}}&client_secret={{client-id}}&username={{user}}&password={{password}}
 ```
 
+```bash
+curl -X POST https://auth.cxengage.net/token \
+     -u {{client-id}}:{{client-secret}} \
+-d "grant_type=client_credentials"
+```
+
 **Example Response:**
 
 ```json
