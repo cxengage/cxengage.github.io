@@ -827,7 +827,9 @@ duration of the reaction, a **set** command can be used to persist the value in 
 
 CxEngage can be integrated with by using CxEngage API.
 
-## Authentication - https://auth.cxengage.com/token
+## Authentication 
+
+url - https://auth.cxengage.com
 
 To connect with the CxEngage API, you need to authenticate with a token.
 
@@ -871,7 +873,9 @@ curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}
 ```
 
 
-## Sending in Events - https://events.cxengage.net
+## Sending in Events 
+
+url - https://auth.cxengage.com/token
    
 Events are sent into CxEngage via a REST based API as in the curl example below. Note that the url is different from the CxEngage API
 
@@ -883,7 +887,8 @@ curl -iX POST https://events.cxengage.net/tenants/tenant-name/event \
 -d '{"key" : "1", "type" : "echoo"}'
 ```
 
-### CxEngage API - https://api.cxengage.net
+### CxEngage API 
+url - https://api.cxengage.net
 
 ## API Tenants
 
