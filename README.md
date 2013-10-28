@@ -879,10 +879,9 @@ Events are sent into CxEngage via a REST based API as in the curl example below.
 
 ```bash
 curl -iX POST https://events.cxengage.net/tenants/tenant-name/event \
- -H 'Authorization: Bearer {{token}}' \
+-H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json' \
--d '{"key" : "1", "type" : "echoo"}
-'
+-d '{"key" : "1", "type" : "echoo"}'
 ```
 
 
