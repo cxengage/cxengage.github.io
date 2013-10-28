@@ -778,10 +778,9 @@ client_secret - Provided client secret
 ```http
 POST /token HTTP/1.1
 Host: http://auth.cxengage.com/token
-Authorization: Basic {{SSL TOKEN HERE}}
-Content-Type: application/x-www-form-urlencoded
+grant_type=client_credential
+Authorization: Basic {{pass in your client id and client secret using basic authentication}} 
 
-grant_type=password&client_id={{client-id}}&client_secret={{client-id}}&username={{user}}&password={{password}}
 ```
 
 ```bash
@@ -792,10 +791,9 @@ curl -X POST https://auth.cxengage.net/token -u {{client-id}}:{{client-secret}} 
 **Example Response:**
 
 ```json
-{
-  "access_token":"{{token}}",
-  "token_type":"bearer"
-}
+{"access_token":"token",
+ "token_type":"bearer",
+ "expires_in":3600}
 ```
 
 Now that you have your access token, you can make authenticated requests.
