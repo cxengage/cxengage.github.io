@@ -42,6 +42,7 @@ So, if the key attribute is user, an event that would match this pattern would b
 If you have any further questions about this or anything below, do not hesitate to reach us by creating a ticket, or e-mailing CxEngage Support at [support@cxengage.com](mailto:support@cxengage.com).
 
 ## Listener
+
 A Listener is a CxEngage Service that integrates with a 3rd Party service to receive events. Currently, we have a Datasift Listener and a Salesforce Listener.
 
 For example, if you have a Datasift stream that monitors tweets for your company, you can connect that stream to CxEngage via a Listener
@@ -54,6 +55,10 @@ As a user of CxEngage, you would write patterns that are important to your organ
 ## Message Template
 
 A message template is used for storing common messages that you would like to use across patterns. For example, in your Then for a pattern you would like a common salutation. You would create a message template for this. 
+
+## Receiver
+
+You can send in events to CxEngage via a receiver. Events are sent into your specific tenant in a JSON format. An example is available below.
 
 ## Endpoint
 
