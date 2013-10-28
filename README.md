@@ -854,6 +854,7 @@ This pattern showcases the flexibility and strength of the DSL
 ```
 
 
+
 # Using the API
 
 CxEngage can be integrated with by using CxEngage API.
@@ -899,6 +900,20 @@ Now that you have your access token, you can make authenticated requests.
 ```bash
 curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}
      -H 'Authorization: Bearer {{Token}}'
+```
+
+
+## Sending in Events
+   
+Events are sent into CxEngage via a REST based API as in the curl example below. Note that the url is different from the CxEngage API
+
+
+```bash
+curl -iX POST https://events.cxengage.net/tenants/tenant-name/event \
+ -H 'Authorization: Bearer {{token}}' \
+-H 'Content-Type: application/json' \
+-d '{"key" : "1", "type" : "echoo"}
+'
 ```
 
 
