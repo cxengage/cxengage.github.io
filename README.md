@@ -775,7 +775,7 @@ client_secret - Provided client secret
 
 **Example Request:**
 
-```http
+```
 POST /token HTTP/1.1
 Host: http://auth.cxengage.com/token
 grant_type=client_credential
