@@ -20,12 +20,12 @@ All known errors will be returned in a JSON map with key "error".
 
 - **404 Not Found** - The requested tenant does not exist or has been deleted.
 
-### Example
+### Salesforce Listener Example
 
 **Request**
 
 ```
-  POST tenants/tenant1/listeners
+  POST tenants/tenant-name/listeners
 ```
 
 ```json
@@ -64,6 +64,62 @@ All known errors will be returned in a JSON map with key "error".
         "daystoclose": "daysToClose__c",
         "product": "Product__c"
     }
+}
+```
+
+### curl Example
+
+```
+curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/listeners \
+     -H 'Authorization: Bearer {{token}}' \
+-H 'Content-Type: application/json; charset=utf-8' \
+-d '{"name":"Demo Datasift","type":"datasift","mapping":{"username":"interaction.author.username","sentiment":"salience.content.sentiment","id":"twitter.user.screen_name"},"hash":{{{datasift-hash}},"status":true}'
+```
+
+### Datasift Listener Example
+
+**Request**
+
+```
+  POST tenants/tenant-name/listeners
+```
+
+```json
+
+{
+    "name": "sentiment listener",
+    "type": "datasift",
+    "mapping": {
+        "username": "interaction.author.username",
+        "retweet_count": "twitter.retweet.count",
+        "network": "interaction.type",
+        "sentiment": "salience.content.sentiment",
+        "followers": "twitter.user.followers_count",
+        "user_url": "interaction.author.link",
+        "profile_image": "twitter.user.profile_image_url"
+    },
+    "hash": "datasifthash",
+    "status": true
+}
+```
+**Return**
+
+```json
+{
+    "id": "LI1",
+    "name": "sentiment listener",
+    "type": "datasift",
+    "mapping": {
+        "username": "interaction.author.username",
+        "retweet_count": "twitter.retweet.count",
+        "network": "interaction.type",
+        "sentiment": "salience.content.sentiment",
+        "followers": "twitter.user.followers_count",
+        "user_url": "interaction.author.link",
+        "profile_image": "twitter.user.profile_image_url"
+    },
+    "hash": "datasifthash",
+    "status": true
 }
 ```
 
