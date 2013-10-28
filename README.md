@@ -771,9 +771,6 @@ Once a user has its access token, he or she will be able to make authenticated r
 grant_type - password
 client_id - Provided client id
 client_secret - Provided client secret
-username - your username
-password - your password
-
 
 
 **Example Request:**
@@ -784,14 +781,14 @@ Host: http://auth.cxengage.com/token
 Authorization: Basic {{SSL TOKEN HERE}}
 Content-Type: application/x-www-form-urlencoded
 
-grant_type=password&client_id=66EFTGN33N7NGU37A4JTWLRPJOPWYTOG&client_secret=4NDLKSW6KQWW6W36UIG6H3JVXVRSDQOV&username=admin&password=Password1
+grant_type=password&client_id={{client-id}}&client_secret={{client-id}}&username={{user}}&password={{password}}
 ```
 
 **Example Response:**
 
 ```json
 {
-  "access_token":"FO2TVQIXHHEY2MROX3SQDBVGJMPXP3L2",
+  "access_token":"{{token}}",
   "token_type":"bearer"
 }
 ```
@@ -799,12 +796,9 @@ grant_type=password&client_id=66EFTGN33N7NGU37A4JTWLRPJOPWYTOG&client_secret=4ND
 Now that you have your access token, you can make authenticated requests.
 
 ```bash
-curl -X GET https://api.cxengage.com/tenants/my-tenant
-     -H 'Authorization: Bearer FO2TVQIXHHEY2MROX3SQDBVGJMPXP3L2'
+curl -X GET https://api.cxengage.net/tenants/my-tenant
+     -H 'Authorization: Bearer {{Token}}'
 ```
-
-
-
 
 
 ## Tenants
