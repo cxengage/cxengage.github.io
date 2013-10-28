@@ -12,7 +12,7 @@ For any custom system, you can submit events into our API. We'll get to how to d
 
 # Definitions
 
-## Key-Attribute
+## Key Attribute
 
 A **Key Attribute** is the term used for the unique identifier for a given customer. It could be an e-mail, a phone number or something else, but the important part is that there is only one key attribute, and every other identifier is mapped to it using our Augment Service (described later).
 
@@ -70,7 +70,7 @@ A tenant is your portion of CxEngage. You set up your Key Attributes, Listeners,
 
 # Setting Up CxEngage
 
-## Key Attribute
+## Key Attributes
 
 The Key Attribute is set up and updated in the CxEngage UI by clicking the tenant link on the left.
 
