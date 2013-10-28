@@ -825,41 +825,6 @@ duration of the reaction, a **set** command can be used to persist the value in 
 
 
 
-
-### Big Example
-
-This pattern showcases the flexibility and strength of the DSL
-
-```clojure
-(par (send twilio sms {:to-phone-number *to-phone-number*}
-           (template {:message *template3*}))
-     (seq (send echo message {:message *eventType*}
-                (success
-                 (set twilio-message *template1*))
-                (failure
-                 (set twilio-message *template2*)))
-          (send twilio sms {:to-phone-number *to-phone-number*}
-                (template {:message twilio-message})
-                (success
-                 (set sms-id $call-id)))
-          (send vht set-top-pop {:message "Hello"
-                                 :target "127.0.0.1"}
-                (within 5 minutes)
-                (success
-                 (seq
-                  (send echo message {:message $pop-id})
-                  (set pressed-ok $pop-id))))
-          (if pressed-ok
-            (send echo message {:message "Pressed OK"}))
-          (retries 3)
-          (within 30 minutes)
-          (failure
-           (seq
-            (send echo message {:message *custId*})))))
-```
-
-
-
 # Using the API
 
 CxEngage can be integrated with by using CxEngage API.
