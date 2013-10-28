@@ -6,7 +6,8 @@
 
 ## Description
 
-Retrieves specific integration from the given tenant.
+
+Posts specific integration for the given tenant.
 
 
 ### Parameters
@@ -19,6 +20,8 @@ Retrieves specific integration from the given tenant.
 All known errors will be returned in a JSON map with key "error".
 
 - **404 Not Found** - The requested tenant does not exist or has been deleted.
+
+## Examples for setting up Salesforce, Twilio, Sendgrid and Datasift integrations
 
 ### Salesforce Example
 
