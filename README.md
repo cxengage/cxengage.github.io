@@ -186,7 +186,106 @@ You could also use message templating for setting it in the pattern
                       :subject *subject*
                       :message +TM1})
 ```
+### Salesforce
 
+With CxEngage, you can use salesforce endpoint to create tasks, opportunities, leads and cases. To setup the Salesforce endpoint you will need the following items
+
+* Salesforce Instance
+* Salesforce Consumer Key
+* Salesforce Consumer Secret
+* Salesforce Username
+* Salesforce Password
+
+With the Salesforce endpoint, you can create Salesforce tasks, opportunities,
+leads and cases.
+
+The keywords used are 
+
+* task
+* opportunity
+* lead
+* case
+
+To be able to creat a task, we support the following fields
+
+* OwnerId
+* Description
+* Priority
+* Status
+* WhoId
+* WhatId
+* ActivityDate
+* Subject
+
+A sample pattern would like this 
+
+```clojure
+(send salesforce task
+                {:OwnerId "ownerid"
+                       :Description "Salesforce endpoint"
+                       :Priority "High"
+                       :Status "Normal"
+                       :WhoId "whoid"
+                       :WhatId "whatid"
+                       :ActivityDate "2014-08-29T17:55:14.000+0000"
+                       :Subject "Salesforce Endpoint"
+                       })
+```
+
+To be able to create an opportunity, we support the following fields
+
+* OwnerId
+* AccountId
+* CloseDate
+* StageName
+
+A sample pattern would like this
+
+```clojure
+ (send salesforce opportunity 
+                      {:OwnerId "ownerid"
+                       :AccountId "accountid"
+                       :CloseDate "2014-08-30T17:55:14.000+0000"
+                       :StageName "Prospecting"
+                       :message "hello"
+                       })
+```
+To be able to create a lead, we support the following fields
+
+ * LastName
+ * Company
+ * Status
+ * OwnerId
+
+A sample pattern would look like this
+
+```clojure
+ (send salesforce lead 
+                      {:LastName "lname"
+                       :Company "Athena Home Products"
+                       :Status "Working - Contacted"
+                       :OwnerId "ownerid"
+                       })
+```
+
+To be able to create a case, we support the following fields
+
+* Origin
+* Status
+* OwnerId
+
+A sample pattern would look like this
+
+```clojure
+(send salesforce case
+                      {:Origin "Phone"
+                       :Status "New"
+                       :OwnerId "ownerid"
+                       })
+```
+
+In each of the patterns, you can use to send in the
+values instead of hard coding them as in the examples. 
 
 ## Setting up your patterns
 
