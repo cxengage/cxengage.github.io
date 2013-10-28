@@ -1000,7 +1000,7 @@ curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}
    ```
    [Create Integration](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Integration.md) 
    ```
-   Create a new integration for a given tenant
+   Create a new integration for a given tenant, i.e for Salesforce, Twilio, Sendgrid and Datasift
    ```
    [Get Integration](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Integration.md) 
    ```
