@@ -917,7 +917,7 @@ curl -iX POST https://events.cxengage.net/tenants/tenant-name/event \
 ```
 
 
-## Tenants
+## API Tenants
 
    [Get Tenants](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Tenant.md) 
  
@@ -925,7 +925,7 @@ curl -iX POST https://events.cxengage.net/tenants/tenant-name/event \
    Get the tenant info
    ```
 
-## Cx Key Attribute
+## API Key Attribute
 
    [Get Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Key-Attribute.md) 
    ```
@@ -936,7 +936,7 @@ curl -iX POST https://events.cxengage.net/tenants/tenant-name/event \
    Update the key attribute for a given tenant
    ```
    
-## Patterns
+## API Patterns
 
    [Get Patterns](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Patterns.md)
    ```
@@ -959,7 +959,7 @@ curl -iX POST https://events.cxengage.net/tenants/tenant-name/event \
    Delete a specific pattern for a given tenant
    ```
    
-## Templates
+## API Templates
 
    [Get Templates](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Template.md) 
    ```
@@ -984,7 +984,7 @@ curl -iX POST https://events.cxengage.net/tenants/tenant-name/event \
    
  
 
-## Listeners
+## API Listeners
 
    [Get Listeners](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listeners.md) 
    ```
@@ -1007,7 +1007,7 @@ curl -iX POST https://events.cxengage.net/tenants/tenant-name/event \
    Delete a specific listener for a given tenant
    ```
 
-## Integrations
+## API Integrations
 
    [Get Integrations](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Integrations.md) 
    ```
@@ -1022,7 +1022,7 @@ curl -iX POST https://events.cxengage.net/tenants/tenant-name/event \
    Get a specific integration for a given tenant
    ```
    
-## Augments
+## API Augments
    
    [Get Augments](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Augments.md)
    ```
