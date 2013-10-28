@@ -44,7 +44,6 @@ If you have any further questions about this or anything below, do not hesitate 
 ## Listener
 
 A Listener is a CxEngage Service that integrates with a 3rd Party service to receive events. Currently, we have a Datasift Listener and a Salesforce Listener.
-
 For example, if you have a Datasift stream that monitors tweets for your company, you can connect that stream to CxEngage via a Listener
 
 
