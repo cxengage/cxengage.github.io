@@ -794,8 +794,7 @@ Parameters which are to be templated, do not need to be defined in the main send
 
 (send twilio sms {:to-phone-number *phone-number*
                   :from-phone-number "1-506-555-1234"}
-  (template {:message +TM1
-                     :twil-ml +TM3}))
+  (template {:message +TM1}))
 ```
 
 #### success and failure
