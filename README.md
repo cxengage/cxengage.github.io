@@ -829,7 +829,7 @@ CxEngage can be integrated with by using CxEngage API.
 
 ## Authentication 
 
-url - https://auth.cxengage.com
+url - https://auth.cxengage.net
 
 To connect with the CxEngage API, you need to authenticate with a token.
 
@@ -847,7 +847,7 @@ client_secret - Provided client secret
 
 ```
 POST /token HTTP/1.1
-Host: https://auth.cxengage.com/token
+Host: https://auth.cxengage.net/token
 grant_type=client_credential
 Authorization: Basic {{pass in your client id and client secret using basic authentication}} 
 ```
@@ -875,7 +875,7 @@ curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}
 
 ## Sending in Events 
 
-url - https://auth.cxengage.com/token
+url - https://events.cxengage.net
    
 Events are sent into CxEngage via a REST based API as in the curl example below. Note that the url is different from the CxEngage API
 
