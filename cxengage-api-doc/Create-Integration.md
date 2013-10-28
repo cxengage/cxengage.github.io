@@ -20,7 +20,7 @@ All known errors will be returned in a JSON map with key "error".
 
 - **404 Not Found** - The requested tenant does not exist or has been deleted.
 
-### Example
+### Salesforce Example
 
 **Request**
 
@@ -64,7 +64,88 @@ All known errors will be returned in a JSON map with key "error".
 curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/salesforce \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
--d '{"id": "twilio", "type": "salesforce", "consumer-key": "consumerkey", "consumer-secret":"consumersecret","username":"email@userevents.com"
+-d '{"id": "salesforce", "type": "salesforce", "consumer-key": "consumerkey", "consumer-secret":"consumersecret","username":"email@userevents.com"
 "secret-token":"secret-token","password":"password","instance":"instance-id"}'
 
 ```
+
+### Twilio Example
+
+**Request**
+
+```
+  POST /tenants/{{tenant-name}}/integrations/twilio
+```
+
+```json
+{
+    "id": "twilio",
+    "account": "SID",
+    "password": "Token"
+}
+
+```
+
+**Return**
+
+```json
+
+{
+    "id": "twilio",
+    "account": "SID",
+    "password": "Token"
+}
+
+```
+
+### curl Example
+
+```
+curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/twilio \
+     -H 'Authorization: Bearer {{token}}' \
+-H 'Content-Type: application/json; charset=utf-8' \
+-d '{"id": "twilio", "type": "twilio", "account": "SID", "password":"Token"}'
+
+```
+
+### Sendgrid Example
+
+**Request**
+
+```
+  POST /tenants/{{tenant-name}}/integrations/sendgrid
+```
+
+```json
+{
+    "id": "sendgrid",
+    "account": "username",
+    "password": "password"
+}
+
+```
+
+**Return**
+
+```json
+
+{
+    "id": "sendgrid",
+    "account": "username",
+    "password": "password"
+}
+
+```
+
+### curl Example
+
+```
+curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/sendgrid \
+     -H 'Authorization: Bearer {{token}}' \
+-H 'Content-Type: application/json; charset=utf-8' \
+-d '{"id": "sendgrid", "type": "sendgrid", "account": "username", "password":"password"}'
+
+```
+
+
+
