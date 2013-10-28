@@ -768,7 +768,7 @@ In order to authenticate a user, a service must provide the users login informat
 Once a user has its access token, he or she will be able to make authenticated requests to any resources it has permission to access.
 
 
-grant_type - password
+grant_type - client_credentials
 client_id - Provided client id
 client_secret - Provided client secret
 
@@ -785,8 +785,7 @@ grant_type=password&client_id={{client-id}}&client_secret={{client-id}}&username
 ```
 
 ```bash
-curl -X POST https://auth.cxengage.net/token \
-     -u {{client-id}}:{{client-secret}} \
+curl -X POST https://auth.cxengage.net/token -u {{client-id}}:{{client-secret}} \
 -d "grant_type=client_credentials"
 ```
 
@@ -802,7 +801,7 @@ curl -X POST https://auth.cxengage.net/token \
 Now that you have your access token, you can make authenticated requests.
 
 ```bash
-curl -X GET https://api.cxengage.net/tenants/my-tenant
+curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}
      -H 'Authorization: Bearer {{Token}}'
 ```
 
