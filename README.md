@@ -780,7 +780,6 @@ POST /token HTTP/1.1
 Host: http://auth.cxengage.com/token
 grant_type=client_credential
 Authorization: Basic {{pass in your client id and client secret using basic authentication}} 
-
 ```
 
 ```bash
