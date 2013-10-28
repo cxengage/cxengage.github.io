@@ -147,5 +147,43 @@ curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/sendgri
 
 ```
 
+### Datasift Example
+
+**Request**
+
+```
+  POST /tenants/{{tenant-name}}/integrations/datasift
+```
+
+```json
+{
+    "id": "datasift",
+    "api-key": "api-key",
+    "username": "username"
+}
+
+```
+
+**Return**
+
+```json
+
+{
+    "id": "datasift",
+    "api-key": "api-key",
+    "username": "username"
+}
+
+```
+
+### curl Example
+
+```
+curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/datasift \
+     -H 'Authorization: Bearer {{token}}' \
+-H 'Content-Type: application/json; charset=utf-8' \
+-d '{"id": "datasift", "type": "datasift", "api-key": "api-key", "username":"username"}'
+
+```
 
 
