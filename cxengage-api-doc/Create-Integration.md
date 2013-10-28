@@ -64,7 +64,7 @@ All known errors will be returned in a JSON map with key "error".
 curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/salesforce \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
--d '{"id": "twilio", "type": "salesforce", "consumer-key": "{{consumerkey}}", "consumer-secret":"consumersecret","username":"email@userevents.com"
+-d '{"id": "twilio", "type": "salesforce", "consumer-key": "consumerkey", "consumer-secret":"consumersecret","username":"email@userevents.com"
 "secret-token":"secret-token","password":"password","instance":"instance-id"}'
 
 ```
