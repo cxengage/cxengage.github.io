@@ -10,68 +10,6 @@ To begin, if you would like to integrate with any 3rd-party systems like SendGri
 
 For any custom system, you can submit events into our API. We'll get to how to do that in just a moment, but first, let's start with some definitions.
 
-# Definitions
-
-## Key Attribute
-
-A **Key Attribute** is the term used for the unique identifier for a given customer. It could be an e-mail, a phone number or something else, but the important part is that there is only one key attribute, and every other identifier is mapped to it using our Augment Service (described later).
-
-For example, a key attribute to describe a specific customer could be _CustomerID_. If a separate event comes in later with that user's e-mail address, that e-mail address will be mapped to _CustomerID_, and CxEngage would now know that both of these refer to the same person.
-   
-To give a specific example, here is a pattern where a call gets abandoned from the IVR, and an agent calls the customer back using our integration with Twilio: 
-
-``` clojure 
-;;When
-(event (= callAction "AbandonedCall"))
-
-;;Then
-(send twilio call {:to-phone-number *To-PhoneNumber*}))
-```
-
-So, if the key attribute is user, an event that would match this pattern would be
-
-``` json
-{
-  "user" : "3458676",
-  "calAction" : "AbandonedCall",
-
-}
-```
-
-
-If you have any further questions about this or anything below, do not hesitate to reach us by creating a ticket, or e-mailing CxEngage Support at [support@cxengage.com](mailto:support@cxengage.com).
-
-## Listener
-
-A Listener is a CxEngage Service that integrates with a 3rd Party service to receive events. Currently, we have a Datasift Listener and a Salesforce Listener.
-For example, if you have a Datasift stream that monitors tweets for your company, you can connect that stream to CxEngage via a Listener
-
-
-## Patterns
-
-As a user of CxEngage, you would write patterns that are important to your organization. A pattern has two parts, When and Then. For example, you would like to be notified when a customer with a certain Klout score has tweeted and has called in to your call centre queue, this would be the Then part of your pattern. The Then is the notification part, this is where you tell CxEngage what should happen when the pattern matches. For example, you can send a twilio call, open a Salesforce opportunity or send a test notification via the echo endpoint service.
-
-## Message Template
-
-A message template is used for storing common messages that you would like to use across patterns. For example, in your Then for a pattern you would like a common salutation. You would create a message template for this. 
-
-## Receiver
-
-You can send in events to CxEngage via a receiver. Events are sent into your specific tenant in a JSON format. An example is available below.
-
-## Endpoint
-
-An endpoint is used in the Then portion of the pattern to send notifications. Examples of endpoints are Salesforce, Twilio (Call) , Sendgrid (E-Mail), Echo (Test)
-
-## Augment
-
-You can use our Augment feature to augment the events that come in to CxEngage. For example, if you would like all events that come in that have a customerSegment value of Gold to be switched to Platinum. You could do this via the Augment feature. There are two ways of doing augments, API based and file (csv) based.
-
-## Tenant
-
-A tenant is your portion of CxEngage. You set up your Key Attributes, Listeners, Patterns, Message templates and Endpoint credentials in your tenant. 
-
-
 # Setting Up CxEngage
 
 ## Key Attributes
