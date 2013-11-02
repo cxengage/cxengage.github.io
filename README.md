@@ -785,9 +785,11 @@ client_secret - Provided client secret
 
 ```
 POST /token HTTP/1.1
-Host: https://auth.cxengage.net/token
-grant_type=client_credential
-Authorization: Basic {{pass in your client id and client secret using basic authentication}} 
+Host: auth.cxengage.net
+Authorization: Basic {{client-id:client-secret base64 encoded}} 
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials
 ```
 
 ```bash
