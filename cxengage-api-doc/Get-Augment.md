@@ -25,23 +25,29 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  GET /tenants/tenant1/augments/AU1
+  GET /tenants/tenant1/augments/AU8
 ```
 
 ```json
 {
-    "description": "Some description",
-    "id": "AU5",
-    "name": "Augment csv",
-    "type": "file",
-    "service": "engine"
+    "id": "AU8",
+    "name": "API based",
+    "service": "engine",
+    "type": "api",
+    "options": {
+        "url": "http://cxengage-augment",
+        "attributes": [
+            "phoneNumber",
+            "customerSegment"
+        ]
+    }
 }
 ```
  
 ### curl Example
 
 ```
-curl -X GET http://api.cxengage.com/tenants/{{tenant-name}}/augments/AU1 \
+curl -X GET http://api.cxengage.com/tenants/{{tenant-name}}/augments/AU8 \
      -H 'Authorization: Bearer {{token}}'
 
 ```
