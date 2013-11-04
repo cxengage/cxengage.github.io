@@ -30,7 +30,11 @@ All known errors will be returned in a JSON map with key "error".
 
 ```json
 {
-    "key": "id"
+    "description": "Some description",
+    "id": "AU5",
+    "name": "Augment csv",
+    "type": "file",
+    "service": "engine"
 }
 ```
  
