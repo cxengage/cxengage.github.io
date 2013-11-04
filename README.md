@@ -548,7 +548,7 @@ CxEngage can be integrated with by using CxEngage API.
 
 ## Authentication 
 
-url - https://auth.cxengage.net
+url - https://auth.cxengage.net/1.0
 
 To connect with the CxEngage API, you need to authenticate with a token.
 
@@ -566,7 +566,7 @@ client_secret - Provided client secret
 
 ```
 POST /token HTTP/1.1
-Host: auth.cxengage.net
+Host: auth.cxengage.net/1.0
 Authorization: Basic {{client-id:client-secret base64 encoded}} 
 Content-Type: application/x-www-form-urlencoded
 
@@ -574,7 +574,7 @@ grant_type=client_credentials
 ```
 
 ```bash
-curl -X POST https://auth.cxengage.net/token -u {{client-id}}:{{client-secret}} \
+curl -X POST https://auth.cxengage.net/1.0/token -u {{client-id}}:{{client-secret}} \
 -d "grant_type=client_credentials"
 ```
 
@@ -589,27 +589,27 @@ curl -X POST https://auth.cxengage.net/token -u {{client-id}}:{{client-secret}} 
 Now that you have your access token, you can make authenticated requests.
 
 ```bash
-curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}
+curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}}
      -H 'Authorization: Bearer {{Token}}'
 ```
 
 
 ## Sending in Events 
 
-url - https://events.cxengage.net
+url - https://events.cxengage.net/1.0
    
 Events are sent into CxEngage via a REST based API as in the curl example below. Note that the url is different from the CxEngage API
 
 
 ```bash
-curl -iX POST https://events.cxengage.net/tenants/tenant-name/event \
+curl -iX POST https://events.cxengage.net/1.0/tenants/tenant-name/event \
 -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json' \
 -d '{"key" : "1", "type" : "echoo"}'
 ```
 
 ## CxEngage API 
-url - https://api.cxengage.net
+url - https://api.cxengage.net/1.0
 
 ## Tenants
 
