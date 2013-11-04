@@ -28,9 +28,21 @@ All known errors will be returned in a JSON map with key "error".
 ```
 
 ```json
-{
-    "key": "id"
-}
+[
+    {
+        "id": "AU1",
+        "name": "Augment csv",
+        "type": "file",
+        "service": "engine"
+    },
+    {
+        "description": "Sample description",
+        "id": "AU5",
+        "name": "Augment csv",
+        "type": "file",
+        "service": "engine"
+    }
+]
 ```
  
 ### curl Example
