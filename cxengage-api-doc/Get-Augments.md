@@ -48,7 +48,7 @@ All known errors will be returned in a JSON map with key "error".
 ### curl Example
 
 ```
-curl -X GET http://api.cxengage.com/tenants/{{tenant-name}}/augments \
+curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/augments \
      -H 'Authorization: Bearer {{token}}'
 
 ```

@@ -48,7 +48,7 @@ All known errors will be returned in a JSON map with key "error".
 ```
 
 ```
-curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/templates/TM1 \
+curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/templates/TM1 \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"template":"Hello {{username}}","name":"Test Template"}'

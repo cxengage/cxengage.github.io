@@ -54,7 +54,7 @@ All known errors will be returned in a JSON map with key "error".
 
 ### curl Example
 ```
-curl -X POST http://api.cxengage.com/tenants/{{tenant-name}}/patterns/PT5 \
+curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/patterns/PT5 \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
  -d '{"then":"(send echo message {:message \"Updated pattern 5\"})","when":"(event (= type \"curl\"))","status":true,"name":"Updated curl Pattern"}'

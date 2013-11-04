@@ -64,7 +64,7 @@ All known errors will be returned in a JSON map with key "error".
 ### curl Example
 
 ```
-curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/salesforce \
+curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/integrations/salesforce \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"id": "salesforce", "type": "salesforce", "consumer-key": "consumerkey", "consumer-secret":"consumersecret","username":"email@userevents.com"
@@ -104,7 +104,7 @@ curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/salesfo
 ### curl Example
 
 ```
-curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/twilio \
+curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/integrations/twilio \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"id": "twilio", "type": "twilio", "account": "SID", "password":"Token"}'
@@ -143,7 +143,7 @@ curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/twilio 
 ### curl Example
 
 ```
-curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/sendgrid \
+curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/integrations/sendgrid \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"id": "sendgrid", "type": "sendgrid", "account": "username", "password":"password"}'
@@ -182,7 +182,7 @@ curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/sendgri
 ### curl Example
 
 ```
-curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/integrations/datasift \
+curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/integrations/datasift \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"id": "datasift", "type": "datasift", "api-key": "api-key", "username":"username"}'

@@ -32,6 +32,6 @@ All known errors will be returned in a JSON map with key "error".
 ### curl Example
 
 ```
-curl -I -XDELETE http://api.cxengage.com/tenants/{{tenant-name}}/augments/AU5 \
+curl -I -XDELETE https://api.cxengage.net/tenants/{{tenant-name}}/augments/AU5 \
      -H 'Authorization: Bearer {{token}}'
 ```

@@ -70,7 +70,7 @@ All known errors will be returned in a JSON map with key "error".
 ### curl Example
 
 ```
-curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/listeners \
+curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/listeners \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"name":"My Salesforce Listener","type":"salesforce","mapping":{"user":"user__c","type":"Type","stage":"StageName","amount":"Amount","daystoclose":"daysToClose__c","product": "Product__c"},"status":true}'
@@ -126,7 +126,7 @@ curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/listeners \
 ### curl Example
 
 ```
-curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/listeners \
+curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/listeners \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"name":"Demo Datasift","type":"datasift","mapping":{"username":"interaction.author.username","sentiment":"salience.content.sentiment","id":"twitter.user.screen_name"},"hash":{{{datasift-hash}},"status":true}'

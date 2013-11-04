@@ -51,6 +51,6 @@ convenience.\r\n\r\nThank You\r\n",
 ```
 
 ```
-curl -XGET http://api.cxengage.com/tenants/{{tenant-name}}/templates \
+curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/templates \
      -H 'Authorization: Bearer {{token}}'
 ```

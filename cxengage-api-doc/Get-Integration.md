@@ -43,7 +43,7 @@ All known errors will be returned in a JSON map with key "error".
 ### curl Example
 
 ```
-curl -XGET http://api.cxengage.com/tenants/{{tenant-name}}/integrations/twilio \
+curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/integrations/twilio \
      -H 'Authorization: Bearer {{token}}'
 ```
 

@@ -48,7 +48,7 @@ All known errors will be returned in a JSON map with key "error".
 {
     "service": "engine",
     "id": "AU2",
-    "name": "rest augment api",
+    "name": "rest-augment from api",
     "description": "description",
     "augment-service": "engine",
     "type": "api",
@@ -72,54 +72,4 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
 
 ### File based augment
 
-**Request**
 
-```
-  POST tenants/tenant1/augments
-  Content-Type: application/json; charset=utf-8
-```
-
-```json
-{
-    "service": "engine",
-    "name": "rest augment api",
-    "description": "description",
-    "augment-service": "engine",
-    "type": "file",
-    "options": {
-        "attributes": [
-            "customerSegment", "twitter"
-        ]
-    }
-}
-```
-
-
-**Return**
-
-```json
-{
-    "service": "engine",
-    "id": "AU2",
-    "name": "rest augment api",
-    "description": "description",
-    "augment-service": "engine",
-    "type": "file",
-    "options": {
-        "url": "hostname",
-        "attributes": [
-            "customerSegment"
-        ]
-    }
-}
-```
-
-
-### curl Example
-
-```
-curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
- -H 'Authorization: Bearer {{token}}' \
- -H 'Content-Type: application/json; charset=utf-8' \
- -d '{"service": "engine","id": "AU2","name": "rest augment api", "description": "","augment-service": "engine","type": "file","options": {"attributes": ["customerSegment", "twitter"]}}'
-```

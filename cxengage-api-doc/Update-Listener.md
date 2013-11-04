@@ -76,7 +76,7 @@ All known errors will be returned in a JSON map with key "error".
 ### curl Example
 
 ```
-curl -XPOST http://api.cxengage.com/tenants/{{tenant-name}}/listeners/LI4 \
+curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI4 \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"name":"Demo Datasift","type":"datasift","mapping":{"username":"interaction.author.username","sentiment":"salience.content.sentiment","id":"twitter.user.screen_name"},"hash":"5349f1e4c75120ffe395f0ece24d27a1","status":false}'
