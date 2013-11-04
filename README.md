@@ -274,7 +274,7 @@ For example, the following is a pattern where if a customer calls into a contact
 ```
 _(Echo is used for convenience in this case to illustrate the example, but is also useful for testing your patterns.)_
 
-Now, what if a customer calls a 3rd time and gets an agent before the agent calls back? Since we don't want the agent to call him or her back, we can account for this scenario by using the FailWhen keyword as follows: 
+Now, what if a customer calls a 3rd time and gets an agent before the agent calls back? Since we don't want the agent to call him or her back, we can account for this scenario by using the fail keyword as follows: 
 
 ```clojure
 ;;When
