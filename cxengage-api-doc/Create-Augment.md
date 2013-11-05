@@ -59,7 +59,7 @@ All known errors will be returned in a JSON map with key "error".
         ]
     }
 }
-
+```
 
 ### curl Example
 
