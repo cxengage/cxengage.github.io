@@ -6,7 +6,7 @@
 
 ## Description
 
-Retrieves templates for the given instance.
+Retrieves templates for the given tenant.
 
 
 ### Parameters
