@@ -564,8 +564,8 @@ client_secret - Provided client secret
 
 **Example Request:**
 
-```
-POST /token HTTP/1.1
+```http
+POST /1.0/token HTTP/1.1
 Host: auth.cxengage.net/1.0
 Authorization: Basic {{client-id:client-secret base64 encoded}} 
 Content-Type: application/x-www-form-urlencoded
@@ -574,7 +574,7 @@ grant_type=client_credentials
 ```
 
 ```bash
-curl -X POST https://auth.cxengage.net/1.0/token -u {{client-id}}:{{client-secret}} \
+curl -X POST https://auth.cxengage.net -u {{client-id}}:{{client-secret}} \
 -d "grant_type=client_credentials"
 ```
 
