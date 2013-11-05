@@ -19,6 +19,12 @@ All known errors will be returned in a JSON map with key "error".
 
 - **404 Not Found** - The requested tenant does not exist or has been deleted.
 
+### Content Type
+
+```
+Content-Type: application/json; charset=utf-8
+```
+
 ### Example
 
 **Request**
