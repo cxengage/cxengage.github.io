@@ -6,7 +6,7 @@
 
 ## Description
 
-Retrieves the node for the given instance.
+Retrieves the node for the given tenant.
 
 
 
