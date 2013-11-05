@@ -20,7 +20,7 @@ Retrieves message templates for the given tenant.
 
 All known errors will be returned in a JSON map with key "error".
 
-- **404 Not Found** - The requested node or instance does not exist or has been deleted.
+- **404 Not Found** - The requested template does not exist or has been deleted.
 
 ### Example
 
