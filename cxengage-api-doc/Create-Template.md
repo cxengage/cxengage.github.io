@@ -46,3 +46,13 @@ All known errors will be returned in a JSON map with key "error".
     "name": "SMS"
 }
 ```
+
+### curl Example
+
+```
+curl -X POST https://api.cxengage.net/1.0/tenants/userevents/templates \
+ -H 'Authorization: Bearer {{token}}' \
+ -H 'Content-Type: application/json; charset=utf-8' \
+ -d '{"template": "Welcome to the 4.0 version of CxEngage", "description" : "sample description", "name" : "Welcome"}'
+
+```
