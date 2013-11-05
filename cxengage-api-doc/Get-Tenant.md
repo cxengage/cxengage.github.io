@@ -22,7 +22,10 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  GET /tenants/tenant1
+GET /1.0/tenants/{{tenant}} HTTP/1.1
+Host: api.cxengage.net
+Authorization: Bearer FehRxgBFGMYQnIdIIrw9rDYpQ3tDNm3OtxVe2qru0mxh
+Cache-Control: no-cache
 ```
 
 **Return**
@@ -39,7 +42,7 @@ All known errors will be returned in a JSON map with key "error".
 ### curl Example
 
 ```
-curl -X GET https://api.cxengage.net/tenants/{{tenant-name}} \
+curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}} \
      -H 'Authorization: Bearer {{token}}'
 ```
 
