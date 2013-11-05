@@ -1,7 +1,7 @@
 ## Listener Resources
 
 ```
-  POST tenants/:iid/listeners
+  POST tenants/:iid/listeners/:lid
 ```
 
 ## Description
@@ -12,7 +12,7 @@ Retrieves listeners for the given tenant.
 ### Parameters
 
 - **iid** _(required)_ — Selected tenant
-
+- **lid** _(required)_ - Selected Listener
 
 ### Errors
 
@@ -31,7 +31,7 @@ Content-Type: application/json; charset=utf-8
 **Request**
 
 ```
-  POST tenants/tenant1/listeners
+  POST tenants/tenant1/listeners/LI4
 ```
 
 ```json
@@ -61,7 +61,7 @@ Content-Type: application/json; charset=utf-8
 ```json
 
 {
-    "id": "LI3",
+    "id": "LI4",
     "status": false,
     "topic": "CxDemo_0720v2",
     "name": "My Salesforce Listener",
