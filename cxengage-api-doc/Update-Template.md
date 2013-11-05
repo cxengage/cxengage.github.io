@@ -6,7 +6,7 @@
 
 ## Description
 
-Updates template on given instance
+Updates template on given tenant
 
 
 ### Parameters
