@@ -1,7 +1,7 @@
 # Template Resources
 
 ```
-  POST tenants/:iid/templates/:id
+  POST tenants/:iid/templates
 ```
 
 ## Description
@@ -12,7 +12,7 @@ Creates/Updates event record on given tenant
 ### Parameters
 
 - **iid** _(required)_ — Selected tenant
-- **id** _(required)_ - Selected template
+
 
 ### Errors
 
@@ -25,7 +25,7 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  POST tenants/tenant1/templates/TM1
+  POST tenants/tenant1/templates
   Content-Type: application/json; charset=utf-8
 ```
 
