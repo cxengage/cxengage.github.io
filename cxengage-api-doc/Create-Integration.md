@@ -24,7 +24,11 @@ All known errors will be returned in a JSON map with key "error".
 ### Content Type
 
 ```
+POST /1.0/tenants/{{tenant-name}}/datasift HTTP/1.1
+Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
 ```
 
 ## Examples for setting up Salesforce, Twilio, Sendgrid and Datasift integrations
