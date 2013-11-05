@@ -6,7 +6,7 @@
 
 ## Description
 
-Updates the pattern for the given instance based on the pattern id given
+Updates the pattern for the given tenant based on the pattern id given
 
 
 ### Parameters
