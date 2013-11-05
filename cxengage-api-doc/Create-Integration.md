@@ -74,7 +74,7 @@ Cache-Control: no-cache
 ### curl Example
 
 ```
-curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/integrations/salesforce \
+curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/salesforce \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"id": "salesforce", "type": "salesforce", "consumer-key": "consumerkey", "consumer-secret":"consumersecret","username":"email@userevents.com"
@@ -114,7 +114,7 @@ curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/integrations/salesf
 ### curl Example
 
 ```
-curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/integrations/twilio \
+curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/twilio \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"id": "twilio", "type": "twilio", "account": "SID", "password":"Token"}'
@@ -153,7 +153,7 @@ curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/integrations/twilio
 ### curl Example
 
 ```
-curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/integrations/sendgrid \
+curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/sendgrid \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"id": "sendgrid", "type": "sendgrid", "account": "username", "password":"password"}'
@@ -192,7 +192,7 @@ curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/integrations/sendgr
 ### curl Example
 
 ```
-curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/integrations/datasift \
+curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/datasift \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"id": "datasift", "type": "datasift", "api-key": "api-key", "username":"username"}'
