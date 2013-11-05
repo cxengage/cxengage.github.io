@@ -6,7 +6,7 @@
 
 ## Description
 
-Creates/Updates event record on given instance
+Creates/Updates event record on given tenant
 
 
 ### Parameters
