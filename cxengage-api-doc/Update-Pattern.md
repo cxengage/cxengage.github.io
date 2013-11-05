@@ -1,7 +1,7 @@
 # Pattern Resources
 
 ```
-  POST tenants/:iid/patterns/:id
+  PUT tenants/:iid/patterns/:id
 ```
 
 ## Description
@@ -31,38 +31,33 @@ Content-Type: application/json; charset=utf-8
 **Request**
 
 ```
-  POST tenants/tenant1/patterns/PT1
+  PUT tenants/tenant1/patterns/PT5
 ```
 
 ```json
 {
- "id":"PT1",
- "then":"(seq (send echo message {:message \"Hello world\"}))",
- "when":"(when (event (= \"id\" \"1234\")))",
- "status":true,
- "description":"Updated Sample Pattern",
- "name":"Sample Pattern"}
+"then" : "(send sendgrid email {:to *email*, :subject \"Welcome to a wonderful put experience\"})"
+}
 ```
 
 **Return**
 
 ```json
 
-{
-  "id":"PT1",
-  "then":"(seq (send echo message {:message \"Hello world\"}))",
-  "when":"(when (event (= \"id\" \"1234\")))",
-  "status":true,
-  "description":"Updated Sample Pattern",
-  "name":"Sample Pattern"
-}
+{"id":"PT5",
+"then":"(send sendgrid email {:to *email*, :subject \"Welcome to a wonderful put experience\"})",
+"when":"(event (or (= username \"cxengage\")))",
+"status":true,
+"name":"Updated Pattern"
+}    
 ```
 
 ### curl Example
 ```
-curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/patterns/PT5 \
+curl -X PUT https://api.cxengage.net/1.0/tenants/userevents/patterns/PT5 \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
- -d '{"then":"(send echo message {:message \"Updated pattern 5\"})","when":"(event (= type \"curl\"))","status":true,"name":"Updated curl Pattern"}'
+ -d '{"then" : "(send sendgrid email {:to *email*, :subject \"Welcome to a wonderful put experience\"})"}'
+
 ```
 
