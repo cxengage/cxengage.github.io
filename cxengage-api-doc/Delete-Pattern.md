@@ -6,7 +6,7 @@
 
 ## Description
 
-Deletes the node from the given instance.
+Deletes the node from the given tenant.
 
 ### Parameters
 
