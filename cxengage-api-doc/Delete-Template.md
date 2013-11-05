@@ -6,7 +6,7 @@
 
 ## Description
 
-Deletes the list from the given instance.
+Deletes the template from the given tenant.
 
 
 ### Parameters
