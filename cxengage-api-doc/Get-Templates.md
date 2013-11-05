@@ -6,7 +6,7 @@
 
 ## Description
 
-Retrieves message templates for the given instance.
+Retrieves message templates for the given tenant.
 
 ### Authentication
 
