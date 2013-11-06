@@ -1,8 +1,6 @@
 ## Listener Resources
 
-```
-  POST tenants/:iid/listeners
-```
+
 
 ## Description
 
@@ -23,7 +21,7 @@ All known errors will be returned in a JSON map with key "error".
 
 ### Content Type
 
-```
+```http
 POST /1.0/tenants/{{tenant-name}}/listeners HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
@@ -80,7 +78,7 @@ Cache-Control: no-cache
 
 ### curl Example
 
-```
+```bash
 curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/listeners \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
