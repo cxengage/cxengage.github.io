@@ -8,7 +8,7 @@ Creates a pattern on the given tenants.
 
 ### Mandatory Parameters
 
-- **tenant-name** — Selected tenants
+
 - **name** — Name of Pattern
 
 ### Optional Parameters
@@ -26,7 +26,7 @@ All known errors will be returned in a JSON map with key "error".
 
 **Request**
 
-```
+```http
 POST /1.0/tenants/{{tenant-name}}/patterns HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
