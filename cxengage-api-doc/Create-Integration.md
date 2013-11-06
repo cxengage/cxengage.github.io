@@ -66,8 +66,9 @@ Cache-Control: no-cache
     "password": "password",
 
 }
+```
 
-```bash
+
 ### curl Example
 
 ```bash
