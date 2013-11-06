@@ -1,31 +1,21 @@
 #Pattern Resources
 
-```
-  GET tenants/:iid/patterns/:id
-```
-
 ## Description
 
 Retrieves the node for the given tenant.
 
 
-
-### Parameters
-
-- **iid** _(required)_ — Selected tenant
-- **id** _(required)_ — Pattern to retrieve
-
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
 
-- **404 Not Found** - The requested tenant or pattern does not exist or has been deleted.
+- **422 Unprocessable Entity** - The requested tenant or pattern does not exist or has been deleted.
 
 ### Example
 
 **Request**
 
-```
+```http
 GET /1.0/tenants/{{tenant-name}}/patterns HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json
@@ -46,7 +36,7 @@ Cache-Control: no-cache
 }
 ```
 
-```
+```bash
 curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/patterns \
      -H 'Authorization: Bearer {{token}}'
 ```
