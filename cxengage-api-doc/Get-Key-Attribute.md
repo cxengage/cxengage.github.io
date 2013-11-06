@@ -24,7 +24,11 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  GET /tenants/tenant-one/key-attribute
+GET /1.0/tenants/{{tenant-name}}/key-attribute HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
 ```
 
 ```json
