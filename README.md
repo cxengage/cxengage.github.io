@@ -627,10 +627,36 @@ url - https://api.cxengage.net/1.0
 
 ## Tenants
 
-   [Get Tenants](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Tenant.md) 
- ```
-Get tenant info
-   ```
+Retrieves Tenant info
+**Request**
+
+```http
+GET /1.0/tenants/{{tenant-name}} HTTP/1.1
+Host: api.cxengage.net
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
+```
+**Return**
+
+```json
+
+{
+    "id": "tenant1",
+    "name": "Tenant Number One"
+}
+
+```
+
+### curl Example
+
+```bash
+curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}} \
+     -H 'Authorization: Bearer {{token}}'
+```
+
+
+
+
 
 ## Key Attribute
 
