@@ -17,11 +17,11 @@ All known errors will be returned in a JSON map with key "error".
 
 ## Salesforce Parameters
 
-- **secret-token** - [Get Salesforce Secret Token](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm&language=en)
+- **secret-token** - [Get Salesforce secret token](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm&language=en)
 - **username** - Salesforce username
 - **password** - Salesforce password
-- **consumer-key** - [Get Salesforce Consumer Key/Secret](http://www.salesforce.com/us/developer/docs/api_streaming/Content/code_sample_auth_oauth.htm)
-- **consumer-secret** - [Get Salesforce Consumer Key/Secret](http://www.salesforce.com/us/developer/docs/api_streaming/Content/code_sample_auth_oauth.htm)
+- **consumer-key** - [Get Salesforce Consumer key/secret](http://www.salesforce.com/us/developer/docs/api_streaming/Content/code_sample_auth_oauth.htm)
+- **consumer-secret** - [Get Salesforce Consumer key/secret](http://www.salesforce.com/us/developer/docs/api_streaming/Content/code_sample_auth_oauth.htm)
 
 
 ### Request
