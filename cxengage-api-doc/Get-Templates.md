@@ -1,26 +1,13 @@
 ## Template Resources
 
-```
-  GET tenants/:iid/tenant1/templates
-```
-
 ## Description
 
 Retrieves message templates for the given tenant.
 
-### Authentication
-
-[OAuth](https://github.com/userevents/charon)
-
-### Parameters
-
-- **iid** _(required)_ — Selected tenant
 
 ### Errors
 
-All known errors will be returned in a JSON map with key "error".
-
-- **404 Not Found** - The requested template does not exist or has been deleted.
+- **422 Unprocessable Entity** - The requested template does not exist or has been deleted.
 
 ### Example
 
