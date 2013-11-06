@@ -80,7 +80,7 @@ curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/listeners \
 
 **Request**
 
-```
+```http
 POST /1.0/tenants/{{tenant-name}}/listeners HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
@@ -128,7 +128,7 @@ Authorization: Bearer {{token}}
 
 ### curl Example
 
-```
+```bash
 curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/listeners \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
