@@ -3,7 +3,7 @@
 
 ## Description
 
-Updates template on given tenant
+Updates chosen template on given tenant
 
 
 ### Errors
