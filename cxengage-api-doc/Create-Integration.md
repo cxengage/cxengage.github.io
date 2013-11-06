@@ -123,7 +123,7 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/tw
 
 **Request**
 
-```
+```http
 POST /1.0/tenants/{{tenant-name}}/sendgrid HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
@@ -165,7 +165,7 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/se
 
 **Request**
 
-```
+```http
 POST /1.0/tenants/{{tenant-name}}/datasift HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
