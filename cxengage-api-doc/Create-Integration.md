@@ -67,8 +67,7 @@ Cache-Control: no-cache
 
 }
 
-```
-
+```bash
 ### curl Example
 
 ```bash
