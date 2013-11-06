@@ -614,7 +614,8 @@ url - https://api.cxengage.net/1.0
 ## Tenants
 
    [Get Tenants](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Tenant.md) 
- 
+ ```
+Get tenant info
    ```
 
 ## Key Attribute
