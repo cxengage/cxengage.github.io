@@ -28,6 +28,8 @@ Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
 ```
 
+**Response**
+
 ```json
 {
     "key": "username"
