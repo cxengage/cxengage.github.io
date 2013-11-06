@@ -4,12 +4,6 @@
 
 Retrieves listeners for the given tenant.
 
-
-### Parameters
-
-- **iid** _(required)_ — Selected tenant
-
-
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
