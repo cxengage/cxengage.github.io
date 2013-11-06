@@ -6,6 +6,9 @@
 
 Updates key attribute for the given tenant.
 
+### Parameters
+
+- **key** - key attribute
 
 
 ### Errors
