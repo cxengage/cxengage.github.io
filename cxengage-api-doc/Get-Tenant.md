@@ -18,7 +18,7 @@ Retrieves tenant info
 ```http
 GET /1.0/tenants/{{tenant-name}} HTTP/1.1
 Host: api.cxengage.net
-Authorization: Bearer FehRxgBFGMYQnIdIIrw9rDYpQ3tDNm3OtxVe2qru0mxh
+Authorization: Bearer {{token}}
 Cache-Control: no-cache
 ```
 
