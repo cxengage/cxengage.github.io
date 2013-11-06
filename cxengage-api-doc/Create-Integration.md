@@ -9,7 +9,7 @@ Posts specific integration for the given tenant.
 
 All known errors will be returned in a JSON map with key "error".
 
-- **422 Unprocessable Entity** - The requested tenant does not exist or has been deleted.
+- **422 Unprocessable Entity** - The requested tenant or item does not exist or has been deleted.
 
 ## Salesforce Parameters
 
