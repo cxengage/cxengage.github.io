@@ -16,15 +16,12 @@ All known errors will be returned in a JSON map with key "error".
 
 ### Content Type
 
-```
-Content-Type: application/json; charset=utf-8
-```
 
 ### Example
 
 **Request**
 
-```
+```http
 POST /tenants/{{tenant-name}}/key-attribute HTTP/1.1
 Host: {{cxenage-api}}
 Content-Type: application/json; charset=utf-8
@@ -39,7 +36,7 @@ Authorization: Bearer {{token}}
  
 ### curl Example
 
-```
+```bash
 curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
