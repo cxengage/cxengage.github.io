@@ -7,6 +7,14 @@ Creates/Updates event record on given tenant
 
 ### Errors
 
+### Mandatory Parameters
+
+- **name** — Name of the template
+
+### Optional Parameters
+
+- **template** — template 
+- **description** - description for the template
 
 
 ### Example
