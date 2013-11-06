@@ -552,7 +552,7 @@ url - https://auth.cxengage.net/1.0
 
 To connect with the CxEngage API, you need to authenticate with a token.
 
-In order to authenticate a user, a user must provide its `client_id` and `client_secret`.
+In order to authenticate a user, a user must provide its `client_id` and `client_secret`. You can access your client id and secret by logging into [cxengage.net](https://www.cxengage.net) and clicking on your avatar.
 
 Once a user has its access token, he or she will be able to make authenticated requests to any resources it has permission to access.
 
