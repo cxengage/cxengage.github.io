@@ -14,20 +14,14 @@ All known errors will be returned in a JSON map with key "error".
 
 - **404 Not Found** - The requested tenant does not exist or has been deleted.
 
-### Request
+}
 
-```
-POST /1.0/tenants/{{tenant-name}}/listeners HTTP/1.1
-Host: api.cxengage.net
-Content-Type: application/json; charset=utf-8
-Authorization: Bearer {{token}}
-```
 
 ### Example
 
 **Request**
 
-```
+```http
 PUT /1.0/tenants/{{tenant-name}}/listeners/LI4 HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
