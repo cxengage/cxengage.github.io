@@ -1,30 +1,21 @@
 ## Listener Resources
 
-```
-  GET tenants/:iid/listener/:id
-```
-
 ## Description
 
 Retrieves listeners for the given tenant.
 
 
-### Parameters
-
-- **iid** _(required)_ — Selected tenant
-- **id** _(required)_ - Selected listener
-
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
 
-- **404 Not Found** - The requested tenant or listener does not exist or has been deleted.
+- **422 Unprocessable Entity** - The requested tenant or listener does not exist or has been deleted.
 
 ### Example
 
 **Request**
 
-```
+```http
 GET /1.0/tenants/{{tenant-name}}/listeners/LI4 HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json
@@ -55,7 +46,7 @@ Cache-Control: no-cache
 
 ### curl Example
 
-```
+```bash
 curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI4 \
      -H 'Authorization: Bearer {{token}}'  
 ```
