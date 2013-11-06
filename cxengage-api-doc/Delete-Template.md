@@ -8,7 +8,7 @@ Deletes the template from the given tenant.
 
 All known errors will be returned in a JSON map with key "error".
 
-- **404 Not Found** - The requested template does not exist or has already been deleted.
+- **422 Unprocessable Entity** - The requested template does not exist or has already been deleted.
 
 ### Example
 
