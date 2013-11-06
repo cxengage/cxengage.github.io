@@ -12,9 +12,9 @@ Create an Augment for a tenant
 
 ### Optional Parameters
 
--**options** - Map of optional attributes shown below  
--**url** - url of the augment api
--**attributes** - Attributes that would get augmented
+- **options** - Map of optional attributes shown below  
+- **url** - url of the augment api
+- **attributes** - Attributes that would get augmented
 
 
 ### Errors
