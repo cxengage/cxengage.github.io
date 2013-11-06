@@ -58,7 +58,7 @@ Authorization: Bearer {{token}}
 
 ### curl Example
 
-```
+```bash
 curl -X POST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/patterns \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
