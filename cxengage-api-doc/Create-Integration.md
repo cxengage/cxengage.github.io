@@ -27,7 +27,6 @@ POST /1.0/tenants/{{tenant-name}}/salesforce HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
-Cache-Control: no-cache
 ```
 
 ## Examples for setting up Salesforce, Twilio, SendGrid and Datasift integrations
@@ -83,7 +82,6 @@ POST /1.0/tenants/{{tenant-name}}/twilio HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
-Cache-Control: no-cache
 ```
 
 ### Twilio Parameters
@@ -119,7 +117,6 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/tw
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"id": "twilio", "type": "twilio", "account": "SID", "password":"Token"}'
-
 ```
 
 ### Sendgrid Example
@@ -173,7 +170,6 @@ POST /1.0/tenants/{{tenant-name}}/datasift HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
-Cache-Control: no-cache
 ```
 
 ```json
