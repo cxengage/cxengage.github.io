@@ -31,7 +31,11 @@ Content-Type: application/json; charset=utf-8
 **Request**
 
 ```
-  PUT tenants/tenant1/listeners/LI4
+PUT /1.0/tenants/{{tenant-name}}/listeners/LI4 HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
 ```
 
 ```json
