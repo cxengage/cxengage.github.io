@@ -1,29 +1,21 @@
 ## Key Attribute Resources
 
-```
-  GET tenants/:iid/key-attribute
-```
-
 ## Description
 
 Retrieves key attribute for the given tenant.
 
 
-### Parameters
-
-- **iid** _(required)_ — Selected tenant
-
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
 
-- **404 Not Found** - The requested tenant does not exist or has been deleted.
+- **422 Unprocessable Entity** - The requested tenant does not exist or has been deleted.
 
 ### Example
 
 **Request**
 
-```
+```http
 GET /1.0/tenants/{{tenant-name}}/key-attribute HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json
@@ -39,7 +31,7 @@ Cache-Control: no-cache
  
 ### curl Example
 
-```
+```bash
 curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
      -H 'Authorization: Bearer {{token}}'
 
