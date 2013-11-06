@@ -1,20 +1,24 @@
 # Augment Resources
 
-
-
 ## Description
 
 Create an Augment for a tenant
 
-### Parameters
+### Mandatory Parameters
 
-- **tenant-name** _(required)_ — Selected tenants
+- **name** — Name of Pattern
+- **type** — file or api based augment
+- **service** — engine or notification
+
+### Optional Parameters
+
+
 
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
 
-
+- **422 Unprocessable Entity** - The requested tenant does not exist or has been deleted.
 
 **Request**
 
@@ -64,7 +68,7 @@ Cache-Control: no-cache
 
 ### curl Example
 
-```
+```bash
 curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
@@ -76,8 +80,11 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
 **Request**
 
 ```
-  POST tenants/tenant1/augments
-  Content-Type: application/json; charset=utf-8
+ POST /1.0/tenants/{{tenant-name}}/augments HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
 ```
 
 ```json
@@ -118,7 +125,7 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
 
 ### curl Example
 
-```
+```bash
 curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
