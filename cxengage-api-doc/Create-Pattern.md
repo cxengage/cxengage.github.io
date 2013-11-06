@@ -1,22 +1,27 @@
 # Pattern Resources
 
-```
-  POST tenants/:iid/patterns
-```
 
 ## Description
 
 Creates a pattern on the given tenants.
 
 
-### Parameters
+### Mandatory Parameters
 
-- **iid** _(required)_ — Selected tenants
+- **tenant-name** — Selected tenants
+- **name** — Name of Pattern
+
+### Optional Parameters
+
+- **description** — Description of pattern
+- **status** — Enabled or Disable pattern
+- **when** — When portion of pattern
+- **then** — Then portion of pattern
+
 
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
-
 
 
 **Request**
