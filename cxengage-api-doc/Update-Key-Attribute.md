@@ -30,7 +30,11 @@ Content-Type: application/json; charset=utf-8
 **Request**
 
 ```
-  POST /tenants/tenant1/key-attribute
+POST /tenants/{{tenant-name}}/key-attribute HTTP/1.1
+Host: {{cxenage-api}}
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
 ```
 
 ```json
