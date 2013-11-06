@@ -12,6 +12,9 @@ Create an Augment for a tenant
 
 ### Optional Parameters
 
+-**options** - Map of optional attributes shown below  
+-**url** - url of the augment api
+-**attributes** - Attributes that would get augmented
 
 
 ### Errors
@@ -80,7 +83,7 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
 **Request**
 
 ```
- POST /1.0/tenants/{{tenant-name}}/augments HTTP/1.1
+POST /1.0/tenants/{{tenant-name}}/augments HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
