@@ -121,6 +121,11 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/tw
 
 ### Sendgrid Example
 
+### Sendgrid Parameters
+- **account** - SendGrid account 
+- **password** - Sendgrid password
+
+
 **Request**
 
 ```http
@@ -162,6 +167,11 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/se
 ```
 
 ### Datasift Example
+
+### Datasift Parameters
+- **username** - DataSift username
+- **api-key** - [DataSift api key](http://dev.datasift.com/docs/getting-started/api-faq#APIkey)
+
 
 **Request**
 
