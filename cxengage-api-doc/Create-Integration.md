@@ -34,12 +34,6 @@ Cache-Control: no-cache
 
 ### Salesforce Example
 
-**Request**
-
-```
-  POST /tenants/tenant1/integrations/salesforce
-```
-
 ```json
  {
         "id": "salesforce",
