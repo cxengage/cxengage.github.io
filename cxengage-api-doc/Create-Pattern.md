@@ -31,7 +31,6 @@ POST /1.0/tenants/{{tenant-name}}/patterns HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
-Cache-Control: no-cache
 ```
 
 ```json
