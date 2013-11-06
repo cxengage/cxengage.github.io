@@ -13,7 +13,7 @@ Retrieves message templates for the given tenant.
 
 **Request**
 
-```
+```http
 GET /1.0/tenants/{{tenant-name}}/templates HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
