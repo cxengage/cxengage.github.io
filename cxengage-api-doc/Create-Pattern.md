@@ -57,6 +57,8 @@ Cache-Control: no-cache
 }
 ```
 
+### curl Example
+
 ```
 curl -X POST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/patterns \
  -H 'Authorization: Bearer {{token}}' \
