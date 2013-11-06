@@ -596,16 +596,30 @@ curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}}
 
 ## Sending in Events 
 
-url - https://events.cxengage.net/1.0
-   
-Events are sent into CxEngage via a REST based API as in the curl example below. Note that the url is different from the CxEngage API
+url - https://events.cxengage.net
+  
+Events are sent into CxEngage via a REST based API as in the example below. Note that the url is different from the CxEngage API
 
+```http
+POST /1.0/tenants/userevents/event HTTP/1.1
+Host: events.cxengage.net
+Content-Type: application/json
+Authorization: Bearer {{token}}
+```
 
-```bash
-curl -iX POST https://events.cxengage.net/1.0/tenants/tenant-name/event \
--H 'Authorization: Bearer {{token}}' \
--H 'Content-Type: application/json' \
--d '{"key" : "1", "type" : "echoo"}'
+```json
+{
+"username" : "1"
+}
+```
+
+**Example Response:**
+
+```json
+{"event":{"username":"1"},
+"key-attr":"1",
+"id":"EV11-1",
+"contributing?":false}
 ```
 
 ## CxEngage API 
