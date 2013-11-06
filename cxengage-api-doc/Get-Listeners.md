@@ -1,9 +1,5 @@
 ## Listener Resources
 
-```
-  GET tenants/:iid/listeners
-```
-
 ## Description
 
 Retrieves listeners for the given tenant.
@@ -24,8 +20,12 @@ All known errors will be returned in a JSON map with key "error".
 
 **Request**
 
-```
-  GET tenants/tenant1/listeners
+```http
+GET /1.0/tenants/{{tenant-name}}/listeners HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
 ```
 
 ```json
@@ -64,7 +64,7 @@ All known errors will be returned in a JSON map with key "error".
 ```
 
 ### curl Example
-```
+```bash
 curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/listeners \ 
      -H 'Authorization: Bearer {{token}}'
 ```
