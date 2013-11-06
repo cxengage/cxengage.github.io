@@ -127,7 +127,10 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/tw
 **Request**
 
 ```
-  POST /tenants/{{tenant-name}}/integrations/sendgrid
+POST /1.0/tenants/{{tenant-name}}/sendgrid HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
 ```
 
 ```json
@@ -166,7 +169,11 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/se
 **Request**
 
 ```
-  POST /tenants/{{tenant-name}}/integrations/datasift
+POST /1.0/tenants/{{tenant-name}}/datasift HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
 ```
 
 ```json
