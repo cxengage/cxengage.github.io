@@ -10,7 +10,6 @@ Updates key attribute for the given tenant.
 
 ### Errors
 
-All known errors will be returned in a JSON map with key "error".
 
 - **422 Unprocessable Entity** - The requested tenant does not exist or has been deleted.
 
