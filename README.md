@@ -655,19 +655,44 @@ curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}} \
 ```
 
 
-
-
-
 ## Key Attribute
 
-   [Get Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Key-Attribute.md) 
-   ```
-   Get the key attribute for a given tenant
-   ```
-   [Update Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Key-Attribute.md) 
-   ```
-   Update the key attribute for a given tenant
-   ```
+Retrieves key attribute for the given tenant
+
+**Request**
+```http
+GET /1.0/tenants/{{tenant-name}}/key-attribute HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
+```
+
+**Response**
+
+```json
+{
+    "key": "id"
+}
+```
+
+**curl Example**
+
+```bash
+curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
+     -H 'Authorization: Bearer {{token}}'
+
+```
+
+
+
+
+
+
+[Update Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Key-Attribute.md) 
+```
+Update the key attribute for a given tenant
+```
    
 ## Patterns
 
