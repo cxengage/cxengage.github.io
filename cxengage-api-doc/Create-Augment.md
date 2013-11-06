@@ -1,8 +1,6 @@
 # Augment Resources
 
-```
-  POST tenants/:iid/augments
-```
+
 
 ## Description
 
@@ -10,7 +8,7 @@ Create an Augment for a tenant
 
 ### Parameters
 
-- **iid** _(required)_ — Selected tenants
+- **tenant-name** _(required)_ — Selected tenants
 
 ### Errors
 
