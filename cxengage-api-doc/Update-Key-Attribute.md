@@ -14,7 +14,7 @@ Updates key attribute for the given tenant.
 ### Errors
 
 
-- **422 Unprocessable Entity** - The requested tenant does not exist or has been deleted.
+- **404 Not Found** - The requested tenant does not exist or has been deleted.
 
 
 ### Example
