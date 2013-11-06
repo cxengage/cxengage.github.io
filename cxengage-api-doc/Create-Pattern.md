@@ -14,7 +14,7 @@ Creates a pattern on the given tenants.
 ### Optional Parameters
 
 - **description** — Description of pattern
-- **status** — Set to true/false to enable/disable the pattern
+- **status** — Boolean value. Set to true/false to enable/disable the pattern
 - **when** — When portion of pattern
 - **then** — Then portion of pattern
 
