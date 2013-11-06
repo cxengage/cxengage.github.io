@@ -25,7 +25,11 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  GET tenants/tenant1/listener/LI2
+GET /1.0/tenants/{{tenant-name}}/listeners/LI4 HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer VjVYw3yJaujNoW+k5CGfe23mnJVOdhJZZ/sdrwhpZ41z
+Cache-Control: no-cache
 ```
 
 ```json
@@ -44,7 +48,7 @@ All known errors will be returned in a JSON map with key "error".
             "daystoclose": "daysToClose__c",
             "product": "Product__c"
         },
-        "id": "LI2"
+        "id": "LI4"
      
     }
 ```
