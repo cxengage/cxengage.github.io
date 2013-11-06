@@ -5,10 +5,6 @@
 
 Posts specific integration for the given tenant.
 
-
-
-
-
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
@@ -54,7 +50,6 @@ Cache-Control: no-cache
         "secret-token": "secret-token",
         "password": "password"
     }
-
 ```
 
 **Return**
@@ -89,9 +84,18 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/sa
 
 **Request**
 
+```http
+POST /1.0/tenants/{{tenant-name}}/twilio HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
 ```
-  POST /tenants/{{tenant-name}}/integrations/twilio
-```
+
+### Twilio Parameters
+- **account** - Twilio SID
+- **password** - [Twilio Token](https://www.twilio.com/help/faq/twilio-basics/what-is-the-auth-token-and-how-can-it-be-reset)
+
 
 ```json
 {
