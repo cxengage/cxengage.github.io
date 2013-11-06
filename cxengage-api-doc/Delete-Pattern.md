@@ -8,10 +8,6 @@
 
 Deletes the node from the given tenant.
 
-### Parameters
-
-- **iid** _(required)_ — Selected tenant
-- **id** _(required)_ — Pattern to delete
 
 ### Errors
 
@@ -23,7 +19,7 @@ All known errors will be returned in a JSON map with key "error".
 
 **Request**
 
-```
+```http
 DELETE /1.0/tenants/{{tenant-name}}/patterns/PT21 HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json
@@ -42,7 +38,7 @@ Cache-Control: no-cache
 
 ```
 
-```
+```bash
 curl -IX DELETE https://api.cxengage.net/tenants/{{tenant-name}}/patterns/PT21 \
  -H 'Authorization: Bearer {{token}}' 
 ```
