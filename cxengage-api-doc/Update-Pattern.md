@@ -1,24 +1,15 @@
 # Pattern Resources
 
-```
-  PUT tenants/:iid/patterns/:id
-```
 
 ## Description
 
 Updates the pattern for the given tenant based on the pattern id given
 
-
-### Parameters
-
-- **iid** _(required)_ — Selected tenant
-- **id** _(required)_ — Pattern id
-
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
 
-- **404 Not Found** - The requested tenant or pattern does not exist or has been deleted.
+- **422 Unprocessable Entity** - The requested tenant or pattern does not exist or has been deleted.
 
 ### Content Type
 
@@ -30,7 +21,7 @@ Content-Type: application/json; charset=utf-8
 
 **Request**
 
-```
+```http
 PUT /1.0/tenants/{{tenant-name}}/patterns/PT5 HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
@@ -58,7 +49,7 @@ Cache-Control: no-cache
 ```
 
 ### curl Example
-```
+```bash
 curl -X PUT https://api.cxengage.net/1.0/tenants/userevents/patterns/PT5 \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
