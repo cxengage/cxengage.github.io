@@ -657,9 +657,9 @@ curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}} \
 
 ## Key Attribute
 
-### Parameters
+**Parameters**
 
-- **key** - key attribute
+**key** - key attribute
 
 Retrieve key attribute for the given tenant
 
