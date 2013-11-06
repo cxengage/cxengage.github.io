@@ -25,8 +25,11 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  PUT tenants/tenant1/templates/TM1
-  Content-Type: application/json; charset=utf-8
+PUT /1.0/tenants/{{tenant-name}}/templates/TM1 HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer VjVYw3yJaujNoW+k5CGfe23mnJVOdhJZZ/sdrwhpZ41z
+Cache-Control: no-cache
 ```
 
 ```json
