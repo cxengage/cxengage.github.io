@@ -1,17 +1,9 @@
 ## Augment Resources
 
-```
-  GET tenants/:iid/augments
-```
-
 ## Description
 
 Retrieves augments for the given tenant.
 
-
-### Parameters
-
-- **iid** _(required)_ — Selected tenant
 
 ### Errors
 
@@ -23,13 +15,11 @@ All known errors will be returned in a JSON map with key "error".
 
 **Request**
 
-```
+```http
 GET /1.0/tenants/{{tenant-name}}/augments HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json
 Authorization: Bearer {{token}}
-Cache-Control: no-cache
-
 ```
 
 ```json
@@ -52,7 +42,7 @@ Cache-Control: no-cache
  
 ### curl Example
 
-```
+```bash
 curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/augments \
      -H 'Authorization: Bearer {{token}}'
 
