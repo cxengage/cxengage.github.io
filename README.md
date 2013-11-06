@@ -712,14 +712,6 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
  -d '{"key" : "username"}' 
 ```
 
-
-
-
-
-[Update Key Attribute](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Key-Attribute.md) 
-```
-Update the key attribute for a given tenant
-```
    
 ## Patterns
 
