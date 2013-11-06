@@ -628,6 +628,7 @@ url - https://api.cxengage.net/1.0
 ## Tenants
 
 Retrieves Tenant info
+
 **Request**
 
 ```http
