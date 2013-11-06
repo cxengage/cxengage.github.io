@@ -1,22 +1,12 @@
 # Template Resources
 
-```
-  POST tenants/:iid/templates
-```
-
 ## Description
 
 Creates/Updates event record on given tenant
 
 
-### Parameters
-
-- **iid** _(required)_ — Selected tenant
-
-
 ### Errors
 
-All known errors will be returned in a JSON map with key "error".
 
 
 ### Example
@@ -24,7 +14,7 @@ All known errors will be returned in a JSON map with key "error".
 
 **Request**
 
-```
+```http
 POST /1.0/tenants/{{tenant-name}}/templates HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
@@ -52,7 +42,8 @@ Cache-Control: no-cache
 
 ### curl Example
 
-```
+```bash
+
 curl -X POST https://api.cxengage.net/1.0/tenants/userevents/templates \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
