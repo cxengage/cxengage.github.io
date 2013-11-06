@@ -627,7 +627,7 @@ url - https://api.cxengage.net/1.0
 
 ## Tenants
 
-Retrieves Tenant info
+Retrieve Tenant info
 
 **Request**
 
@@ -657,7 +657,7 @@ curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}} \
 
 ## Key Attribute
 
-Retrieves key attribute for the given tenant
+Retrieve key attribute for the given tenant
 
 **Request**
 ```http
@@ -684,6 +684,33 @@ curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
 
 ```
 
+Update key attribute for the given tenant
+
+**Request**
+
+```http
+POST /tenants/{{tenant-name}}/key-attribute HTTP/1.1
+Host: {{cxenage-api}}
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+```
+
+**Response**
+
+```json
+{
+    "key": "username"
+}
+```
+ 
+**curl Example**
+
+```bash
+curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
+ -H 'Authorization: Bearer {{token}}' \
+ -H 'Content-Type: application/json; charset=utf-8' \
+ -d '{"key" : "username"}' 
+```
 
 
 
