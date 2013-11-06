@@ -41,7 +41,7 @@ Cache-Control: no-cache
 }
 ```
 
-```http
+```bash
 curl -XPUT https://api.cxengage.net/1.0/tenants/{{tenant-name}}/templates/TM1 \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
