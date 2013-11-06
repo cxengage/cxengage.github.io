@@ -1,18 +1,8 @@
 # Template Resources
 
-```
-  DELETE tenants/:iid/templates/:id
-```
-
 ## Description
 
 Deletes the template from the given tenant.
-
-
-### Parameters
-
-- **iid** _(required)_ — Selected tenant
-- **id** _(required)_ — Template to delete
 
 ### Errors
 
@@ -24,7 +14,7 @@ All known errors will be returned in a JSON map with key "error".
 
 **Request**
 
-```
+```http
 DELETE /1.0/tenants/{{tenant-name}}/templates/TM1 HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
@@ -43,7 +33,7 @@ Cache-Control: no-cache
 
 ### curl Example
 
-```
+```bash
 curl -IX DELETE https://api.cxengage.net/tenants/{{tenant-name}}/templates/TM1 \
  -H 'Authorization: Bearer {{token}}' \ 
 ```
