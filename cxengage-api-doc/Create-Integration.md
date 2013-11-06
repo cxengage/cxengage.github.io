@@ -1,37 +1,40 @@
 ## Integration Resources
 
-```
-  POST tenants/:iid/integrations/:id
-```
-
 ## Description
 
 
 Posts specific integration for the given tenant.
 
 
-### Parameters
 
-- **iid** _(required)_ — Selected tenant
-- **id**  _(required)_ - Selected listener or endpoint
+
 
 ### Errors
 
 All known errors will be returned in a JSON map with key "error".
 
-- **404 Not Found** - The requested tenant does not exist or has been deleted.
+- **422 Unprocessable Entity** - The requested tenant does not exist or has been deleted.
+
+## Salesforce Parameters
+
+- **secret-token** - [Get Salesforce Secret Token](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm&language=en)
+- **username** - Salesforce username
+- **password** - Salesforce password
+- **consumer-key** - [Get Salesforce Consumer Key/Secret](http://www.salesforce.com/us/developer/docs/api_streaming/Content/code_sample_auth_oauth.htm)
+- **consumer-secret** - [Get Salesforce Consumer Key/Secret](http://www.salesforce.com/us/developer/docs/api_streaming/Content/code_sample_auth_oauth.htm)
+
 
 ### Request
 
-```
-POST /1.0/tenants/{{tenant-name}}/datasift HTTP/1.1
+```http
+POST /1.0/tenants/{{tenant-name}}/salesforce HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
 Cache-Control: no-cache
 ```
 
-## Examples for setting up Salesforce, Twilio, Sendgrid and Datasift integrations
+## Examples for setting up Salesforce, Twilio, SendGrid and Datasift integrations
 
 ### Salesforce Example
 
@@ -73,7 +76,7 @@ Cache-Control: no-cache
 
 ### curl Example
 
-```
+```bash
 curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/salesforce \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
