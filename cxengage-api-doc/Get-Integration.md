@@ -16,7 +16,7 @@ All known errors will be returned in a JSON map with key "error".
 
 **Request**
 
-```
+```http
 GET /1.0/tenants/{{tenant-name}}/integrations/{{integration}} HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json
@@ -38,7 +38,7 @@ Cache-Control: no-cache
 
 ### curl Example
 
-```
+```bash
 curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/integrations/twilio \
      -H 'Authorization: Bearer {{token}}'
 ```
