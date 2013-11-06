@@ -1,17 +1,10 @@
 # Pattern Resources
 
-```
-  GET tenants/:iid/patterns
-```
 
 ## Description
 
-Retrieves all patterns on tenant :iid
+Retrieves all patterns from chosen tenant
 
-
-### Parameters
-
-- **iid** _(required)_ — Selected tenant
 
 ### Errors
 
@@ -22,7 +15,7 @@ All known errors will be returned in a JSON map with key "error".
 
 **Request**
 
-```
+```http
 GET /1.0/tenants/{{tenant-name}}/patterns HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json
@@ -41,6 +34,5 @@ Cache-Control: no-cache
    "description": "Loyalty Pattern for Gold customers",
    "name": "Loyalty Pattern"
   }
-
 
 ```
