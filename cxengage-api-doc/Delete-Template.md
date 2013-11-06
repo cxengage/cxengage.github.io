@@ -25,7 +25,11 @@ All known errors will be returned in a JSON map with key "error".
 **Request**
 
 ```
-  DELETE tenants/tenants/templates/TM1
+DELETE /1.0/tenants/{{tenant-name}}/templates/TM1 HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
 ```
 
 **Return**
@@ -40,6 +44,6 @@ All known errors will be returned in a JSON map with key "error".
 ### curl Example
 
 ```
-curl -IX DELETE https://api.cxengage.net/tenants/{{tenant-name}}/templates/TM2 \
+curl -IX DELETE https://api.cxengage.net/tenants/{{tenant-name}}/templates/TM1 \
  -H 'Authorization: Bearer {{token}}' \ 
 ```
