@@ -1368,7 +1368,6 @@ curl -I -XDELETE https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI54
 
 **Retrieve integrations from tenant**
 
-__Salesforce Example__
   
 Request
 
@@ -1405,7 +1404,7 @@ curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/integrations \
 
 **Create specific integrations**
 
-Salesforce
+__Salesforce Example__
 
 Salesforce Parameters
 
