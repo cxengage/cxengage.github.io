@@ -548,7 +548,7 @@ CxEngage can be integrated with by using CxEngage API.
 
 ## Authentication 
 
-url - https://auth.cxengage.net/1.0
+url - https://auth.cxengage.net
 
 To connect with the CxEngage API, you need to authenticate with a token.
 
@@ -562,11 +562,10 @@ client_id - Provided client id
 client_secret - Provided client secret
 
 
-**Example Request:**
-
 ```http
+Example Request
 POST /1.0/token HTTP/1.1
-Host: auth.cxengage.net/1.0
+Host: auth.cxengage.net
 Authorization: Basic {{client-id:client-secret base64 encoded}} 
 Content-Type: application/x-www-form-urlencoded
 
