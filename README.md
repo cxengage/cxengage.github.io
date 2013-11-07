@@ -585,8 +585,6 @@ Example Response
  "expires_in":3600}
 ```
 
-Now that you have your access token, you can make authenticated requests.
-
 ```bash
 curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}}
      -H 'Authorization: Bearer {{Token}}'
@@ -599,6 +597,9 @@ url - https://events.cxengage.net
   
 Events are sent into CxEngage via a REST based API as in the example below. Note that the url is different from the CxEngage API
 
+```
+Request
+```
 ```http
 POST /1.0/tenants/userevents/event HTTP/1.1
 Host: events.cxengage.net
@@ -612,7 +613,9 @@ Authorization: Bearer {{token}}
 }
 ```
 
-**Example Response:**
+```
+Example Response
+```
 
 ```json
 {"event":{"username":"1"},
