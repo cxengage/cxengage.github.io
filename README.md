@@ -638,7 +638,7 @@ GET /1.0/tenants/{{tenant-name}} HTTP/1.1
 Host: api.cxengage.net
 Authorization: Bearer {{token}}
 ```
-**Return**
+**Response**
 
 ```json
 
