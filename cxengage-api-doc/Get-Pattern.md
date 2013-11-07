@@ -2,7 +2,7 @@
 
 ## Description
 
-Retrieves the node for the given tenant.
+Retrieves chosen pattern for the given tenant.
 
 
 ### Errors
