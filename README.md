@@ -1421,7 +1421,7 @@ Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
 ```
 
-## Examples for setting up Salesforce, Twilio, SendGrid and Datasift integrations
+## Create integrations
 
 Salesforce
 
