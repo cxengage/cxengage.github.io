@@ -851,7 +851,7 @@ curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/patterns \
 ```
 
 
-**Update the pattern for the given tenant based on the pattern id given**
+**Update chosen pattern**
 
 Request
 
@@ -891,19 +891,34 @@ curl -X PUT https://api.cxengage.net/1.0/tenants/userevents/patterns/PT5 \
 
 ```
 
+**Delete chosen pattern** 
 
+**Request**
 
+```http
+DELETE /1.0/tenants/{{tenant-name}}/patterns/PT21 HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
 
+```
 
+**Response**
 
+```json
 
-   ```
-   Update a specific pattern for a given tenant
-   ```
-   [Delete Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Pattern.md) 
-   ```
-   Delete a specific pattern for a given tenant
-   ```
+{
+ "id":"PT21"
+}
+
+```
+
+```bash
+curl -IX DELETE https://api.cxengage.net/tenants/{{tenant-name}}/patterns/PT21 \
+ -H 'Authorization: Bearer {{token}}' 
+```
+
    
 ## Templates
 
