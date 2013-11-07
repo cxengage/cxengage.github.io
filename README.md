@@ -723,9 +723,44 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
    
 ## Patterns
 
-   [Get Patterns](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Patterns.md)
-   ```
-   Get all patterns for a given tenant
+**Mandatory Parameters**
+name ```Name of Pattern```
+
+**Optional Parameters**
+
+description ```Description of pattern```
+status ```Boolean value. Set to true/false to enable/disable the pattern```
+when ```When portion of pattern```
+then ```Then portion of pattern```
+
+**Retrieves all patterns from chosen tenant**
+
+Request
+
+```http
+GET /1.0/tenants/{{tenant-name}}/patterns HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
+```
+
+Response
+
+```json
+
+  {
+   "id": "PT1",
+   "then": "(par (send echo message {:message \"We should probably call the customer\"}) (send echo message {:message \"We should probably call the customer now now now now\"}))",
+   "when": "(within 1 minutes (allOf (count 4 (event (and (= customerSegment \"Gold\") (= eventType \"flcheck\")))) (event (and (= customerSegment \"Gold\") (= eventType \"cnclTicket\"))))))",
+   "description": "Loyalty Pattern for Gold customers",
+   "name": "Loyalty Pattern"
+  }
+
+```
+
+
+
    ```
    [Create Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Pattern.md) 
    ```
