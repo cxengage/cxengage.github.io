@@ -312,7 +312,7 @@ Name of Template
 template
 
 ```
-template to create
+Template to create
 ```
 
 description
@@ -513,7 +513,7 @@ Response
 
 ```json
 
-  [
+[
     {
         "status": true,
         "topic": "CxDemo_0720v2",
