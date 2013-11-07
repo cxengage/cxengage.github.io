@@ -1366,10 +1366,46 @@ curl -I -XDELETE https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI54
 
 ## Integrations
 
-   [Get Integrations](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Integrations.md) 
-   ```
-   Get all integrations for a given tenant
-   ```
+**Retrieve integrations from tenant**
+  
+Request
+
+```http
+GET /1.0/tenants/{{tenant-name}}/integrations HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
+```
+
+Response
+
+```json
+[
+  {
+    "id": "datasift",
+    "api-key": "keyvalue",
+    "username": "usernamevalue"
+}
+
+    {
+        "id": "echo"
+    }
+]
+```
+
+curl Example
+
+```bash
+curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/integrations \
+     -H 'Authorization: Bearer {{token}}'
+```
+
+  
+  
+  
+  
+  
    [Create Integration](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Integration.md) 
    ```
    Create a new integration for a given tenant, i.e for Salesforce, Twilio, Sendgrid and Datasift
