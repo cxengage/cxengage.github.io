@@ -1334,7 +1334,7 @@ Response
 
 ```
 
-### curl Example
+curl Example
 
 ```bash
 curl -XPUT https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI4 \
