@@ -1367,6 +1367,8 @@ curl -I -XDELETE https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI54
 ## Integrations
 
 **Retrieve integrations from tenant**
+
+__Salesforce Example__
   
 Request
 
@@ -1476,6 +1478,8 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/sa
 
 ```
 
+__Twilio Example__
+
 
 Request
 
@@ -1528,7 +1532,7 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/tw
 -d '{"id": "twilio", "type": "twilio", "account": "SID", "password":"Token"}'
 ```
 
-Sendgrid Example
+__Sendgrid Example__
 
 Sendgrid Parameters
 account 
@@ -1581,7 +1585,7 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/se
 
 ```
 
-Datasift Example
+__Datasift Example__
 
 Datasift Parameters
 
