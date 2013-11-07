@@ -414,7 +414,7 @@ Request
 PUT /1.0/tenants/{{tenant-name}}/templates/TM1 HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
-Authorization: Bearer VjVYw3yJaujNoW+k5CGfe23mnJVOdhJZZ/sdrwhpZ41z
+Authorization: Bearer {{token}}
 Cache-Control: no-cache
 ```
 
@@ -666,7 +666,7 @@ Request
 GET /1.0/tenants/{{tenant-name}}/listeners/LI4 HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json
-Authorization: Bearer VjVYw3yJaujNoW+k5CGfe23mnJVOdhJZZ/sdrwhpZ41z
+Authorization: Bearer {{token}}
 Cache-Control: no-cache
 ```
 
