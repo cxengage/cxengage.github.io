@@ -851,7 +851,7 @@ curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/patterns \
 ```
 
 
-**Update chosen pattern**
+**Update the pattern for the given tenant based on the pattern id given**
 
 Request
 
@@ -890,41 +890,45 @@ curl -X PUT https://api.cxengage.net/1.0/tenants/userevents/patterns/PT5 \
  -d '{"then" : "(send sendgrid email {:to *email*, :subject \"Welcome to a wonderful put experience\"})"}'
 
 ```
-
-**Delete chosen pattern** 
-
-**Request**
-
-```http
-DELETE /1.0/tenants/{{tenant-name}}/patterns/PT21 HTTP/1.1
-Host: api.cxengage.net
-Content-Type: application/json
-Authorization: Bearer {{token}}
-Cache-Control: no-cache
-
-```
-
-**Response**
-
-```json
-
-{
- "id":"PT21"
-}
-
-```
-
-```bash
-curl -IX DELETE https://api.cxengage.net/tenants/{{tenant-name}}/patterns/PT21 \
- -H 'Authorization: Bearer {{token}}' 
-```
-
    
 ## Templates
 
-   [Get Templates](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Template.md) 
-   ```
-   Get all templates for a given tenant
+**Retrieves templates for the given tenant**
+
+Request
+
+```http
+GET /1.0/tenants/{{tenant-name}}/templates/TM1 HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
+```
+
+Response
+
+```json
+
+    {
+        "id": "TM1",
+        "template": "Hi {{FirstName}}, sorry we missed your call. Call Joe at
++14153159430 re: 401K needs. Gelson Bank.",
+        "description": "Default SMS message with click-to-call",
+        "name": "SMS"
+    }
+```
+
+curl Example
+
+```bash
+curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/templates/TM1 \
+     -H 'Authorization: Bearer {{token}}'
+```
+
+
+
+
+
    ```
    [Create Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Template.md)
    ```
