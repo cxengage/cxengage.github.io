@@ -558,10 +558,9 @@ grant_type - client_credentials
 client_id - Provided client id
 client_secret - Provided client secret
 ``` 
-
+Example Request
 
 ```http
-Example Request
 POST /1.0/token HTTP/1.1
 Host: auth.cxengage.net
 Authorization: Basic {{client-id:client-secret base64 encoded}} 
@@ -575,9 +574,8 @@ curl -X POST https://auth.cxengage.net -u {{client-id}}:{{client-secret}} \
 -d "grant_type=client_credentials"
 ```
 
-```
 Example Response
-```
+
 
 ```json
 {"access_token":"token",
@@ -597,9 +595,9 @@ url - https://events.cxengage.net
   
 Events are sent into CxEngage via a REST based API as in the example below. Note that the url is different from the CxEngage API
 
-```
+
 Request
-```
+
 ```http
 POST /1.0/tenants/userevents/event HTTP/1.1
 Host: events.cxengage.net
@@ -608,9 +606,10 @@ Authorization: Bearer {{token}}
 ```
 
 ```json
-{
-"username" : "1"
-}
+{ "username" : "1", 
+"customerSegment" : "Gold", 
+"type" : "callphone", 
+"segment" : "Platinum" }
 ```
 
 ```
@@ -618,20 +617,27 @@ Response
 ```
 
 ```json
-{"event":{"username":"1"},
-"key-attr":"1",
-"id":"EV11-1",
-"contributing?":false}
+{
+    "event": {
+        "username": "1",
+        "customerSegment": "Gold",
+        "type": "callphone",
+        "segment": "Platinum"
+    },
+    "key-attr": "1",
+    "id": "EV11-1",
+    "contributing?": true
+}
 ```
 
 ## CxEngage API 1.0
-url - https://api.cxengage.net/1.0
+url - https://api.cxengage.net/
 
 ## Tenants
 
 Retrieve Tenant info
 
-__Request__
+**Request**
 
 ```http
 GET /1.0/tenants/{{tenant-name}} HTTP/1.1
