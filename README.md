@@ -1344,11 +1344,6 @@ curl -XPUT https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI4 \
 
 ```
 
-
-
-   ```
-   [Update Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Listener.md) 
-   ```
    Update a specific listener for a given tenant
    ```
    [Delete Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Listener.md) 
