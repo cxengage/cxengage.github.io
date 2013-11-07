@@ -678,7 +678,7 @@ curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/listeners \
 -d '{"name":"Demo Datasift","type":"datasift","mapping":{"username":"interaction.author.username","sentiment":"salience.content.sentiment","id":"twitter.user.screen_name"},"hash":{{{datasift-hash}},"status":true}'
 ```
 
-**Retrieves chosen listener**
+**Retrieve chosen listener**
 
 Request
 
@@ -694,7 +694,7 @@ Response
 
 ```json
 
-    {
+{
         "status": true,
         "topic": "CxDemo_0720v2",
         "name": "My Salesforce Listener",
@@ -710,7 +710,7 @@ Response
         },
         "id": "LI4"
      
-    }
+}
 ```
 
 curl Example
