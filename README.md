@@ -1343,7 +1343,7 @@ curl -XPUT https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI4 \
 -d '{"name":"Updated Name for listener"}'
 ```
 
-**Deletes the chosen listener from the given tenant**
+**Delete chosen listener**
 
 Request
 
