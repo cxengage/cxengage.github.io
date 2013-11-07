@@ -1039,7 +1039,6 @@ curl -XPUT https://api.cxengage.net/1.0/tenants/{{tenant-name}}/templates/TM1 \
 ```
 
 
-   ```
    [Delete Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Template.md) 
    ```
    Delete a specific template for a given tenant
