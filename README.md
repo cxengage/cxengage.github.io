@@ -1906,11 +1906,6 @@ bob,admin@userevents.com
 ```
 
 
-Response
-
-201 Created
-
-
 **Retrieves augment for the given tenant**
 
 Request
