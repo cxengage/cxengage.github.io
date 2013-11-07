@@ -815,7 +815,7 @@ curl -X POST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/patterns \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
  -d '{"then":"(send echo message {:message \"Hello curl\"})","when":"(event (= type \"curl\"))","status":true,"name":"curl Pattern"}'
- ```
+```
 
 
 **Retrieves chosen pattern for the given tenant**
