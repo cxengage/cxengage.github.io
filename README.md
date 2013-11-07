@@ -614,7 +614,7 @@ Authorization: Bearer {{token}}
 ```
 
 ```
-Example Response
+Response
 ```
 
 ```json
