@@ -925,11 +925,6 @@ curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/templates/TM1 \
      -H 'Authorization: Bearer {{token}}'
 ```
 
-
-
-
-
-   ```
    [Create Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Template.md)
    ```
    Create a new template for a given tenant
