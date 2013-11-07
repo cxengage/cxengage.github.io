@@ -6,6 +6,26 @@ CxEngage can be integrated with by using CxEngage API.
 
 How to authenticate with CxEngage API - [http://devs.cxengage.com/docs/authentication](http://devs.cxengage.com/docs/authentication/)
 
+## Error Codes
+
+CxEngage API uses HTTP response codes for showing success or failure of it's API request.
+
+**HTTP 404** 
+```
+The selected tenant or item does not exist
+```
+
+**HTTP 401**
+```
+Incorrect credentials
+```
+
+**HTTP 403**
+```
+User does not have access to selected tenant
+```
+
+
 ## CxEngage API 1.0
 url - https://api.cxengage.net/
 
@@ -46,7 +66,7 @@ curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}} \
 key
 
 ```
-key attribute
+Key attribute
 ```
 
 **Retrieve key attribute for the given tenant**
@@ -345,11 +365,11 @@ Cache-Control: no-cache
 ```
 
 ```json
-  {
+{
     "template": "Hi {{first-name}}\r\n\r\nWe apologize for the inconvenience. Please contact us at {{email-address}} at your earliest convenience.\r\n\r\nThank You\r\n",
     "description": "SMS apologizing to customer",
     "name": "SMS"
-  }
+}
 ```
 
 Response
@@ -390,13 +410,13 @@ Response
 
 ```json
 
-    {
-        "id": "TM1",
-        "template": "Hi {{FirstName}}, sorry we missed your call. Call Joe at
+{
+    "id": "TM1",
+    "template": "Hi {{FirstName}}, sorry we missed your call. Call Joe at
 +14153159430 re: 401K needs.",
-        "description": "Default SMS message with click-to-call",
-        "name": "SMS"
-    }
+    "description": "Default SMS message with click-to-call",
+    "name": "SMS"
+}
 ```
 
 curl Example
@@ -419,10 +439,10 @@ Cache-Control: no-cache
 ```
 
 ```json
-  {
+{
    
     "name": "Test Template"
-  }
+}
 ```
 
 Response
