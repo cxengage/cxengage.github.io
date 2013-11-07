@@ -724,7 +724,9 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
 ## Patterns
 
 **Mandatory Parameters**
+
 name 
+
 ```
 Name of Pattern
 ```
