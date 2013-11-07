@@ -761,7 +761,7 @@ Response
 
 
 
-   ```
+   
    [Create Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Pattern.md) 
    ```
    Create a new pattern for a given tenant
