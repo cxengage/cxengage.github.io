@@ -577,7 +577,9 @@ curl -X POST https://auth.cxengage.net -u {{client-id}}:{{client-secret}} \
 -d "grant_type=client_credentials"
 ```
 
-**Example Response:**
+```
+Example Response
+```
 
 ```json
 {"access_token":"token",
@@ -621,7 +623,7 @@ Authorization: Bearer {{token}}
 "contributing?":false}
 ```
 
-## CxEngage API 
+## CxEngage API 1.0
 url - https://api.cxengage.net/1.0
 
 ## Tenants
