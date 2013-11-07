@@ -1038,12 +1038,34 @@ curl -XPUT https://api.cxengage.net/1.0/tenants/{{tenant-name}}/templates/TM1 \
      -d '{"name":"Test Template"}'
 ```
 
+**Delete chosen template**
 
-   [Delete Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Template.md) 
-   ```
-   Delete a specific template for a given tenant
-   ```
-   
+Request
+
+```http
+DELETE /1.0/tenants/{{tenant-name}}/templates/TM1 HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
+```
+
+Response
+
+```json
+{
+
+  "TM1"
+}
+```
+
+curl Example
+
+```bash
+curl -IX DELETE https://api.cxengage.net/tenants/{{tenant-name}}/templates/TM1 \
+ -H 'Authorization: Bearer {{token}}' \ 
+```
+
  
 
 ## Listeners
