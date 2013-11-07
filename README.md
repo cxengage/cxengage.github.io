@@ -1403,27 +1403,39 @@ curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/integrations \
 
 **Create specific integrations**
 
-## Salesforce Parameters
+Salesforce
 
-- **secret-token** - [Get Salesforce secret token](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm&language=en)
-- **username** - Salesforce username
-- **password** - Salesforce password
-- **consumer-key** - [Get Salesforce Consumer key/secret](http://www.salesforce.com/us/developer/docs/api_streaming/Content/code_sample_auth_oauth.htm)
-- **consumer-secret** - [Get Salesforce Consumer key/secret](http://www.salesforce.com/us/developer/docs/api_streaming/Content/code_sample_auth_oauth.htm)
+Salesforce Parameters
 
+secret-token
+```
+[Get Salesforce secret token](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm&language=en)
+```
+username 
+```
+Salesforce username
+```
+password 
+```
+Salesforce password
+```
+consumer-key 
+```
+[Get Salesforce Consumer key/secret](http://www.salesforce.com/us/developer/docs/api_streaming/Content/code_sample_auth_oauth.htm)
+```
+consumer-secret 
+```
+[Get Salesforce Consumer key/secret](http://www.salesforce.com/us/developer/docs/api_streaming/Content/code_sample_auth_oauth.htm)
+```
 
-### Request
+Request
 
 ```http
 POST /1.0/tenants/{{tenant-name}}/salesforce HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
-```
 
-## Create integrations
-
-Salesforce
 
 ```json
  {
@@ -1464,7 +1476,6 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/sa
 
 ```
 
-Twilio Example
 
 Request
 
