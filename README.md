@@ -925,6 +925,8 @@ curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/templates/TM1 \
      -H 'Authorization: Bearer {{token}}'
 ```
 
+**Update chosen template**
+
 Request
 
 ```http
@@ -965,10 +967,78 @@ curl -X POST https://api.cxengage.net/1.0/tenants/userevents/templates \
 
 ```
 
+**Retrieve chosen template**
 
-   [Get Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Template.md) 
-   ```
-   Get a specific template for a given tenant
+Request
+
+```http
+GET /1.0/tenants/{{tenant-name}}/templates/TM1 HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
+```
+
+Response
+
+```json
+
+    {
+        "id": "TM1",
+        "template": "Hi {{FirstName}}, sorry we missed your call. Call Joe at
++14153159430 re: 401K needs. Gelson Bank.",
+        "description": "Default SMS message with click-to-call",
+        "name": "SMS"
+    }
+```
+
+curl Example
+
+```bash
+curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/templates/TM1 \
+     -H 'Authorization: Bearer {{token}}'
+```
+
+**Update chosen template**
+
+Request
+
+```http
+PUT /1.0/tenants/{{tenant-name}}/templates/TM1 HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer VjVYw3yJaujNoW+k5CGfe23mnJVOdhJZZ/sdrwhpZ41z
+Cache-Control: no-cache
+```
+
+```json
+  {
+   
+    "name": "Test Template"
+  }
+```
+
+Response
+
+```json
+{
+    "id": "TM1",
+    "template": "Hi {{first-name}}\r\n\r\nWe apologize for the inconvenience. Please contact us at {{email-address}} at your earliest convenience.\r\n\r\nThank You\r\n",
+    "description": "SMS apologizing to customer",
+    "name": "Test Template"
+}
+```
+
+curl Example
+
+```bash
+curl -XPUT https://api.cxengage.net/1.0/tenants/{{tenant-name}}/templates/TM1 \
+     -H 'Authorization: Bearer {{token}}' \
+     -H 'Content-Type: application/json; charset=utf-8' \
+     -d '{"name":"Test Template"}'
+```
+
+
    ```
    [Update Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Template.md) 
    ```
