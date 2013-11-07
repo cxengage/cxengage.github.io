@@ -6,6 +6,10 @@ CxEngage can be integrated with by using CxEngage API.
 
 How to authenticate with CxEngage API - [http://devs.cxengage.com/docs/authentication](http://devs.cxengage.com/docs/authentication/)
 
+
+## CxEngage API 1.0
+url - https://api.cxengage.net/
+
 ## Error Codes
 
 CxEngage API uses HTTP response codes for showing success or failure of it's API request.
@@ -24,10 +28,6 @@ Incorrect credentials
 ```
 User does not have access to selected tenant
 ```
-
-
-## CxEngage API 1.0
-url - https://api.cxengage.net/
 
 ## Tenants
 
