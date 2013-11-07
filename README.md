@@ -659,7 +659,8 @@ curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}} \
 
 **Parameters**
 
-**key** 
+key
+
 ```
 key attribute
 ```
