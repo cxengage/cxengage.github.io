@@ -1272,7 +1272,7 @@ Request
 POST /1.0/tenants/userevents/augments/AU1/file HTTP/1.1
 Host: api.cxengage.net
 Content-Type: text/csv
-Authorization: Bearer +JCbSSte77ZWPw6avbmd5F0EKrMn77XWL2ZQZqMHcrkX
+Authorization: Bearer {{token}}
 ```
 
 ```
