@@ -859,7 +859,7 @@ curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/patterns \
 ```
 
 
-**Update the pattern for the given tenant based on the pattern id given**
+**Update chosen pattern**
 
 Request
 
@@ -902,6 +902,29 @@ curl -X PUT https://api.cxengage.net/1.0/tenants/userevents/patterns/PT5 \
 ## Templates
 
 **Retrieves templates for the given tenant**
+
+**Mandatory Parameters**
+
+name 
+
+```
+Name of Template
+```
+
+**Optional Parameters**
+
+template
+
+```
+template to create
+```
+
+description
+
+```
+Description of template
+```
+
 
 Request
 
