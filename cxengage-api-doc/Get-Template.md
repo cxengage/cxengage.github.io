@@ -2,7 +2,7 @@
 
 ## Description
 
-Retrieves templates for the given tenant.
+Retrieves template for the given tenant.
 
 
 ### Errors
@@ -22,6 +22,8 @@ Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
 Cache-Control: no-cache
 ```
+
+**Response**
 
 ```json
 
