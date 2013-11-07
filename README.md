@@ -850,8 +850,6 @@ curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/patterns \
 
 
 
-
-```
    [Update Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Pattern.md) 
    ```
    Update a specific pattern for a given tenant
