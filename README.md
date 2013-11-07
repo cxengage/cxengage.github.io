@@ -1670,20 +1670,78 @@ curl Example
 curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/integrations/twilio \
      -H 'Authorization: Bearer {{token}}'
 ```
-
-
-
    
 ## Augments
-   
-   [Get Augments](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Augments.md)
-   ```
-   Get all Augments for a given tenant
-   ```
-   [Create Augment](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Augment.md)
-   ```
-   Create a new Augment for a given tenant
-   ```
+
+**Retrieves augments for the given tenant**
+
+Request
+
+```http
+GET /1.0/tenants/{{tenant-name}}/augments HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer {{token}}
+```
+
+```json
+[
+    {
+        "id": "AU1",
+        "name": "Augment csv",
+        "type": "file",
+        "service": "engine"
+    },
+    {
+        "description": "Sample description",
+        "id": "AU5",
+        "name": "Augment csv",
+        "type": "file",
+        "service": "engine"
+    }
+]
+```
+ 
+curl Example
+
+```bash
+curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/augments \
+     -H 'Authorization: Bearer {{token}}'
+
+```
+
+**Create an Augment for a tenant**
+
+Mandatory Parameters
+
+name 
+```
+Name of Augment
+```
+
+type 
+```
+file or api based augment
+```
+service 
+```
+engine or notification
+```
+
+Optional Parameters
+
+options 
+```
+Map of optional attributes shown below  
+```
+url 
+```
+url of the augment api
+```
+attributes 
+```
+Attributes that would get augmented
+```
    [Get Augment](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Augment.md)
    ```
    Get a specific Augment for a given tenant
