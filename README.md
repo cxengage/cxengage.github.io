@@ -1119,7 +1119,7 @@ curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/augments \
 
 **Create an Augment for a tenant**
 
-__Mandatory Parameters__
+**Mandatory Parameters**
 
 name 
 ```
@@ -1135,7 +1135,7 @@ service
 engine or notification
 ```
 
-__Optional Parameters__
+**Optional Parameters**
 
 options 
 ```
@@ -1205,7 +1205,7 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
  -d '{"service": "engine", "id": "AU2", "name": "rest augment api", "description": "describe", "augment-service": "engine", "type": "api", "options": { "url": "hostname", "attributes": ["customerSegment"]}}'
 ```
 
-__File based augment__
+**File based augment**
 
 Request
 
@@ -1264,7 +1264,7 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
 
 **Upload CSV for Augment**
 
-__Upload File__
+**Upload File**
 
 Request
 
