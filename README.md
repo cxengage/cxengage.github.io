@@ -914,7 +914,7 @@ Response
     {
         "id": "TM1",
         "template": "Hi {{FirstName}}, sorry we missed your call. Call Joe at
-+14153159430 re: 401K needs. Gelson Bank.",
++14153159430 re: 401K needs.",
         "description": "Default SMS message with click-to-call",
         "name": "SMS"
     }
@@ -988,7 +988,7 @@ Response
     {
         "id": "TM1",
         "template": "Hi {{FirstName}}, sorry we missed your call. Call Joe at
-+14153159430 re: 401K needs. Gelson Bank.",
++14153159430 re: 401K needs.",
         "description": "Default SMS message with click-to-call",
         "name": "SMS"
     }
