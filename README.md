@@ -1856,10 +1856,41 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
 ```
 
 
+**Retrieves augment for the given tenant**
 
+Request
 
-   [Get Augment](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Augment.md)
-   ```
-   Get a specific Augment for a given tenant
-   ```
-   
+```http
+GET /1.0/tenants/{{tenant-name}}/augments/{{augment-id}} HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
+```
+
+Response
+
+```json
+{
+    "id": "AU1",
+    "name": "API based",
+    "service": "engine",
+    "type": "api",
+    "options": {
+        "url": "http://cxengage-augment",
+        "attributes": [
+            "phoneNumber",
+            "customerSegment"
+        ]
+    }
+}
+```
+ 
+curl Example
+
+```bash
+curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/augments/AU1 \
+     -H 'Authorization: Bearer {{token}}'
+
+```
+
