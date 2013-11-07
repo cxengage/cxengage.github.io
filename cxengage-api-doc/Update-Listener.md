@@ -4,7 +4,7 @@
 
 ## Description
 
-Retrieves listeners for the given tenant.
+Update chosen listeners for the given tenant.
 
 
 
