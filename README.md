@@ -667,7 +667,7 @@ key attribute
 
 Retrieve key attribute for the given tenant
 
-**Request**
+Request
 ```http
 GET /1.0/tenants/{{tenant-name}}/key-attribute HTTP/1.1
 Host: api.cxengage.net
@@ -676,7 +676,7 @@ Authorization: Bearer {{token}}
 Cache-Control: no-cache
 ```
 
-**Response**
+Response
 
 ```json
 {
@@ -684,7 +684,7 @@ Cache-Control: no-cache
 }
 ```
 
-**curl Example**
+curl Example
 
 ```bash
 curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
