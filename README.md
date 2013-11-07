@@ -925,10 +925,47 @@ curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/templates/TM1 \
      -H 'Authorization: Bearer {{token}}'
 ```
 
-   [Create Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Template.md)
-   ```
-   Create a new template for a given tenant
-   ```
+Request
+
+```http
+POST /1.0/tenants/{{tenant-name}}/templates HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
+```
+
+```json
+  {
+    "template": "Hi {{first-name}}\r\n\r\nWe apologize for the inconvenience. Please contact us at {{email-address}} at your earliest convenience.\r\n\r\nThank You\r\n",
+    "description": "SMS apologizing to customer",
+    "name": "SMS"
+  }
+```
+
+Response
+
+```json
+{
+    "id": "TM1",
+    "template": "Hi {{first-name}}\r\n\r\nWe apologize for the inconvenience. Please contact us at {{email-address}} at your earliest convenience.\r\n\r\nThank You\r\n",
+    "description": "SMS apologizing to customer",
+    "name": "SMS"
+}
+```
+
+curl Example
+
+```bash
+
+curl -X POST https://api.cxengage.net/1.0/tenants/userevents/templates \
+ -H 'Authorization: Bearer {{token}}' \
+ -H 'Content-Type: application/json; charset=utf-8' \
+ -d '{"template": "Welcome to the 4.0 version of CxEngage", "description" : "sample description", "name" : "Welcome"}'
+
+```
+
+
    [Get Template](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Template.md) 
    ```
    Get a specific template for a given tenant
