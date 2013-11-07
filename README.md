@@ -1742,6 +1742,122 @@ attributes
 ```
 Attributes that would get augmented
 ```
+
+Request
+
+```
+POST /1.0/tenants/{{tenant-name}}/augments HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
+```
+
+```json
+{
+    "service": "engine",
+    "name": "rest augment api",
+    "description": "description",
+    "augment-service": "engine",
+    "type": "api",
+    "options": {
+        "url": "hostname",
+        "attributes": [
+            "customerSegment"
+        ]
+    }
+}
+```
+
+
+Response
+
+```json
+{
+    "service": "engine",
+    "id": "AU2",
+    "name": "rest augment api",
+    "description": "description",
+    "augment-service": "engine",
+    "type": "api",
+    "options": {
+        "url": "hostname",
+        "attributes": [
+            "customerSegment"
+        ]
+    }
+}
+```
+
+curl Example
+
+```bash
+curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
+ -H 'Authorization: Bearer {{token}}' \
+ -H 'Content-Type: application/json; charset=utf-8' \
+ -d '{"service": "engine", "id": "AU2", "name": "rest augment api", "description": "describe", "augment-service": "engine", "type": "api", "options": { "url": "hostname", "attributes": ["customerSegment"]}}'
+```
+
+__File based augment__
+
+Request
+
+```
+POST /1.0/tenants/{{tenant-name}}/augments HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
+```
+
+```json
+{
+    "service": "engine",
+    "name": "rest augment api",
+    "description": "description",
+    "augment-service": "engine",
+    "type": "file",
+    "options": {
+        "attributes": [
+            "customerSegment", "twitter"
+        ]
+    }
+}
+```
+
+
+Response
+
+```json
+{
+    "service": "engine",
+    "id": "AU2",
+    "name": "rest augment api",
+    "description": "description",
+    "augment-service": "engine",
+    "type": "file",
+    "options": {
+        "url": "hostname",
+        "attributes": [
+            "customerSegment"
+        ]
+    }
+}
+```
+
+
+curl Example
+
+```bash
+curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
+ -H 'Authorization: Bearer {{token}}' \
+ -H 'Content-Type: application/json; charset=utf-8' \
+ -d '{"service": "engine","id": "AU2","name": "rest augment api", "description": "","augment-service": "engine","type": "file","options": {"attributes": ["customerSegment", "twitter"]}}'
+```
+
+
+
+
    [Get Augment](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Augment.md)
    ```
    Get a specific Augment for a given tenant
