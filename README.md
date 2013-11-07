@@ -817,7 +817,7 @@ Salesforce Parameters
 
 secret-token
 ```
-[Get Salesforce secret token](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm&language=en)
+Salesforce secret token
 ```
 username 
 ```
@@ -829,11 +829,11 @@ Salesforce password
 ```
 consumer-key 
 ```
-[Get Salesforce Consumer key/secret](http://www.salesforce.com/us/developer/docs/api_streaming/Content/code_sample_auth_oauth.htm)
+Get Salesforce Consumer key/secret
 ```
 consumer-secret 
 ```
-[Get Salesforce Consumer key/secret](http://www.salesforce.com/us/developer/docs/api_streaming/Content/code_sample_auth_oauth.htm)
+Get Salesforce Consumer key/secret
 ```
 
 Request
@@ -843,7 +843,7 @@ POST /1.0/tenants/{{tenant-name}}/salesforce HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
-
+```
 
 ```json
  {
@@ -904,7 +904,7 @@ Twilio SID
 ```
 password 
 ```
-[Twilio Token](https://www.twilio.com/help/faq/twilio-basics/what-is-the-auth-token-and-how-can-it-be-reset)
+Twilio Token
 ```
 
 
@@ -1002,7 +1002,7 @@ DataSift username
 api-key 
 
 ```
-[DataSift api key](http://dev.datasift.com/docs/getting-started/api-faq#APIkey)
+DataSift api key
 ```
 
 Request
