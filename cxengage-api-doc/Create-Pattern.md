@@ -3,7 +3,7 @@
 
 ## Description
 
-Creates a pattern on the given tenants.
+Creates a pattern on the given tenant
 
 
 ### Mandatory Parameters
