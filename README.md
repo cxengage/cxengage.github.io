@@ -1886,6 +1886,30 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
  -d '{"service": "engine","id": "AU2","name": "rest augment api", "description": "","augment-service": "engine","type": "file","options": {"attributes": ["customerSegment", "twitter"]}}'
 ```
 
+**Upload CSV for Augment**
+
+__Upload File__
+
+Request
+
+```
+POST /1.0/tenants/userevents/augments/AU1/file HTTP/1.1
+Host: api.cxengage.net
+Content-Type: text/csv
+Authorization: Bearer +JCbSSte77ZWPw6avbmd5F0EKrMn77XWL2ZQZqMHcrkX
+```
+
+```
+username,email 
+ryan,support@userevents.com
+bob,admin@userevents.com
+```
+
+
+Response
+
+201 Created
+
 
 **Retrieves augment for the given tenant**
 
