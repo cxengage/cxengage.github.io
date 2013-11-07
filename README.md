@@ -1341,11 +1341,8 @@ curl -XPUT https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI4 \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"name":"Updated Name for listener"}'
-
 ```
 
-   Update a specific listener for a given tenant
-   ```
    [Delete Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Delete-Listener.md) 
    ```
    Delete a specific listener for a given tenant
