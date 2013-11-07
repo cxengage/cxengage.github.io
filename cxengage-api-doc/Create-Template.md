@@ -2,7 +2,7 @@
 
 ## Description
 
-Creates/Updates event record on given tenant
+Creates/Updates template record on given tenant
 
 
 ### Errors
