@@ -774,7 +774,7 @@ Response
 
 ```
 
-**Creates a pattern on the given tenant**
+**Create a pattern on the given tenant**
 
 Request
 
@@ -818,15 +818,40 @@ curl -X POST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/patterns \
  ```
 
 
-   
- 
-   ```
-   Create a new pattern for a given tenant
-   ```
-   [Get Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Pattern.md) 
-   ```
-   Get a specific pattern for a given tenant
-   ```
+**Retrieves chosen pattern for the given tenant**
+
+Request
+
+```http
+GET /1.0/tenants/{{tenant-name}}/patterns HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer {{token}}
+```
+
+Response
+
+```json
+{
+  "id":"PT2",
+  "when":"(when (event (= \"id\" \"1234\")))",
+  "then":"(seq (send echo message {:message \"Hello world\"}))",
+  "status":true,
+  "description":"Sample Pattern",
+  "name":"Sample Pattern"
+}
+```
+curl Example
+
+```bash
+curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/patterns \
+     -H 'Authorization: Bearer {{token}}'
+```
+
+
+
+
+```
    [Update Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Pattern.md) 
    ```
    Update a specific pattern for a given tenant
