@@ -1635,17 +1635,41 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/da
 
 ```
 
+**Retrieves specific integration from the given tenant**
+
+Request
+
+```http
+GET /1.0/tenants/{{tenant-name}}/integrations/{{integration}} HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
+```
+
+Response
+
+```json
+{
+    "id": "salesforce",
+    "type": "salesforce",
+    "consumer-key": "consumerkey",
+    "consumer-secret": "consumersecret",
+    "username": "dev@userevents.com",
+    "secret-token": "secret-token",
+    "password": "password"
+}
+```
+
+curl Example
+
+```bash
+curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/integrations/twilio \
+     -H 'Authorization: Bearer {{token}}'
+```
 
 
-  
 
-
-
-
-   [Get Integration](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Integration.md) 
-   ```
-   Get a specific integration for a given tenant
-   ```
    
 ## Augments
    
