@@ -12,7 +12,7 @@ url - https://api.cxengage.net/
 
 ## Error Codes
 
-CxEngage API uses HTTP response codes for showing success or failure of it's API request.
+CxEngage API uses HTTP response codes for showing failure of it's API request.
 
 **HTTP 404** 
 ```
