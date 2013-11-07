@@ -550,12 +550,8 @@ CxEngage can be integrated with by using CxEngage API.
 
 url - https://auth.cxengage.net
 
-To connect with the CxEngage API, you need to authenticate with a token.
-
-In order to authenticate a user, a user must provide its `client_id` and `client_secret`. You can access your client id and secret by logging into [cxengage.net](https://www.cxengage.net) and clicking on your avatar.
-
-Once a user has its access token, he or she will be able to make authenticated requests to any resources it has permission to access.
-
+To connect with the CxEngage API, you need to authenticate with a token.In order to authenticate a user, a user must provide its `client_id` and `client_secret`. You can access your client id and secret by logging into [cxengage.net](https://www.cxengage.net) and clicking on your avatar.
+Once a user has their access token, he or she will be able to make authenticated requests to any resources it has permission to access.
 
 grant_type - client_credentials
 client_id - Provided client id
