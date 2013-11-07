@@ -629,7 +629,7 @@ url - https://api.cxengage.net/1.0
 
 Retrieve Tenant info
 
-**Request**
+__Request__
 
 ```http
 GET /1.0/tenants/{{tenant-name}} HTTP/1.1
