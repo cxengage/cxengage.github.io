@@ -829,11 +829,11 @@ Salesforce password
 ```
 consumer-key 
 ```
-Get Salesforce Consumer key/secret
+Salesforce Consumer key/secret
 ```
 consumer-secret 
 ```
-Get Salesforce Consumer key/secret
+Salesforce Consumer key/secret
 ```
 
 Request
@@ -846,15 +846,15 @@ Authorization: Bearer {{token}}
 ```
 
 ```json
- {
-        "id": "salesforce",
-        "type": "salesforce",
-        "consumer-key": "consumerkey",
-        "consumer-secret": "consumersecret",
-        "username": "dev@userevents.com",
-        "secret-token": "secret-token",
-        "password": "password"
-    }
+{
+    "id": "salesforce",
+    "type": "salesforce",
+    "consumer-key": "consumerkey",
+    "consumer-secret": "consumersecret",
+    "username": "dev@userevents.com",
+    "secret-token": "secret-token",
+    "password": "password"
+}
 ```
 
 Response
