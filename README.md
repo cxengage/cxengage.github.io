@@ -774,10 +774,52 @@ Response
 
 ```
 
+**Creates a pattern on the given tenant**
+
+Request
+
+```http
+POST /1.0/tenants/{{tenant-name}}/patterns HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+```
+
+```json
+{ 
+  "name": "Sample Pattern",
+  "description": "Sample",
+  "status":true,
+  "when": "(when (event (= \"id\" \"1234\")))",
+  "then": "(seq (send echo message {:message \"Hello world\"}))"
+}
+```
+
+Response
+
+```json
+{ 
+  "id": "PT2",
+  "name": "Sample Pattern",
+  "description": "Sample",
+  "status":true,
+  "when": "(when (event (= \"id\" \"1234\")))",
+  "then": "(seq (send echo message {:message \"Hello world\"}))"
+}
+```
+
+curl Example
+
+```bash
+curl -X POST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/patterns \
+ -H 'Authorization: Bearer {{token}}' \
+ -H 'Content-Type: application/json; charset=utf-8' \
+ -d '{"then":"(send echo message {:message \"Hello curl\"})","when":"(event (= type \"curl\"))","status":true,"name":"curl Pattern"}'
+ ```
 
 
    
-   [Create Pattern](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Create-Pattern.md) 
+ 
    ```
    Create a new pattern for a given tenant
    ```
