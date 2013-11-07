@@ -1251,10 +1251,101 @@ curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/listeners \
 -d '{"name":"Demo Datasift","type":"datasift","mapping":{"username":"interaction.author.username","sentiment":"salience.content.sentiment","id":"twitter.user.screen_name"},"hash":{{{datasift-hash}},"status":true}'
 ```
 
+**Retrieves chosen listener**
 
-   [Get Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listener.md) 
-   ```
-   Get a specific listener for a given tenant
+Request
+
+```http
+GET /1.0/tenants/{{tenant-name}}/listeners/LI4 HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer VjVYw3yJaujNoW+k5CGfe23mnJVOdhJZZ/sdrwhpZ41z
+Cache-Control: no-cache
+```
+
+Response
+
+```json
+
+    {
+        "status": true,
+        "topic": "CxDemo_0720v2",
+        "name": "My Salesforce Listener",
+        "version": "26.0",
+        "type": "salesforce",
+        "mapping": {
+            "user": "user__c",
+            "type": "Type",
+            "stage": "StageName",
+            "amount": "Amount",
+            "daystoclose": "daysToClose__c",
+            "product": "Product__c"
+        },
+        "id": "LI4"
+     
+    }
+```
+
+curl Example
+
+```bash
+curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI4 \
+     -H 'Authorization: Bearer {{token}}'  
+```
+
+**Update chosen listener**
+
+Request
+
+```http
+PUT /1.0/tenants/{{tenant-name}}/listeners/LI4 HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+Cache-Control: no-cache
+```
+
+```json
+
+  {"name" : "Updated Name for listener"}
+    
+```
+
+Response
+
+```json
+
+{
+    "id": "LI4",
+    "status": false,
+    "topic": "CxDemo_0720v2",
+    "name": "Updated Name for listener",
+    "version": "26.0",
+    "type": "salesforce",
+    "mapping": {
+        "user": "user__c",
+        "type": "Type",
+        "stage": "StageName",
+        "amount": "Amount",
+        "daystoclose": "daysToClose__c",
+        "product": "Product__c"
+    }
+}
+
+```
+
+### curl Example
+
+```bash
+curl -XPUT https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI4 \
+     -H 'Authorization: Bearer {{token}}' \
+-H 'Content-Type: application/json; charset=utf-8' \
+-d '{"name":"Updated Name for listener"}'
+
+```
+
+
+
    ```
    [Update Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Update-Listener.md) 
    ```
