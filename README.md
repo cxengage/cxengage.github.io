@@ -1070,7 +1070,7 @@ curl -IX DELETE https://api.cxengage.net/tenants/{{tenant-name}}/templates/TM1 \
 
 ## Listeners
 
-**Retrieve chosen listener**
+**Retrieve listeners**
 
 Request
 
@@ -1250,8 +1250,6 @@ curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/listeners \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"name":"Demo Datasift","type":"datasift","mapping":{"username":"interaction.author.username","sentiment":"salience.content.sentiment","id":"twitter.user.screen_name"},"hash":{{{datasift-hash}},"status":true}'
 ```
-
-
 
 
    [Get Listener](https://github.com/cxengage/cxengage.github.io/blob/master/cxengage-api-doc/Get-Listener.md) 
