@@ -4,7 +4,7 @@ CxEngage can be integrated with by using CxEngage API.
 
 ## Authentication 
 
-[Authentication](http://devs.cxengage.com/docs/authentication/)
+How to authenticate with CxEngage API - [http://devs.cxengage.com/docs/authentication](http://devs.cxengage.com/docs/authentication/)
 
 ## CxEngage API 1.0
 url - https://api.cxengage.net/
