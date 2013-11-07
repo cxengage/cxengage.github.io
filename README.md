@@ -724,14 +724,29 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
 ## Patterns
 
 **Mandatory Parameters**
-name ```Name of Pattern```
+name 
+```
+Name of Pattern
+```
 
 **Optional Parameters**
 
-description ```Description of pattern```
-status ```Boolean value. Set to true/false to enable/disable the pattern```
-when ```When portion of pattern```
-then ```Then portion of pattern```
+description 
+```
+Description of pattern
+```
+status 
+```
+Boolean value. Set to true/false to enable/disable the pattern
+```
+when 
+```
+When portion of pattern
+```
+then 
+```
+Then portion of pattern
+```
 
 **Retrieves all patterns from chosen tenant**
 
