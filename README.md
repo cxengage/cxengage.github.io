@@ -665,7 +665,7 @@ key
 key attribute
 ```
 
-Retrieve key attribute for the given tenant
+**Retrieve key attribute for the given tenant**
 
 Request
 ```http
@@ -692,9 +692,9 @@ curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
 
 ```
 
-Update key attribute for the given tenant
+**Update key attribute for the given tenant**
 
-**Request**
+Request
 
 ```http
 POST /tenants/{{tenant-name}}/key-attribute HTTP/1.1
@@ -703,7 +703,7 @@ Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
 ```
 
-**Response**
+Response
 
 ```json
 {
@@ -711,7 +711,7 @@ Authorization: Bearer {{token}}
 }
 ```
  
-**curl Example**
+curl Example
 
 ```bash
 curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
