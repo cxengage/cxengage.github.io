@@ -1712,7 +1712,7 @@ curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/augments \
 
 **Create an Augment for a tenant**
 
-Mandatory Parameters
+__Mandatory Parameters__
 
 name 
 ```
@@ -1728,7 +1728,7 @@ service
 engine or notification
 ```
 
-Optional Parameters
+__Optional Parameters__
 
 options 
 ```
