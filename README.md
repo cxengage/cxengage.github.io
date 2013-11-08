@@ -198,7 +198,7 @@ Authorization: Bearer {{token}}
   "name": "Sample Pattern",
   "description": "Sample",
   "status":true,
-  "when": "(when (event (= \"id\" \"1234\")))",
+  "when": "(when (event (= id \"1234\")))",
   "then": "(seq (send echo message {:message \"Hello world\"}))"
 }
 ```
