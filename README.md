@@ -392,7 +392,7 @@ curl Example
 curl -X POST https://api.cxengage.net/1.0/tenants/userevents/templates \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
- -d '{"template": "Welcome to the 4.0 version of CxEngage", "description" : "sample description", "name" : "Welcome"}'
+ -d '{"template": "Welcome to CxEngage 4.0", "description" : "sample description", "name" : "Welcome"}'
 
 ```
 
@@ -452,7 +452,7 @@ Response
 ```json
 {
     "id": "TM1",
-    "template": "Hi {{first-name}}\r\n\r\nWe apologize for the inconvenience. Please contact us at {{email-address}} at your earliest convenience.\r\n\r\nThank You\r\n",
+    "template": "Hi {{first-name}}. We apologize for the inconvenience. Please contact us at {{email-address}}",
     "description": "SMS apologizing to customer",
     "name": "Test Template"
 }
@@ -618,7 +618,8 @@ curl Example
 curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/listeners \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
--d '{"name":"My Salesforce Listener","type":"salesforce","mapping":{"user":"user__c","type":"Type","stage":"StageName","amount":"Amount","daystoclose":"daysToClose__c","product": "Product__c"},"status":true}'
+-d '{"name":"My Salesforce Listener","type":"salesforce","mapping":{"user":"user__c","type":"Type", 
+    "stage":"StageName","amount":"Amount","daystoclose":"daysToClose__c","product": "Product__c"},"status":true}'
 ```
 
 Datasift Listener Example
@@ -677,7 +678,9 @@ curl Example
 curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/listeners \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
--d '{"name":"Demo Datasift","type":"datasift","mapping":{"username":"interaction.author.username","sentiment":"salience.content.sentiment","id":"twitter.user.screen_name"},"hash":{{{datasift-hash}},"status":true}'
+-d '{"name":"Demo Datasift","type":"datasift",
+    "mapping":{"username":"interaction.author.username","sentiment":"salience.content.sentiment",
+    "id":"twitter.user.screen_name"},"hash":{{{datasift-hash}},"status":true}'
 ```
 
 **Retrieve chosen listener**
@@ -901,8 +904,9 @@ curl Example
 curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/salesforce \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
--d '{"id": "salesforce", "type": "salesforce", "consumer-key": "consumerkey", "consumer-secret":"consumersecret","username":"email@userevents.com"
-"secret-token":"secret-token","password":"password"}'
+-d '{"id": "salesforce", "type": "salesforce", "consumer-key": "consumerkey", 
+     "consumer-secret":"consumersecret","username":"email@userevents.com"
+     "secret-token":"secret-token","password":"password"}'
 
 ```
 
@@ -1224,7 +1228,9 @@ curl Example
 curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
- -d '{"service": "engine", "id": "AU2", "name": "rest augment api", "description": "describe", "augment-service": "engine", "type": "api", "options": { "url": "hostname", "attributes": ["customerSegment"]}}'
+ -d '{"service": "engine", "id": "AU2", "name": "rest augment api", 
+      "description": "describe", "augment-service": "engine", "type": "api", 
+      "options": { "url": "hostname", "attributes": ["customerSegment"]}}'
 ```
 
 **File based augment**
@@ -1282,7 +1288,9 @@ curl Example
 curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
- -d '{"service": "engine","id": "AU2","name": "rest augment api", "description": "","augment-service": "engine","type": "file","options": {"attributes": ["customerSegment", "twitter"]}}'
+ -d '{"service": "engine","id": "AU2","name": "rest augment api", 
+      "description": "","augment-service": "engine","type": 
+      "file","options": {"attributes": ["customerSegment", "twitter"]}}'
 ```
 
 **Upload CSV for Augment**
