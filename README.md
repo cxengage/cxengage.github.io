@@ -1,6 +1,4 @@
-# Using the API
-
-CxEngage can be integrated with by using CxEngage API.
+# Using the CxEngage API
 
 ## Authentication 
 
@@ -172,8 +170,12 @@ Response
 
   {
    "id": "PT1",
-   "then": "(par (send echo message {:message \"We should probably call the customer\"}) (send echo message {:message \"We should probably call the customer now now now now\"}))",
-   "when": "(within 1 minutes (allOf (count 4 (event (and (= customerSegment \"Gold\") (= eventType \"flcheck\")))) (event (and (= customerSegment \"Gold\") (= eventType \"cnclTicket\"))))))",
+   "then": "(par (send echo message {:message \"We should probably call the customer\"}) 
+                 (send echo message {:message \"We should probably call the customer now \"}))",
+   "when": "(within 1 minutes (allOf (count 4 (event (and (= customerSegment \"Gold\") 
+                                                          (= eventType \"flcheck\")))) 
+                                              (event (and (= customerSegment \"Gold\") 
+                                                          (= eventType \"cnclTicket\"))))))",
    "description": "Loyalty Pattern for Gold customers",
    "name": "Loyalty Pattern"
   }
