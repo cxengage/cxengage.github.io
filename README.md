@@ -1277,6 +1277,7 @@ Response
 
 curl Example
 
+
 ```bash
 curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
  -H 'Authorization: Bearer {{token}}' \
@@ -1304,6 +1305,7 @@ bob,admin@userevents.com
 ```
 
 curl Example
+
 
 ```bash
 curl -iX POST https://api.cxengage.net/1.0/tenants/userevents/augments/AU1/file  \ 
@@ -1342,8 +1344,9 @@ Response
     }
 }
 ```
- 
+
 curl Example
+
 
 ```bash
 curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/augments/AU1 \
