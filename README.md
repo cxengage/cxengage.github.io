@@ -1073,6 +1073,60 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/da
 
 ```
 
+
+__Pusher Example__
+
+Pusher Parameters
+key 
+```
+Pusher key 
+```
+secret 
+```
+Pusher secret
+```
+
+
+Request
+
+```http
+POST /1.0/tenants/{{tenant-name}}/pusher HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+```
+
+```json
+{
+    "id": "pusher",
+    "key": "key",
+    "secret": "secret"
+}
+
+```
+
+Response
+
+```json
+
+{
+    "id": "pusher",
+    "key": "key",
+    "secret": "secret"
+}
+
+```
+
+curl Example
+
+```bash
+curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/pusher \
+     -H 'Authorization: Bearer {{token}}' \
+-H 'Content-Type: application/json; charset=utf-8' \
+-d '{"id": "pusher", "type": "pusher", "key": "key", "secret":"password"}'
+
+```
+
 **Retrieves specific integration from the given tenant**
 
 Request
