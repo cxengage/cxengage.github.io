@@ -1319,7 +1319,7 @@ curl Example
 
 ```bash
 curl -iX POST https://api.cxengage.net/1.0/tenants/userevents/augments/AU1/file  \ 
- -H 'Authorization: Bearer WKamEpdMEobsM4o5p3RnjyY3+yBVTM7smNKuaMU37Djm' \
+ -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: text/csv' \
  -d @file.csv
 ```
@@ -1338,7 +1338,7 @@ Cache-Control: no-cache
 ```
 
 Response
-
+
 ```json
 {
     "id": "AU1",
