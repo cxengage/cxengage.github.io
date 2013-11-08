@@ -7,6 +7,7 @@ How to authenticate with CxEngage API - [http://devs.cxengage.com/docs/authentic
 
 ## CxEngage API 1.0
 url - https://api.cxengage.net/
+version - 1.0
 
 ## Error Codes
 
