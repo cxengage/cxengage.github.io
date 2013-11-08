@@ -368,7 +368,7 @@ Cache-Control: no-cache
 
 ```json
 {
-    "template": "Hi {{first-name}}\r\n\r\nWe apologize for the inconvenience. Please contact us at {{email-address}} at your earliest convenience.\r\n\r\nThank You\r\n",
+    "template": "Hi {{first-name}} We apologize for the inconvenience. Please contact us at {{email-address}}",
     "description": "SMS apologizing to customer",
     "name": "SMS"
 }
@@ -379,7 +379,7 @@ Response
 ```json
 {
     "id": "TM1",
-    "template": "Hi {{first-name}}\r\n\r\nWe apologize for the inconvenience. Please contact us at {{email-address}} at your earliest convenience.\r\n\r\nThank You\r\n",
+    "template": "Hi {{first-name}} We apologize for the inconvenience. Please contact us at {{email-address}}",
     "description": "SMS apologizing to customer",
     "name": "SMS"
 }
