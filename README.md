@@ -2,7 +2,7 @@
 
 ## Authentication 
 
-How to authenticate with CxEngage API - [http://devs.cxengage.com/docs/authentication](http://devs.cxengage.com/docs/authentication/)
+How to authenticate with CxEngage API - [http://docs.cxengage.com/docs/authentication](http://docs.cxengage.com/docs/authentication/)
 
 
 ## CxEngage API 1.0
