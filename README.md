@@ -13,24 +13,21 @@ version - 1.0
 
 CxEngage API uses HTTP response codes for showing failure of API requests.
 
-**HTTP 404** 
+**HTTP 400**
 ```
-The selected tenant or item does not exist
+Required fields are not present
 ```
-
 **HTTP 401**
 ```
 Incorrect credentials
 ```
-
 **HTTP 403**
 ```
 User does not have access to selected tenant
 ```
-
-**HTTP 400**
+**HTTP 404** 
 ```
-Required fields are not present
+The selected tenant or item does not exist
 ```
 
 
