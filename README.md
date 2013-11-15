@@ -28,6 +28,12 @@ Incorrect credentials
 User does not have access to selected tenant
 ```
 
+**HTTP 400**
+```
+Required fields are not present
+```
+
+
 ## Tenants
 
 Retrieve Tenant info
