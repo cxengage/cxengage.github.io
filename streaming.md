@@ -61,7 +61,7 @@ The ticket provided is valid for a single use within 2 minutes of requesting and
 The ticket can then be used to open a web socket at the following address:
 
 ```
-ws://stream.cxengage.net/1.0/stream/<ticket>
+wss://stream.cxengage.net/1.0/stream/<ticket>
 ```
 
 Sending data is not permitted on the socket, only receiving data.
