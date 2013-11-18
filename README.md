@@ -1162,7 +1162,23 @@ curl Example
 curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/integrations/twilio \
      -H 'Authorization: Bearer {{token}}'
 ```
-   
+
+## Generic Streaming Endpoint
+
+Request a stream ticket
+
+```
+POST /1.0/tenants/<tenantid>/ticket HTTP/1.1
+Host: stream.cxengage.net
+Authorization: Bearer <token>
+```
+
+Open websocket connection with ticket
+
+```
+wss://stream.cxengage.net/1.0/stream/<ticket>
+```
+
 ## Augments
 
 **Retrieves augments for the given tenant**
