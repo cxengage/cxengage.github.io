@@ -1359,16 +1359,17 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
 Request
 
 ```
-POST /1.0/tenants/userevents/augments/AU1/file HTTP/1.1
+POST /1.0/tenants/userevents/augments/AU14/file HTTP/1.1
 Host: api.cxengage.net
-Content-Type: text/csv
 Authorization: Bearer {{token}}
-```
+Cache-Control: no-cache
 
-```
-username,email 
-ryan,support@userevents.com
-bob,admin@userevents.com
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
+Content-Disposition: form-data; name="file"; filename="1.csv"
+Content-Type: text/csv
+
+
+----WebKitFormBoundaryE19zNvXGzXaLvS5C
 ```
 
 curl Example
