@@ -1163,7 +1163,7 @@ curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/integrations/twilio 
      -H 'Authorization: Bearer {{token}}'
 ```
 
-## Generic Streaming Endpoint
+__Generic Streaming Endpoint__
 
 Request a stream ticket
 
