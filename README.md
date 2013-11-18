@@ -1359,7 +1359,7 @@ curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
 Request
 
 ```
-POST /1.0/tenants/userevents/augments/AU14/file HTTP/1.1
+POST /1.0/tenants/userevents/augments/AU1/file HTTP/1.1
 Host: api.cxengage.net
 Authorization: Bearer {{token}}
 Cache-Control: no-cache
@@ -1376,10 +1376,9 @@ curl Example
 
 
 ```bash
-curl -iX POST https://api.cxengage.net/1.0/tenants/userevents/augments/AU1/file  \ 
- -H 'Authorization: Bearer {{token}}' \
- -H 'Content-Type: text/csv' \
- -d @file.csv
+curl -iX POST https://api.cxengage.net/1.0/tenants/userevents/augments/AU14/file \
+-H 'Authorization: Bearer Mc6NLc7ukAE3AR59XDqRbOxvVW1RTaoYHeLQm9P2WhlX' \
+-F file=@1.csv
 ```
 
 
