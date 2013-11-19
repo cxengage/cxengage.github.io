@@ -93,7 +93,7 @@ Response
 curl Example
 
 ```bash
-curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
+curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}}/key-attribute \
      -H 'Authorization: Bearer {{token}}'
 
 ```
@@ -103,7 +103,7 @@ curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
 Request
 
 ```http
-POST /tenants/{{tenant-name}}/key-attribute HTTP/1.1
+POST /1.0/tenants/{{tenant-name}}/key-attribute HTTP/1.1
 Host: {{cxenage-api}}
 Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
@@ -120,7 +120,7 @@ Response
 curl Example
 
 ```bash
-curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/key-attribute \
+curl -X POST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/key-attribute \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
  -d '{"key" : "username"}' 
@@ -429,7 +429,7 @@ Response
 curl Example
 
 ```bash
-curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/templates/TM1 \
+curl -XGET https://api.cxengage.net/1.0/tenants/{{tenant-name}}/templates/TM1 \
      -H 'Authorization: Bearer {{token}}'
 ```
 
@@ -496,7 +496,7 @@ Response
 curl Example
 
 ```bash
-curl -IX DELETE https://api.cxengage.net/tenants/{{tenant-name}}/templates/TM1 \
+curl -IX DELETE https://api.cxengage.net/1.0/tenants/{{tenant-name}}/templates/TM1 \
  -H 'Authorization: Bearer {{token}}' \ 
 ```
 
@@ -555,7 +555,7 @@ Response
 
 curl Example
 ```bash
-curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/listeners \ 
+curl -XGET https://api.cxengage.net/1.0/tenants/{{tenant-name}}/listeners \ 
      -H 'Authorization: Bearer {{token}}'
 ```
 
@@ -575,7 +575,7 @@ Salesforce Listener Example
 Request
 
 ```
-  POST tenants/tenant-name/listeners
+  POST /1.0/tenants/tenant-name/listeners
 ```
 
 ```json
@@ -620,7 +620,7 @@ Response
 curl Example
 
 ```bash
-curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/listeners \
+curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/listeners \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"name":"My Salesforce Listener","type":"salesforce","mapping":{"user":"user__c","type":"Type", 
@@ -680,7 +680,7 @@ Response
 curl Example
 
 ```bash
-curl -XPOST https://api.cxengage.net/tenants/{{tenant-name}}/listeners \
+curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/listeners \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"name":"Demo Datasift","type":"datasift",
@@ -726,7 +726,7 @@ Response
 curl Example
 
 ```bash
-curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI4 \
+curl -XGET https://api.cxengage.net/1.0/tenants/{{tenant-name}}/listeners/LI4 \
      -H 'Authorization: Bearer {{token}}'  
 ```
 
@@ -774,7 +774,7 @@ Response
 curl Example
 
 ```bash
-curl -XPUT https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI4 \
+curl -XPUT https://api.cxengage.net/1.0/tenants/{{tenant-name}}/listeners/LI4 \
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"name":"Updated Name for listener"}'
@@ -796,7 +796,7 @@ Cache-Control: no-cache
 curl Example
 
 ```bash
-curl -I -XDELETE https://api.cxengage.net/tenants/{{tenant-name}}/listeners/LI54 \
+curl -I -XDELETE https://api.cxengage.net/1.0/tenants/{{tenant-name}}/listeners/LI54 \
      -H 'Authorization: Bearer {{token}}'  
 ```
 
@@ -835,7 +835,7 @@ Response
 curl Example
 
 ```bash
-curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/integrations \
+curl -XGET https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations \
      -H 'Authorization: Bearer {{token}}'
 ```
 
@@ -1159,7 +1159,7 @@ Response
 curl Example
 
 ```bash
-curl -XGET https://api.cxengage.net/tenants/{{tenant-name}}/integrations/twilio \
+curl -XGET https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/twilio \
      -H 'Authorization: Bearer {{token}}'
 ```
 
@@ -1213,7 +1213,7 @@ Authorization: Bearer {{token}}
 curl Example
 
 ```bash
-curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/augments \
+curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}}/augments \
      -H 'Authorization: Bearer {{token}}'
 
 ```
@@ -1300,7 +1300,7 @@ Response
 curl Example
 
 ```bash
-curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
+curl -X POST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/augment \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
  -d '{"service": "engine", "id": "AU2", "name": "rest augment api", 
@@ -1360,7 +1360,7 @@ curl Example
 
 
 ```bash
-curl -X POST https://api.cxengage.net/tenants/{{tenant-name}}/augment \
+curl -X POST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/augment \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
  -d '{"service": "engine","id": "AU2","name": "rest augment api", 
@@ -1431,7 +1431,7 @@ curl Example
 
 
 ```bash
-curl -X GET https://api.cxengage.net/tenants/{{tenant-name}}/augments/AU1 \
+curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}}/augments/AU1 \
      -H 'Authorization: Bearer {{token}}'
 
 ```
