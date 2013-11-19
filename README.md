@@ -5,6 +5,11 @@
 How to authenticate with CxEngage API - [http://docs.cxengage.com/docs/authentication](http://docs.cxengage.com/docs/authentication/)
 
 
+## Sending in Events
+
+To send in custom events - [http://docs.cxengage.com/docs/custom-events/](http://docs.cxengage.com/docs/custom-events/)
+
+
 ## CxEngage API 1.0
 url - https://api.cxengage.net/
 version - 1.0
