@@ -785,6 +785,31 @@ curl -XPUT https://api.cxengage.net/1.0/tenants/{{tenant-name}}/listeners/LI4 \
 -d '{"name":"Updated Name for listener"}'
 ```
 
+**Retrieve listener status**
+
+Request
+```http
+GET /1.0/tenants/userevents/listeners/LI1/status HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer {{token}}
+```
+
+```json
+{
+    "id": "status",
+    "status": "started",
+    "message": "Connected to stream: hash"
+}
+```
+
+curl Example
+
+```bash
+curl -XGET https://api.cxengage.net/1.0/tenants/userevents/listeners/LI1/status \
+     -H 'Authorization: Bearer {{token}}'
+```
+
 **Delete chosen listener**
 
 Request
