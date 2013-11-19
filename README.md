@@ -632,9 +632,9 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/listeners \
     "stage":"StageName","amount":"Amount","daystoclose":"daysToClose__c","product": "Product__c"},"status":true}'
 ```
 
-Datasift Listener Example
+**Datasift Listener Example**
 
-**Request**
+Request
 
 ```http
 POST /1.0/tenants/{{tenant-name}}/listeners HTTP/1.1
