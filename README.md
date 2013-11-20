@@ -1079,8 +1079,8 @@ Authorization: Bearer {{token}}
 ```json
 {
     "id": "urban-airship",
-    "username": "App Key",
-    "password": "App Master Key"
+    "username": "app key",
+    "password": "app master key"
 }
 
 ```
