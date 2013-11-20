@@ -1002,6 +1002,7 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/tw
 __Sendgrid Example__
 
 Sendgrid Parameters
+
 account 
 ```
 SendGrid account 
@@ -1055,6 +1056,7 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/se
 __Urban Airship Example__
 
 Urban Airship Parameters
+
 App Key 
 ```
 Urban Airship App Key 
