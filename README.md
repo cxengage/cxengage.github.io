@@ -899,7 +899,7 @@ Salesforce Consumer key/secret
 Request
 
 ```http
-POST /1.0/tenants/{{tenant-name}}/salesforce HTTP/1.1
+POST /1.0/tenants/{{tenant-name}}/integrations/salesforce HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
@@ -951,7 +951,7 @@ __Twilio Example__
 Request
 
 ```http
-POST /1.0/tenants/{{tenant-name}}/twilio HTTP/1.1
+POST /1.0/tenants/{{tenant-name}}/integrations/twilio HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
@@ -1015,7 +1015,7 @@ Sendgrid password
 Request
 
 ```http
-POST /1.0/tenants/{{tenant-name}}/sendgrid HTTP/1.1
+POST /1.0/tenants/{{tenant-name}}/integrations/sendgrid HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json; charset=utf-8
 Authorization: Bearer {{token}}
@@ -1049,6 +1049,59 @@ curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/se
      -H 'Authorization: Bearer {{token}}' \
 -H 'Content-Type: application/json; charset=utf-8' \
 -d '{"id": "sendgrid", "type": "sendgrid", "account": "username", "password":"password"}'
+
+```
+
+__Urban Airship Example__
+
+Urban Airship Parameters
+App Key 
+```
+Urban Airship App Key 
+```
+App Master Key 
+```
+Urban Airship App Master Key
+```
+
+
+Request
+
+```http
+POST /1.0/tenants/{{tenant-name}}/integrations/urban-airship HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json; charset=utf-8
+Authorization: Bearer {{token}}
+```
+
+```json
+{
+    "id": "urban-airship",
+    "username": "{{App Key}}",
+    "password": "{{App Master Key}}"
+}
+
+```
+
+Response
+
+```json
+
+{
+    "id": "urban-airship",
+    "username": "app key",
+    "password": "app master key"
+}
+
+```
+
+curl Example
+
+```bash
+curl -XPOST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/integrations/urban-airship \
+     -H 'Authorization: Bearer {{token}}' \
+-H 'Content-Type: application/json; charset=utf-8' \
+-d '{"id": "urban-airship", "type": "urban-airship", "username": "app key", "password":"app master key"}'
 
 ```
 
