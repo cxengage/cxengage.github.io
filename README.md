@@ -1300,8 +1300,9 @@ curl Example
 ```bash
 curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}}/augments \
      -H 'Authorization: Bearer {{token}}'
-
 ```
+
+
 
 **Create an Augment for a tenant**
 
@@ -1521,3 +1522,27 @@ curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}}/augments/AU1 \
 
 ```
 
+**Retrieve augment CSV**
+
+Request
+
+```http
+GET /1.0/tenants/userevents/augments/AU1/file HTTP/1.1
+Host: api.cxengage.net
+Content-Type: application/json
+Authorization: Bearer {{token}}
+```
+
+```
+custId,first-name
+101,Ryan
+201,John
+123,Bob
+```
+
+curl Example
+
+```bash
+curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}}/augments/AU1/file \
+     -H 'Authorization: Bearer {{token}}'
+```
