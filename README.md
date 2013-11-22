@@ -1533,6 +1533,8 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 ```
 
+Response
+
 ```
 custId,first-name
 101,Ryan
