@@ -300,7 +300,7 @@ Response
 
 curl Example
 ```bash
-curl -X PUT https://api.cxengage.net/1.0/tenants/userevents/patterns/PT5 \
+curl -X PUT https://api.cxengage.net/1.0/tenants/{{tenant-name}}/patterns/PT5 \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
  -d '{"then" : "(send sendgrid email {:to *email*, :subject \"Welcome to a wonderful put experience\"})"}'
@@ -399,7 +399,7 @@ curl Example
 
 ```bash
 
-curl -X POST https://api.cxengage.net/1.0/tenants/userevents/templates \
+curl -X POST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/templates \
  -H 'Authorization: Bearer {{token}}' \
  -H 'Content-Type: application/json; charset=utf-8' \
  -d '{"template": "Welcome to CxEngage 4.0", "description" : "sample description", "name" : "Welcome"}'
@@ -789,7 +789,7 @@ curl -XPUT https://api.cxengage.net/1.0/tenants/{{tenant-name}}/listeners/LI4 \
 
 Request
 ```http
-GET /1.0/tenants/userevents/listeners/LI1/status HTTP/1.1
+GET /1.0/tenants/{{tenant-name}}/listeners/LI1/status HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json
 Authorization: Bearer {{token}}
@@ -806,7 +806,7 @@ Authorization: Bearer {{token}}
 curl Example
 
 ```bash
-curl -XGET https://api.cxengage.net/1.0/tenants/userevents/listeners/LI1/status \
+curl -XGET https://api.cxengage.net/1.0/tenants/{{tenant-name}}/listeners/LI1/status \
      -H 'Authorization: Bearer {{token}}'
 ```
 
@@ -1461,7 +1461,7 @@ curl -X POST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/augment \
 Request
 
 ```
-POST /1.0/tenants/userevents/augments/AU1/file HTTP/1.1
+POST /1.0/tenants/{{tenant-name}}/augments/AU1/file HTTP/1.1
 Host: api.cxengage.net
 Authorization: Bearer {{token}}
 Cache-Control: no-cache
@@ -1477,7 +1477,7 @@ curl Example
 
 
 ```bash
-curl -iX POST https://api.cxengage.net/1.0/tenants/userevents/augments/AU14/file \
+curl -iX POST https://api.cxengage.net/1.0/tenants/{{tenant-name}}/augments/AU14/file \
 -H 'Authorization: Bearer Mc6NLc7ukAE3AR59XDqRbOxvVW1RTaoYHeLQm9P2WhlX' \
 -F file=@1.csv
 ```
@@ -1527,7 +1527,7 @@ curl -X GET https://api.cxengage.net/1.0/tenants/{{tenant-name}}/augments/AU1 \
 Request
 
 ```http
-GET /1.0/tenants/userevents/augments/AU1/file HTTP/1.1
+GET /1.0/tenants/{{tenant-name}}/augments/AU1/file HTTP/1.1
 Host: api.cxengage.net
 Content-Type: application/json
 Authorization: Bearer {{token}}
