@@ -231,9 +231,7 @@
                  :datasift
                  :sendgrid
                  :salesforce
-                 :pusher
-                 :urban-airship
-                 :demo}
+                 :pusher}
  :tenants {:userevents {:name "UserEvents"
                         :instance :my-instance
                         :key-attr :username
